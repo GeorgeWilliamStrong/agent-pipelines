@@ -1,2 +1,2 @@
-# Document Parsing
-Benchmarking Instill Core's document parsing capability
+# Instill AI Benchmarking
+Benchmarking Instill AI pipelines.
