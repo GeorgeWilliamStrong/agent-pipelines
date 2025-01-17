@@ -1,2 +1,3 @@
-# Instill AI Benchmarking
-Benchmarking Instill AI pipelines.
+# Pipeline Benchmarks
+
+Benchmarking the quality and latency of Instill VDP Pipelines.
