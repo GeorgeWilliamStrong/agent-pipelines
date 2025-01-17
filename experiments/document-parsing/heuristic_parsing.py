@@ -19,11 +19,7 @@ def test_pdf_parsing():
     stats_dir = Path("experiments/document-parsing/stats")
     stats_dir.mkdir(parents=True, exist_ok=True)
     timing_file = stats_dir / "heuristic_parsing_times.json"
-
-    # Load existing timing data if available
     timing_data = {}
-    if timing_file.exists():
-        timing_data = json.loads(timing_file.read_text())
 
     # Get all PDF files
     supported_extensions = [".pdf"]
