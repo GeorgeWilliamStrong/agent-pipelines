@@ -1,24 +1,32 @@
 {
   "nvidia-10q.md": [
     {
-      "timestamp": "2025-01-31 11:38:56",
-      "processing_time": 7.191456079483032,
+      "timestamp": "2025-01-31 15:33:30",
+      "processing_time": 8.903712034225464,
       "file_size": 131728,
+      "success": true
+    }
+  ],
+  "wework-s1.md": [
+    {
+      "timestamp": "2025-01-31 15:34:07",
+      "processing_time": 37.364866971969604,
+      "file_size": 1093985,
       "success": true
     }
   ],
   "scanned-cia-document.md": [
     {
-      "timestamp": "2025-01-31 11:39:03",
-      "processing_time": 6.256695985794067,
+      "timestamp": "2025-01-31 15:34:21",
+      "processing_time": 13.7952561378479,
       "file_size": 57457,
       "success": true
     }
   ],
   "apple-10q.md": [
     {
-      "timestamp": "2025-01-31 11:39:09",
-      "processing_time": 5.975519180297852,
+      "timestamp": "2025-01-31 15:34:33",
+      "processing_time": 11.535006046295166,
       "file_size": 56725,
       "success": true
     }
