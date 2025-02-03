@@ -11,12 +11,12 @@ def test_pdf_parsing():
     pipeline = init_pipeline_client(api_token=os.environ["INSTILL_API_TOKEN"])
 
     # Get all files from samples directory
-    samples_dir = Path("experiments/document-parsing/samples")
-    output_dir = Path("experiments/document-parsing/output/heuristic/markdown")
+    samples_dir = Path("samples")
+    output_dir = Path("output/heuristic/markdown")
     output_dir.mkdir(parents=True, exist_ok=True)
 
     # Create timing stats directory
-    stats_dir = Path("experiments/document-parsing/stats")
+    stats_dir = Path("stats")
     stats_dir.mkdir(parents=True, exist_ok=True)
     timing_file = stats_dir / "heuristic_parsing_times.json"
     timing_data = {}

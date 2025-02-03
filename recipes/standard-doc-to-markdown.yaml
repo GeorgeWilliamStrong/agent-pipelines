@@ -1,0 +1,19 @@
+version: v1beta
+variable:
+  file:
+    title: Document
+    format: file
+component:
+  process-document:
+    type: document
+    input:
+      document: ${variable.file}
+      display-image-tag: true
+    task: TASK_CONVERT_TO_MARKDOWN
+output:
+  markdown:
+    title: Markdown
+    value: ${process-document.output.body}
+  images:
+    title: Images
+    value: ${process-document.output.images}
