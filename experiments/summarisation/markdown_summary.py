@@ -20,12 +20,19 @@ def test_summarisation():
     timing_file = stats_dir / "summarisation_times.json"
     timing_data = {}
 
-    # Get all Markdown files
+    # Get all Markdown files from both document and audio directories
     supported_extensions = [".md"]
-    sample_files = [
-        f for f in samples_dir.iterdir()
-        if f.is_file() and f.suffix.lower() in supported_extensions
-    ]
+    sample_files = []
+
+    # Scan both document and audio directories
+    for content_type in ["document", "audio"]:
+        content_dir = samples_dir / content_type
+        if content_dir.exists():
+            files = [
+                (f, content_type) for f in content_dir.iterdir()
+                if f.is_file() and f.suffix.lower() in supported_extensions
+            ]
+            sample_files.extend(files)
 
     if not sample_files:
         print(f"No supported documents found in {samples_dir}")
@@ -35,7 +42,7 @@ def test_summarisation():
     print("-" * 50)
 
     # Process each file
-    for sample_file in sample_files:
+    for sample_file, content_type in sample_files:
         try:
             start_time = time.time()
 
@@ -47,13 +54,16 @@ def test_summarisation():
             summary_content = pipeline.trigger(
                 namespace_id="george_strong",
                 pipeline_id="agent-summary",
-                data=[{"context": markdown_content, "file-type": "document"}]
+                data=[{"context": markdown_content, "file-type": content_type}]
             )['outputs'][0]
 
             # Get summary from either long or short text field
             final_summary = (
-                summary_content.get("summary-from-long-text") or 
-                summary_content.get("summary-from-short-text", "No summary generated")
+                summary_content.get("summary-from-long-text") or
+                summary_content.get(
+                    "summary-from-short-text",
+                    "No summary generated"
+                )
             )
 
             # Create output path with same name but add "-summary" suffix
@@ -70,13 +80,15 @@ def test_summarisation():
                 'timestamp': time.strftime('%Y-%m-%d %H:%M:%S'),
                 'processing_time': processing_time,
                 'file_size': sample_file.stat().st_size,
-                'success': True
+                'success': True,
+                'content_type': content_type
             })
 
             print(f"✓ Successfully converted {sample_file.name}")
+            print(f"  Content type: {content_type}")
             print(f"  Processing time: {processing_time:.2f} seconds")
             print(f"  Output saved to {output_path}")
-            print(f"  Preview (first 200 chars):")
+            print("  Preview (first 200 chars):")
             print(f"  {final_summary[:200]}...")
             print("-" * 50)
 
@@ -88,7 +100,8 @@ def test_summarisation():
                 'timestamp': time.strftime('%Y-%m-%d %H:%M:%S'),
                 'error': str(e),
                 'file_size': sample_file.stat().st_size,
-                'success': False
+                'success': False,
+                'content_type': content_type
             })
 
             print(f"✗ Failed to convert {sample_file.name}")

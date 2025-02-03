@@ -1,34 +1,56 @@
 {
+  "vae-paper.md": [
+    {
+      "timestamp": "2025-02-03 16:21:49",
+      "processing_time": 18.599830865859985,
+      "file_size": 49418,
+      "success": true,
+      "content_type": "document"
+    }
+  ],
   "nvidia-10q.md": [
     {
-      "timestamp": "2025-02-03 14:52:14",
-      "processing_time": 16.49560284614563,
+      "timestamp": "2025-02-03 16:22:02",
+      "processing_time": 12.606652021408081,
       "file_size": 131728,
-      "success": true
+      "success": true,
+      "content_type": "document"
     }
   ],
   "wework-s1.md": [
     {
-      "timestamp": "2025-02-03 14:52:54",
-      "processing_time": 39.70322608947754,
+      "timestamp": "2025-02-03 16:22:43",
+      "processing_time": 40.994917154312134,
       "file_size": 1093985,
-      "success": true
+      "success": true,
+      "content_type": "document"
     }
   ],
   "scanned-cia-document.md": [
     {
-      "timestamp": "2025-02-03 14:53:01",
-      "processing_time": 6.4261980056762695,
+      "timestamp": "2025-02-03 16:23:00",
+      "processing_time": 16.80460286140442,
       "file_size": 57457,
-      "success": true
+      "success": true,
+      "content_type": "document"
     }
   ],
   "apple-10q.md": [
     {
-      "timestamp": "2025-02-03 14:53:10",
-      "processing_time": 9.114547967910767,
+      "timestamp": "2025-02-03 16:23:17",
+      "processing_time": 17.02670693397522,
       "file_size": 56725,
-      "success": true
+      "success": true,
+      "content_type": "document"
+    }
+  ],
+  "apple-10q-transcript.md": [
+    {
+      "timestamp": "2025-02-03 16:23:34",
+      "processing_time": 17.201995134353638,
+      "file_size": 49980,
+      "success": true,
+      "content_type": "audio"
     }
   ]
 }
