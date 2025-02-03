@@ -94,7 +94,15 @@ Hello World Company [ Company Name]
 By: ________________________ Date: ___________
 [Authorized Signatory Name, Title]
 
+
+
+![image 0](0)
+
 [Employee Name]
 
 By: ________________________ Date: ___________
 [Employee’s Signature]
+
+
+![image 1](1)
+

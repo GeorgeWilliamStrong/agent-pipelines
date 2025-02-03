@@ -71,6 +71,14 @@ Deployment | Simple<br>hosting | Container-base<br>d | Kubernetes | Multi-region
 
 # 2. Vector   Store   Setup
 
+
+
+![image 4](4)
+
+
+
+![image 5](5)
+
  ●  Choose appropriate vector database
  ●  Define embedding model
  ●  Setup indexing pipeline
@@ -112,6 +120,10 @@ Deployment | Simple<br>hosting | Container-base<br>d | Kubernetes | Multi-region
 
  1. Data freshness
 
+
+
+![image 6](6)
+
  2. Retrieval accuracy
  3. Response consistency
  4. System latency
@@ -138,3 +150,23 @@ up-to-date AI applications.
  ●  Implementation guides
  ●  Tool documentation
  ●  Community resources
+
+
+![image 0](0)
+
+
+
+![image 1](1)
+
+
+
+![image 2](2)
+
+
+
+![image 3](3)
+
+
+
+![image 7](7)
+

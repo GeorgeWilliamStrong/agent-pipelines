@@ -4,9 +4,25 @@
 
                                                     CCoommppeettiittiivvee                                AAddvvaannttaaggee
 
+
+
+![image 0](0)
+
+
+
+![image 1](1)
+
                                                                                                         Contents
 
                                                                                                                                                                                                  2  / 38
+
+
+
+![image 2](2)
+
+
+
+![image 3](3)
 
 ## 01
                                                     Foreword:                        Your           journey                  to      a    GenAI                future
@@ -40,6 +56,10 @@
                                                     productivity       and   competitive       advantage.
 
                                                                                                                                                                                                  3  / 38
+
+
+
+![image 4](4)
 
 ## 02
                                                     Organizations                               are         reporting                    early            successes
@@ -90,6 +110,10 @@
                                                     measurable        value   to  stakeholders.
 
                                                                                                                                                                                                  5  / 38
+
+
+
+![image 5](5)
 
                                                     a.    Comprehensive                              governance:                       Increasing                 trust         in    data         usage            and
 
@@ -318,6 +342,10 @@
 
                                                                                                                                                                                                 10   / 38
 
+
+
+![image 6](6)
+
                                                                                                                                                                                                    52%
                                                                                                                                                                                             47%
                                                                                                                                                                                                        44%
@@ -432,6 +460,10 @@
 
                                                                                                                                                                                                 12   / 38
 
+
+
+![image 7](7)
+
                                                                                                                                                                        Insight          2:
                                                     Asia    Pacific   countries      (mainly     China)    are   ahead     in their   preparation       to  comply     with
                                                     GenAI     regulations.                                                                                                                                       57%
@@ -537,6 +569,14 @@ APAC
                                                                                                                                                        utilities                                   sector                                   services
 
                                                                                                                                                                                                 14   / 38
+
+
+
+![image 8](8)
+
+
+
+![image 9](9)
 
                                                     b.    Strategic                deployment:                        Translating                    implementation                            into        measurable                     benefits
 
@@ -693,6 +733,10 @@ APAC
 
                                                                                                                                                                                                 18   / 38
 
+
+
+![image 10](10)
+
                                                     c.    Technological                         integration:                    Ensuring                that        your         systems
 
                                                     and        tools          do      not       limit        GenAI’s              potential
@@ -759,6 +803,10 @@ APAC
 
                                                                                                                                                                                                20    / 38
 
+
+
+![image 11](11)
+
                                                     Over    a  third   of  businesses       face   technological       challenges       when     they   set   out   to implement        and   use   GenAI.
 
                                                                                  What     would     you   say   is your    biggest    challenge      in  implementing         effective     governance        and   monitoring       for   GenAI?
@@ -792,6 +840,10 @@ APAC
                                                                               Northern      Europe                                                            South    West     &  Eastern     Europe                    APAC
 
                                                                                                                                                                                                 21   / 38
+
+
+
+![image 12](12)
 
                                                     Professional        services     and   telco   organizations        feel  least    challenged       by  technological        limitations.
 
@@ -924,6 +976,14 @@ APAC
                                                                                                                                                                                                24    / 38
                                                     preferred     business      processes.                                                                    the   transparency      and   governance       of  LLMs.
 
+
+
+![image 13](13)
+
+
+
+![image 14](14)
+
                                                     d.    Expert             guidance:                  Resourcing                    challenges                   with         scarcity              of    GenAI             skill       sets
 
                                                     For   many     organizations,       it really   comes      down    to  this:   In-house     GenAI     expertise
@@ -948,6 +1008,10 @@ APAC
                                                       public    sector    (43%).     Telco    companies        (24%)     are  less   affected.
 
                                                                                                                                                                                                 25    / 38
+
+
+
+![image 15](15)
 
                                                     Lack    of  internal    expertise      is a particular      issue   for  those    in  health    care   and    the  public    sector.
 
@@ -1008,6 +1072,10 @@ APAC
 
                                                                                                                                                                                                 27    / 38
 
+
+
+![image 16](16)
+
                                                     GenAI     usage     is above     the  global    average      in China,    the   UK,   the   US,   Australia     and   Germany.
 
                                                                                                        To  what    extent     is your   organization        using   GenAI?      (%   currently     using)
@@ -1056,6 +1124,10 @@ APAC
                                                                                                                            U
 
                                                                                                                                                                                                 28    / 38
+
+
+
+![image 17](17)
 
                                                     Organizations         in North     America      are  further     ahead    with    full  implementation.
 
@@ -1118,6 +1190,14 @@ APAC
                                                                  U
 
                                                                                                                                                                                                30    / 38
+
+
+![image 18](18)
+
+
+
+![image 19](19)
+
                                                                                          Telco,    retail,  insurance,      banking      and   life sciences      organizations       lead
                                                                                          in  GenAI     usage.
 
@@ -1140,6 +1220,10 @@ GenAI     usage.    Almost     half   (46%)    are  planning     to  enlist   th
 ensure     that  they    make    the   most    of  GenAI’s     potential.
 
                                                                                                                                            31   / 38
+
+
+
+![image 20](20)
 
 Many     are   enlisting    third   parties    to  support      GenAI     integration,      including     through     orchestration        platforms.
 
@@ -1228,6 +1312,10 @@ Watch      a short    demo     and   learn   more    about    our   portfolio   
 
                                                                                                                                            34    / 38
 
+
+
+![image 21](21)
+
 GenAI     for   increased      business      productivity       with    SAS    Viya.
 
                             s
@@ -1314,6 +1402,10 @@ For   more    information,      contact     Stephen@coleman-parkes.co.uk.
 
                                                                                                                                            36    / 38
 
+
+
+![image 22](22)
+
 Geographical                    coverage
 
 Americas                            550     USA,      Canada,        Brazil,     Mexico
@@ -1324,8 +1416,20 @@ APAC                                275     Japan,      Australia,        China,
 
                                                                                                                                            37    / 38
 
+
+
+![image 23](23)
+
                                          To      learn          more,           please            visit       sas.com/generative-ai
+
+
+
+![image 24](24)
 
                                                               To contact  your  local SAS  office, please visit: sas.com/contact
 
     SAS and all other SAS Institute Inc. product or service names are registered trademarks or trademarks of SAS Institute Inc. in the USA and other countries. ® indicates USA registration. Other brand and product names are trademarks of their respective companies. Copyright © 2024, SAS Institute Inc. All rights reserved. G277395_113914_0824
+
+
+![image 25](25)
+

@@ -7,6 +7,10 @@
 
                                                             1 The AIdea of india
 
+
+
+![image 0](0)
+
                     2 The AIdea of india
 # stnetnoC
                                    PAGE                              PAGE
@@ -21,6 +25,22 @@
 
                                               Executive
                                               Summary
+
+
+
+![image 1](1)
+
+
+
+![image 2](2)
+
+
+
+![image 3](3)
+
+
+
+![image 4](4)
 
                                 PAGE                              PAGE
                                 36                                 54
@@ -40,7 +60,31 @@ to the Future          Opportunity
 
                                                             3 The AIdea of india
 
+
+
+![image 5](5)
+
+
+
+![image 6](6)
+
+
+
+![image 7](7)
+
+
+
+![image 8](8)
+
+
+
+![image 9](9)
+
                    Foreword
+
+
+
+![image 10](10)
 
                   India, today, is in a powerful position to set Companies across India are already starting to take
                     the agenda and realize significant benefits an AI-first approach to digital. They are figuring out
@@ -110,6 +154,14 @@ to the Future          Opportunity
 
                                                             5 The AIdea of india
 
+
+
+![image 11](11)
+
+
+
+![image 12](12)
+
                                                  Gen   AI is poised to reshape industries
                                                      by revolutionizing operating
                                                      models, transforming value chains,
@@ -156,6 +208,10 @@ to the Future          Opportunity
                          evitucexE
 # yrammuS
 
+
+
+![image 13](13)
+
                   With consumer-facing applications progressively Machine Learning (ML), the same is not true for Gen
                   incorporating innovative cognitive interfaces, AI. Enterprises must be vigilant in managing Gen
                   enterprises must enhance their existing technology AI-related risks to prevent reputation and financial
@@ -201,6 +257,10 @@ to the Future          Opportunity
 
                                                             7 The AIdea of India
 
+
+
+![image 14](14)
+
                     Global institutions like the World Bank and the IMF impact encompasses improvements in employee
                     recognize India’s economy as the fastest-growing productivity, enhanced operational efficiency and
                     among major nations. Our study indicates that personalized customer experiences. These sectors,
@@ -231,6 +291,10 @@ to the Future          Opportunity
                     education, retail trade and healthcare. The expected AI. Strategies differ across countries and there is
 
                     8 The AIdea of India
+
+
+
+![image 15](15)
 
                   no consensus yet on the approach to promoting or across various sectors of impact such as education,
                   regulating Gen AI. The Indian government recognizes healthcare, agriculture, smart cities, etc., where the
@@ -287,6 +351,10 @@ to the Future          Opportunity
 
                                                             9 The AIdea of India
 
+
+
+![image 16](16)
+
                     Sector-wise impact of Gen AI on GVA (2029-30)
 
                      Impact on sectoral GVA (X-axis) and additional GVA due to Gen AI (Y-axis) depicted here reflects the mid-point of the
@@ -330,6 +398,14 @@ to the Future          Opportunity
 
                     1 0 The AIdea of India
 
+
+
+![image 17](17)
+
+
+
+![image 18](18)
+
                     EY India’s C-suite Gen AI survey
 
                     We conducted an in-depth Gen AI survey covering ~200 C-suite executives across India. They represent
@@ -358,10 +434,30 @@ to the Future          Opportunity
 
                                                             1 1 The AIdea of India
 
+
+
+![image 19](19)
+
+
+
+![image 20](20)
+
+
+
+![image 21](21)
+
                     Chapter                 1
 
                     Three                        Steps
                     to         the               Future
+
+
+
+![image 22](22)
+
+
+
+![image 23](23)
 
                     Three      Steps     to   the   Future
 
@@ -418,6 +514,18 @@ to the Future          Opportunity
                                               oriented training paradigm? From this point of view,
 
                     1 4 The AIdea of India
+
+
+
+![image 24](24)
+
+
+
+![image 25](25)
+
+
+
+![image 26](26)
 
                    A short history of the world since ChatGPT
 
@@ -488,6 +596,10 @@ to the Future          Opportunity
                   powered by Gen AI with frictionless and ambient
 
                                                             1 5 The AIdea of India
+
+
+
+![image 27](27)
 
                                               digital interfaces – imagine smart glasses that can see
                                               what you see by feeding a stream of vision data back
@@ -563,6 +675,10 @@ to the Future          Opportunity
 
                     1 6 The AIdea of India
 
+
+
+![image 28](28)
+
                   prompts. Midjourney, Stable Diffusion and many Google released MedPaLM 2 that focuses on the
                   other generative art tools have matured significantly healthcare domain and we have BloombergGPT, a
                   and can create amazing photorealistic images based model that understands finance industry-related
@@ -611,6 +727,10 @@ to the Future          Opportunity
                                              available on AWS.
                   hardest part of this is of course the creation of
                   benchmarks and datasets which are industry specific.
+
+
+
+![image 29](29)
 
                                                             1 7 The AIdea of India
 
@@ -685,6 +805,10 @@ to the Future          Opportunity
 
                     1 8 The AIdea of India
 
+
+
+![image 30](30)
+
                   Foundation models trained on text, voice, image and communication is a challenge. So is synthesizing
                   video will fundamentally change the digital interfaces what we know to create the new. In the context of
                   we will use.                        an enterprise this problem is magnified. How should
@@ -757,6 +881,10 @@ to the Future          Opportunity
 
                                                             1 9 The AIdea of India
 
+
+
+![image 31](31)
+
                     Chapter                 2
 
                     Rethinking
@@ -764,6 +892,14 @@ to the Future          Opportunity
                     the          Enterprise
 
                     Agenda
+
+
+
+![image 32](32)
+
+
+
+![image 33](33)
 
                     Rethinking          the    Enterprise         Agenda
 
@@ -828,6 +964,14 @@ to the Future          Opportunity
 
                     2 2 The AIdea of India
 
+
+
+![image 34](34)
+
+
+
+![image 35](35)
+
                    EY CEO Outlook Pulse Survey
 
                    In October 2023, EY conducted a survey of 1,200 CEOs from large companies around the world. This CEO Outlook Pulse
@@ -885,6 +1029,14 @@ to the Future          Opportunity
 
                                                             2 3 The AIdea of India
 
+
+
+![image 36](36)
+
+
+
+![image 37](37)
+
                     The agenda for enterprises
 
                         Reimagining    Rebuilding the  Equipping the AI Shielding with
@@ -935,6 +1087,14 @@ to the Future          Opportunity
                               goals    KPIs     allocate roadmap
 
                     2 4 The AIdea of India
+
+
+
+![image 38](38)
+
+
+
+![image 39](39)
 
                   using nimble federated Gen AI Pods. The other environment prioritize data security and adhere
                   approach, Top Down, entails utilizing a Gen AI Center to robust AI risk governance protocols, unlike
@@ -990,6 +1150,10 @@ to the Future          Opportunity
                                     Survey data                          Survey data
 
                                                             2 5 The AIdea of India
+
+
+
+![image 40](40)
 
                                               02
                      Impact area                         Rebuilding the Tech Stack
@@ -1057,6 +1221,10 @@ to the Future          Opportunity
 
                     2 6 The AIdea of India
 
+
+
+![image 41](41)
+
                    Based on business priorities, enterprises need to design the right architecture across
                    different technology components
 
@@ -1102,6 +1270,26 @@ to the Future          Opportunity
 
                                                             2 7 The AIdea of India
 
+
+
+![image 42](42)
+
+
+
+![image 43](43)
+
+
+
+![image 44](44)
+
+
+
+![image 45](45)
+
+
+
+![image 46](46)
+
                       These require adoption of specialized tools (for data. The modern data platform needs added
                       example, LangChain and LlamaIndex, Vector capabilities around data governance, data
                       Databases like Pinecone, and model farms like security and some new functionalities for Gen AI
@@ -1140,6 +1328,10 @@ to the Future          Opportunity
                       right tools for handling large volumes of
                                                 high. A ‘token’ is the basic unit of text that a
                       unstructured data along with structured
+
+
+
+![image 47](47)
 
                     2 8 The AIdea of India
 
@@ -1219,6 +1411,10 @@ to the Future          Opportunity
 
                                                             2 9 The AIdea of India
 
+
+
+![image 48](48)
+
                       Phase 2: Learn                       The implementation of the strategy involves
                                                 constructing the technology platform, cultivating
                       Building upon the insights gained from Sprint 1
@@ -1246,6 +1442,10 @@ to the Future          Opportunity
                     LLM costs: Striking a balance between accuracy and cost optimization
 
                     3 0 The AIdea of India
+
+
+![image 49](49)
+
                                                                                      Key questions to help enterprises
                                                            Takeaways for enterprises
                                                                                      formulate a comprehensive
@@ -1317,6 +1517,10 @@ to the Future          Opportunity
 
                                                                                                    3 1 The AIdea of India
 
+
+
+![image 50](50)
+
                                                            Successful Gen AI implementation necessitates a enterprises may need to recruit individuals with NLP
                                                            diverse skill set embedded in either a Gen AI CoE or and traditional AI/ML backgrounds, providing them
                                                            in Gen AI Pods. Building, deploying and governing with targeted training to rapidly develop Gen AI-
@@ -1327,6 +1531,10 @@ to the Future          Opportunity
                                                            deployment. To address the scarcity of such experts,
 
                                                            3 2 The AIdea of India
+
+
+
+![image 51](51)
 
                                                                                       guardrails are essential to prevent the entry
                                                                                       of proprietary data into non-enterprise Gen AI
@@ -1399,6 +1607,10 @@ to the Future          Opportunity
 
                                                                                                    3 3 The AIdea of India
 
+
+
+![image 52](52)
+
                                                             Comparing classical ML and Gen AI products
 
 
@@ -1438,6 +1650,10 @@ Access to<br>data | Access to pre-defined set<br>of variables | |Access to unstr
 
                                                            3 4 The AIdea of India
 
+
+
+![image 53](53)
+
                                                           Planning ahead
 
                                                           Developing a strategic blueprint for Gen AI involves This strategic guide aims not only to distil the
@@ -1453,9 +1669,25 @@ Access to<br>data | Access to pre-defined set<br>of variables | |Access to unstr
 
                                                                                                    3 5 The AIdea of India
 
+
+
+![image 54](54)
+
+
+
+![image 55](55)
+
                                                            Chapter                 3
 
 # The                 Economic Opportunity of         Gen                   AI            in India
+
+
+
+![image 56](56)
+
+
+
+![image 57](57)
 
                                                            The    Economic           Opportunity
 
@@ -1505,6 +1737,14 @@ Access to<br>data | Access to pre-defined set<br>of variables | |Access to unstr
 
                                                            3 8 The AIdea of India
 
+
+
+![image 58](58)
+
+
+
+![image 59](59)
+
                                                           Sector-wise impact of Gen AI on GVA (2029-30)
 
                                                            Impact on sectoral GVA (X-axis) and additional GVA due to Gen AI (Y-axis) depicted here reflects the mid-point of the
@@ -1541,6 +1781,14 @@ Access to<br>data | Access to pre-defined set<br>of variables | |Access to unstr
 
                                                                                                    3 9 The AIdea of India
 
+
+
+![image 60](60)
+
+
+
+![image 61](61)
+
                                                                                       Gen AI’s boost to sectors
 
 
@@ -1560,6 +1808,10 @@ Pharma | 7%-8% | 4-5
                                                                                       *including IT, legal, consulting, outsourcing, rental, etc
 
                                                            4 0 The AIdea of India
+
+
+
+![image 62](62)
 
                            Gen AI’s boost to sectors
 
@@ -1628,12 +1880,24 @@ Pharma | 7%-8% | 4-5
 
                                                                                                    4 1 The AIdea of India
 
+
+
+![image 63](63)
+
                                                            Chapter                 4
 
 # A        Gen                   AI Policy                        Agenda for             India
 
+
+
+![image 64](64)
+
  A Gen AI Policy Agenda for India
                                                                                                 Generative AI survey report | 43
+
+
+
+![image 65](65)
 
                                                            A  Gen      AI   Policy     Agenda
 
@@ -1690,7 +1954,19 @@ Pharma | 7%-8% | 4-5
 
                                                            4 4 The AIdea of India
 
+
+
+![image 66](66)
+
+
+
+![image 67](67)
+
                                                                                                 Generative AI survey report | 45
+
+
+
+![image 68](68)
 
                                                             Key learnings from various countries and their policy approach towards Gen AI
 
@@ -1754,6 +2030,18 @@ Pharma | 7%-8% | 4-5
 
                                                            4 6 The AIdea of India
 
+
+
+![image 69](69)
+
+
+
+![image 70](70)
+
+
+
+![image 71](71)
+
                                                              European Union (EU)
 
                                                              •  Approved regulations mandate that AI systems launched for public must meet a set of
@@ -1808,6 +2096,22 @@ Pharma | 7%-8% | 4-5
                                                                                                 Generative AI survey report | 47
 
                                                                                                    4 7 The AIdea of India
+
+
+
+![image 72](72)
+
+
+
+![image 73](73)
+
+
+
+![image 74](74)
+
+
+
+![image 75](75)
 
                                                                                       National AI Mission in 2022 with a strong R&D focus.
                                                             AI and the Indian context:
@@ -1946,6 +2250,10 @@ Pharma | 7%-8% | 4-5
 
                                                                                                    4 9 The AIdea of India
 
+
+
+![image 76](76)
+
                                                            • Expedite the development of indigenous may be undertaken to help develop and localize
                                                              training datasets (especially for local Indian Gen AI tools.
                                                              languages): The government may invest in
@@ -2028,6 +2336,10 @@ Pharma | 7%-8% | 4-5
 
                                                            5 0 The AIdea of India
 
+
+
+![image 77](77)
+
                                                            the AIRAWAT supercomputer, focused on AI Regulating Gen AI in India
                                                            computing, was established at C-DAC10. Such
                                                            efforts can democratize access to AI compute
@@ -2088,6 +2400,14 @@ Pharma | 7%-8% | 4-5
 
                                                                                                    5 1 The AIdea of India
 
+
+
+![image 78](78)
+
+
+
+![image 79](79)
+
                                                              and private entities understand and manage • Roadmap with clear actions: There should be a
                                                              emergent risks while preparing for the future. clear roadmap for developing regulatory capacity
                                                              The government will have to issue standardized with specific regulators and technical capacity
@@ -2130,6 +2450,10 @@ Pharma | 7%-8% | 4-5
                                                                                        future. Robust security testing and auditing
                                                            of safe testing spaces.
                                                                                        infrastructure will be needed for the protection
+
+
+
+![image 80](80)
 
                                                            of all involved stakeholders (citizens, businesses,
                                                            governments). Government capacity can be
@@ -2178,9 +2502,21 @@ Pharma | 7%-8% | 4-5
 
                                                                                                 Generative AI survey report | 53
 
+
+
+![image 81](81)
+
 # Annexures
 
+
+
+![image 82](82)
+
                                                                                                 Generative AI survey report | 55
+
+
+
+![image 83](83)
 
                                                            Annexures
 
@@ -2207,7 +2543,175 @@ Pharma | 7%-8% | 4-5
                                                                                       massive repository. Fine tuning an LLM by adding
                                                            which extracts the most relevant content from
 
+
+
+![image 84](84)
+
+
+
+![image 85](85)
+
+
+
+![image 86](86)
+
+
+
+![image 87](87)
+
+
+
+![image 88](88)
+
+
+
+![image 89](89)
+
+
+
+![image 90](90)
+
+
+
+![image 91](91)
+
+
+
+![image 92](92)
+
+
+
+![image 93](93)
+
+
+
+![image 94](94)
+
+
+
+![image 95](95)
+
+
+
+![image 96](96)
+
+
+
+![image 97](97)
+
+
+
+![image 98](98)
+
+
+
+![image 99](99)
+
+
+
+![image 100](100)
+
+
+
+![image 101](101)
+
+
+
+![image 102](102)
+
+
+
+![image 103](103)
+
+
+
+![image 104](104)
+
+
+
+![image 105](105)
+
+
+
+![image 106](106)
+
+
+
+![image 107](107)
+
+
+
+![image 108](108)
+
+
+
+![image 109](109)
+
+
+
+![image 110](110)
+
+
+
+![image 111](111)
+
+
+
+![image 112](112)
+
+
+
+![image 113](113)
+
+
+
+![image 114](114)
+
+
+
+![image 115](115)
+
+
+
+![image 116](116)
+
+
+
+![image 117](117)
+
+
+
+![image 118](118)
+
+
+
+![image 119](119)
+
+
+
+![image 120](120)
+
+
+
+![image 121](121)
+
+
+
+![image 122](122)
+
+
+
+![image 123](123)
+
                                                            5 6 The AIdea of India
+
+
+
+![image 124](124)
+
+
+
+![image 125](125)
 
                                                           enterprise’s own data means changing the underlying of fine tuning, and also as AI engineers have more
                                                           model parameters by training it on this new domain- control on the fine tuning process, many enterprises
@@ -2230,6 +2734,10 @@ Pharma | 7%-8% | 4-5
                                                                                                 Generative AI survey report | 57
 
                                                                                                    5 7 The AIdea of India
+
+
+
+![image 126](126)
 
 # C                                   •  Infrastructure can become a big bottleneck in
                                                                                        Speed to Market given the shortage of talent
@@ -2268,6 +2776,10 @@ Pharma | 7%-8% | 4-5
                                                             Open source LLMs with fine tuning
 
                                                            5 8 The AIdea of India
+
+
+
+![image 127](127)
 
                                                            Closed source LLM with enterprise’s data embeddings
 
@@ -2314,6 +2826,18 @@ Pharma | 7%-8% | 4-5
 
                                                                                                    5 9 The AIdea of India
 
+
+
+![image 128](128)
+
+
+
+![image 129](129)
+
+
+
+![image 130](130)
+
 # D
                                                              Reference Architecture
 
@@ -2337,6 +2861,10 @@ Pharma | 7%-8% | 4-5
                                                                 Rate limiting and throttling: Managing requests and API volume for better user experience, latency and costs
 
                                                            6 0 The AIdea of India
+
+
+![image 131](131)
+
 Compute cost management for Open Source LLMs
 
     Optimize hardware resources: Match model’s needs with CPU/GPU/TPU configurations to avoid
@@ -2361,6 +2889,14 @@ Compute cost management for Open Source LLMs
                                       Generative AI survey report | 61
 
                                          6 1 The AIdea of India
+
+
+
+![image 132](132)
+
+
+
+![image 133](133)
 
 ## G
    Technical Appendix
@@ -2397,6 +2933,10 @@ Compute cost management for Open Source LLMs
 8 | |total additional GVA for the economy as a whole on account of Gen AI in the<br>terminal year 2029-30
 
  6 2 The AIdea of India
+
+
+
+![image 134](134)
 
 Using (a) cost reduction and output expansion effects (in percentage terms) captured through the survey and
 (b) ratio of output and intermediate inputs relative to value added estimated from KLEMS database, we have
@@ -2443,6 +2983,10 @@ The output expansion and cost reduction effects of the adoption of Gen AI can th
                                       Generative AI survey report | 63
 
                                          6 3 The AIdea of India
+
+
+
+![image 135](135)
 
  The base GVA in 2029-30 has been estimated using
                             The US
@@ -3006,11 +3550,19 @@ Issues, July 2019, MEITY
                • Nisha Sharma
 # stnemegdelwonkcA
 
+
+
+![image 136](136)
+
               Proud   to  be part  of
               the  face  of the  future
 
                www.ey.com/en_in/ai/platform
                                       Generative AI survey report | 71
+
+
+
+![image 137](137)
 
  Ernst & Young LLP
 
@@ -3064,3 +3616,15 @@ Issues, July 2019, MEITY
  ey.com/en_in
 
   @EY_India EY    EY India EY Careers India @ey_indiacareers
+
+
+![image 138](138)
+
+
+
+![image 139](139)
+
+
+
+![image 140](140)
+

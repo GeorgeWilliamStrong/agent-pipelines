@@ -24,7 +24,7 @@ def test_pdf_parsing():
     # Get all PDF files
     supported_extensions = [".pdf"]
     sample_files = [
-        f for f in samples_dir.iterdir() 
+        f for f in samples_dir.iterdir()
         if f.is_file() and f.suffix.lower() in supported_extensions
     ]
 

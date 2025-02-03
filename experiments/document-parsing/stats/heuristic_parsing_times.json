@@ -1,96 +1,96 @@
 {
   "[2-page-table] Understanding RAG.pdf": [
     {
-      "timestamp": "2025-01-17 00:31:36",
-      "processing_time": 3.882293939590454,
+      "timestamp": "2025-02-03 23:06:56",
+      "processing_time": 7.86748480796814,
       "file_size": 170738,
       "success": true
     }
   ],
   "[scanned] sv600_m_excellent.pdf": [
     {
-      "timestamp": "2025-01-17 00:31:39",
-      "processing_time": 2.351806879043579,
+      "timestamp": "2025-02-03 23:07:00",
+      "processing_time": 4.358726978302002,
       "file_size": 641447,
       "success": true
     }
   ],
   "[quarterly-release] aapl-20240629.pdf": [
     {
-      "timestamp": "2025-01-17 00:31:56",
-      "processing_time": 17.536902904510498,
+      "timestamp": "2025-02-03 23:07:39",
+      "processing_time": 39.30922317504883,
       "file_size": 1370585,
       "success": true
     }
   ],
   "[scanned] PublicWaterMassMailing.pdf": [
     {
-      "timestamp": "2025-01-17 00:32:00",
-      "processing_time": 4.1089630126953125,
+      "timestamp": "2025-02-03 23:07:48",
+      "processing_time": 8.892982959747314,
       "file_size": 2681358,
       "success": true
     }
   ],
   "[maths-and-diagrams] ey-gen-ai-report.pdf": [
     {
-      "timestamp": "2025-01-17 00:35:48",
-      "processing_time": 227.34743285179138,
+      "timestamp": "2025-02-03 23:14:45",
+      "processing_time": 416.48270773887634,
       "file_size": 9701634,
       "success": true
     }
   ],
   "[table] Black White Minimalist Simple Creative Freelancer Invoice (1).pdf": [
     {
-      "timestamp": "2025-01-17 00:35:50",
-      "processing_time": 2.2080419063568115,
+      "timestamp": "2025-02-03 23:14:47",
+      "processing_time": 2.392672061920166,
       "file_size": 34413,
       "success": true
     }
   ],
   "[complex-chart] generative-ai-global-research-report-113914.pdf": [
     {
-      "timestamp": "2025-01-17 00:36:12",
-      "processing_time": 22.521317958831787,
+      "timestamp": "2025-02-03 23:15:53",
+      "processing_time": 65.90503692626953,
       "file_size": 4047699,
       "success": true
     }
   ],
   "[research-paper] 1312.6114v11.pdf": [
     {
-      "timestamp": "2025-01-17 00:36:26",
-      "processing_time": 13.961798906326294,
+      "timestamp": "2025-02-03 23:16:20",
+      "processing_time": 27.422192096710205,
       "file_size": 3926758,
       "success": true
     }
   ],
   "[handwritten] Deloitte.pdf": [
     {
-      "timestamp": "2025-01-17 00:36:28",
-      "processing_time": 2.092475175857544,
+      "timestamp": "2025-02-03 23:16:24",
+      "processing_time": 3.4153382778167725,
       "file_size": 300295,
       "success": true
     }
   ],
   "[form-data] uniform_residential_loan_application.pdf": [
     {
-      "timestamp": "2025-01-17 00:36:35",
-      "processing_time": 6.237581968307495,
+      "timestamp": "2025-02-03 23:16:34",
+      "processing_time": 10.038248062133789,
       "file_size": 506407,
       "success": true
     }
   ],
   "[red-line-doc] Dummy employee contract.pdf": [
     {
-      "timestamp": "2025-01-17 00:36:38",
-      "processing_time": 3.7104480266571045,
+      "timestamp": "2025-02-03 23:16:40",
+      "processing_time": 6.024155139923096,
       "file_size": 112065,
       "success": true
     }
   ],
   "[low-quality-scan]cia-rdp74-00005r000200080057-3 (dragged).pdf": [
     {
-      "timestamp": "2025-01-17 00:36:41",
-      "processing_time": 2.7639200687408447,
+      "timestamp": "2025-02-03 23:16:43",
+      "processing_time": 3.6509130001068115,
       "file_size": 748149,
       "success": true
     }

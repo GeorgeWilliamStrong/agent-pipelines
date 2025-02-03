@@ -222,6 +222,14 @@ i. Total costs (add items a through h) details, including date, name, and addres
 
 Freddie Mac Form 65 7/05             Page 3 of 5                  Fannie Mae Form 1003 7/05
 
+
+
+![image 0](0)
+
+
+
+![image 1](1)
+
     VII. DETAILS OF TRANSACTION                VIII. DECLARATIONS
 
 j. Subordinate financing     If you answer “Yes” to any questions a through i, Borrower Co-Borrower
@@ -306,6 +314,10 @@ This application was taken by:
 
 Freddie Mac Form 65 7/05             Page 4 of 5                  Fannie Mae Form 1003 7/05
 
+
+
+![image 2](2)
+
                 CONTINUATION SHEET/RESIDENTIAL LOAN APPLICATION
 
 Use this continuation sheet if you need more Borrower: Agency Case Number:
@@ -321,3 +333,7 @@ Borrower’s Signature       Date       Co-Borrower’s Signature     Date
 X                                     X
 
 Freddie Mac Form 65 7/05             Page 5 of 5                  Fannie Mae Form 1003 7/05
+
+
+![image 3](3)
+

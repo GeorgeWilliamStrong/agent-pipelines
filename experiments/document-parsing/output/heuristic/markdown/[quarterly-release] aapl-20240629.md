@@ -15,6 +15,10 @@
 
                   Commission File Number: 001-36743
 
+
+
+![image 0](0)
+
 # Apple    Inc.
 
                (Exact name of Registrant as specified in its charter)
@@ -58,6 +62,10 @@ such files).
 Indicate by check mark whether the Registrant is a large accelerated filer, an accelerated filer, a non-accelerated filer, a smaller reporting company,
 or an emerging growth company. See the definitions of “large accelerated filer,” “accelerated filer,” “smaller reporting company,” and “emerging
 
+
+
+![image 1](1)
+
 growth company” in Rule 12b-2 of the Exchange Act.
 
 Large accelerated filer ☒                           Accelerated filer  ☐
@@ -72,6 +80,10 @@ Indicate by check mark whether the Registrant is a shell company (as defined in 
                        Yes ☐ No ☒
 
           15,204,137,000 shares of common stock were issued and outstanding as of July 19, 2024.
+
+
+
+![image 2](2)
 
                         Apple Inc.
 
@@ -95,6 +107,10 @@ Item 3.  Defaults Upon Senior Securities                             20
 Item 4.  Mine Safety Disclosures                                     20
 Item 5.  Other Information                                           20
 Item 6.  Exhibits                                                    21
+
+
+
+![image 3](3)
 
 PART I — FINANCIAL INFORMATION
 
@@ -142,6 +158,10 @@ Shares used in computing earnings per share:
 
                     Apple Inc. | Q3 2024 Form 10-Q | 1
 
+
+
+![image 4](4)
+
                         Apple Inc.
 
        CONDENSED CONSOLIDATED STATEMENTS OF COMPREHENSIVE INCOME (Unaudited)
@@ -176,6 +196,10 @@ Total comprehensive income          $   21,992 $ 19,826 $  82,036 $ 73,347
            See accompanying Notes to Condensed Consolidated Financial Statements.
 
                     Apple Inc. | Q3 2024 Form 10-Q | 2
+
+
+
+![image 5](5)
 
                         Apple Inc.
 
@@ -230,6 +254,10 @@ Shareholders’ equity:
 
                     Apple Inc. | Q3 2024 Form 10-Q | 3
 
+
+
+![image 6](6)
+
                         Apple Inc.
 
        CONDENSED CONSOLIDATED STATEMENTS OF SHAREHOLDERS’ EQUITY (Unaudited)
@@ -269,6 +297,10 @@ Dividends and dividend equivalents declared per share or RSU $ 0.25 $ 0.24 $ 0.7
            See accompanying Notes to Condensed Consolidated Financial Statements.
 
                     Apple Inc. | Q3 2024 Form 10-Q | 4
+
+
+
+![image 7](7)
 
                         Apple Inc.
 
@@ -323,6 +355,10 @@ Supplemental cash flow disclosure:
 
                     Apple Inc. | Q3 2024 Form 10-Q | 5
 
+
+
+![image 8](8)
+
                         Apple Inc.
 
            Notes to Condensed Consolidated Financial Statements (Unaudited)
@@ -375,6 +411,10 @@ respectively. As of June 29, 2024, the Company expects 64% of total deferred rev
 one-to-two years, 9% within two-to-three years and 2% in greater than three years.
 
                     Apple Inc. | Q3 2024 Form 10-Q | 6
+
+
+
+![image 9](9)
 
 Note 3 – Earnings Per Share
 
@@ -429,6 +469,10 @@ Mortgage- and asset-backed
    Total (2)       $ 160,230 $ 220 $ (7,409) $ 153,041 $ 25,565 $ 36,236 $ 91,240
 
                     Apple Inc. | Q3 2024 Form 10-Q | 7
+
+
+
+![image 10](10)
 
                              September 30, 2023
                                     Cash and Current Non-Current
@@ -492,6 +536,10 @@ remeasurement of certain assets and liabilities denominated in non-functional cu
 
                     Apple Inc. | Q3 2024 Form 10-Q | 8
 
+
+
+![image 11](11)
+
 Interest Rate Risk
 
 To protect the Company’s term debt or marketable securities from fluctuations in interest rates, the Company may use interest rate
@@ -551,6 +599,10 @@ Accumulated depreciation                                 (72,627)   (70,884)
 
                     Apple Inc. | Q3 2024 Form 10-Q | 9
 
+
+
+![image 12](12)
+
 Note 6 – Income Taxes
 
 European Commission State Aid Decision
@@ -605,6 +657,10 @@ Rule 10b5-1 under the Securities Exchange Act of 1934, as amended (the “Exchan
 
                    Apple Inc. | Q3 2024 Form 10-Q | 10
 
+
+
+![image 13](13)
+
 Note 9 – Share-Based Compensation
 
 Restricted Stock Units
@@ -648,6 +704,10 @@ concerning loss contingencies for asserted legal and other claims.
 
                    Apple Inc. | Q3 2024 Form 10-Q | 11
 
+
+
+![image 14](14)
+
 Note 11 – Segment Information and Geographic Data
 
 The following table shows information by reportable segment for the three- and nine-month periods ended June 29, 2024 and July 1,
@@ -688,6 +748,10 @@ Other corporate expenses, net           (1,737)  (1,650)   (5,659)  (5,043)
  Total operating income            $   25,352 $ 22,998 $  93,625 $ 87,332
 
                    Apple Inc. | Q3 2024 Form 10-Q | 12
+
+
+
+![image 15](15)
 
 Item 2. Management’s Discussion and Analysis of Financial Condition and Results of Operations
 
@@ -751,6 +815,10 @@ could in the future materially impact, the Company’s results of operations and
 
                    Apple Inc. | Q3 2024 Form 10-Q | 13
 
+
+
+![image 16](16)
+
 Segment Operating Performance
 
 The following table shows net sales by reportable segment for the three- and nine-month periods ended June 29, 2024 and July 1,
@@ -805,6 +873,10 @@ Pacific net sales during the third quarter and first nine months of 2024.
 
                    Apple Inc. | Q3 2024 Form 10-Q | 14
 
+
+
+![image 17](17)
+
 Products and Services Performance
 
 The following table shows net sales by category for the three- and nine-month periods ended June 29, 2024 and July 1, 2023
@@ -848,6 +920,10 @@ Services net sales increased during the third quarter and first nine months of 2
 primarily to higher net sales from advertising, the App Store® and cloud services.
 
                    Apple Inc. | Q3 2024 Form 10-Q | 15
+
+
+
+![image 18](18)
 
 Gross Margin
 
@@ -1018,6 +1094,10 @@ Act, that have materially affected, or are reasonably likely to materially affec
 
                    Apple Inc. | Q3 2024 Form 10-Q | 18
 
+
+
+![image 19](19)
+
 PART II — OTHER INFORMATION
 
 Item 1. Legal Proceedings
@@ -1079,6 +1159,10 @@ Q, there have been no material changes to the Company’s risk factors since the
 
                    Apple Inc. | Q3 2024 Form 10-Q | 19
 
+
+
+![image 20](20)
+
 Item 2. Unregistered Sales of Equity Securities and Use of Proceeds
 
 Purchases of Equity Securities by the Issuer and Affiliated Purchasers
@@ -1130,6 +1214,10 @@ early termination in accordance with the terms of the plan.
 
                    Apple Inc. | Q3 2024 Form 10-Q | 20
 
+
+
+![image 21](21)
+
 Item 6. Exhibits
 
                                         Incorporated by Reference
@@ -1151,6 +1239,10 @@ Number  Exhibit Description                           Form Exhibit Date
  ** Furnished herewith.
 
                    Apple Inc. | Q3 2024 Form 10-Q | 21
+
+
+
+![image 22](22)
 
                        SIGNATURE
 

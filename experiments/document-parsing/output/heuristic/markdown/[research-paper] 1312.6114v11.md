@@ -60,6 +60,18 @@ ceD
 
 # 11v4116.2131:viXra
 
+
+
+![image 0](0)
+
+
+
+![image 1](1)
+
+
+
+![image 2](2)
+
                         φ     z     θ
 
                             x
@@ -127,6 +139,10 @@ ceD
             vision include image denoising, inpainting and super-resolution.
 
                             2
+
+
+
+![image 3](3)
 
          For the purpose of solving the above problems, let us introduce a recognition model q (z|x): an
                                             φ
@@ -296,6 +312,10 @@ ceD
                                    i i
 
                             4
+
+
+
+![image 4](4)
 
          that a differentiable estimator can be constructed: (cid:82) q (z|x)f (z) dz (cid:39) 1 (cid:80)L f (g (x, (cid:15)(l)))
                                φ          L  l=1 φ
@@ -540,6 +560,14 @@ ceD
 
                             7
 
+
+
+![image 5](5)
+
+
+
+![image 6](6)
+
            100
 
            110
@@ -606,6 +634,14 @@ ceD
          with latent variables, useful for learning complicated noise distributions.
 
                             8
+
+
+
+![image 7](7)
+
+
+
+![image 8](8)
 
          References
 
@@ -684,6 +720,22 @@ ceD
          p (x|z) with the learned parameters θ.
          θ
 
+
+
+![image 11](11)
+
+
+
+![image 12](12)
+
+
+
+![image 13](13)
+
+
+
+![image 14](14)
+
            (a) 2-D latent space (b) 5-D latent space (c) 10-D latent space (d) 20-D latent space
 
          Figure 5: Random samples from learned generative models of MNIST for different dimensionalities
@@ -712,6 +764,14 @@ ceD
                                   j=1
 
                             10
+
+
+
+![image 9](9)
+
+
+
+![image 10](10)
 
          And:
                  (cid:90)     (cid:90)
@@ -1005,3 +1065,15 @@ ceD
          j   j
 
                             14
+
+
+![image 15](15)
+
+
+
+![image 16](16)
+
+
+
+![image 17](17)
+
