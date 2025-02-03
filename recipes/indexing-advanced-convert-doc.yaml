@@ -20,13 +20,13 @@ component:
     type: collection
     input:
       data: ${pages-to-images.output.images}
-      size: 4 # ${variable.image-batch-size}
+      size: 4
     task: TASK_SPLIT
   batch-markdown:
     type: collection
     input:
       data: ${pages-to-markdown.output.markdowns}
-      size: 4 # ${variable.image-batch-size}
+      size: 4
     task: TASK_SPLIT
     condition: ${pages-to-markdown.output.body} != ""
   vlm-refine-markdown:
