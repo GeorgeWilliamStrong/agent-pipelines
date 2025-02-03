@@ -1,3 +1,3 @@
-# Pipeline Benchmarks
+# Agent Pipelines
 
-Benchmarking the quality and latency of Instill VDP Pipelines.
+Optimisation and benchmarking of AI pipelines.
