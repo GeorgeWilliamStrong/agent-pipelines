@@ -53,8 +53,10 @@ def test_summarisation():
             # Convert using Instill AI pipeline
             summary_content = pipeline.trigger(
                 namespace_id="george_strong",
-                pipeline_id="agent-summary",
-                data=[{"context": markdown_content, "file-type": content_type}]
+                pipeline_id="indexing-generate-summary",
+                data=[{"context": markdown_content,
+                       "file-type": content_type,
+                       "llm-model": "gpt-4o-mini"}]
             )['outputs'][0]
 
             # Get summary from either long or short text field

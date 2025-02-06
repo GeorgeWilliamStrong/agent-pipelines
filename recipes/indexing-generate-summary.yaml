@@ -8,6 +8,10 @@ variable:
     title: File Type
     description: One of document/audio/video/image
     format: string
+  llm-model:
+    title: OpenAI LLM model
+    description: OpenAI model e.g., gpt-4o-mini
+    format: string
 component:
   chunk-text:
     type: text
@@ -29,7 +33,7 @@ component:
         type: openai
         task: TASK_TEXT_GENERATION
         input:
-          model: gpt-4o-mini
+          model: ${variable.llm-model} #gpt-4o-mini
           n: 1
           prompt: |-
             You are an expert at analyzing and summarizing file content. Use the provided text to create a concise and insightful summary that highlights the most important aspects of the file.
@@ -63,7 +67,7 @@ component:
     type: openai
     task: TASK_TEXT_GENERATION
     input:
-      model: gpt-4o-mini
+      model: ${variable.llm-model} # gpt-4o-mini
       n: 1
       prompt: |-
         You are tasked with aggregating multiple summaries into a single, coherent overview that represents the file's content.

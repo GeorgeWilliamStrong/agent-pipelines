@@ -49,7 +49,8 @@ def test_pdf_parsing():
             response = pipeline.trigger(
                 namespace_id="george_strong",
                 pipeline_id="indexing-advanced-convert-doc",
-                data=[{"document_input": pdf_base64}]
+                data=[{"document_input": pdf_base64,
+                       "vlm_model": "gpt-4o-mini"}]
             )
 
             # Validate response structure and handle potential missing keys
