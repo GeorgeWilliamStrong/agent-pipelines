@@ -1,0 +1,120 @@
+version: v1beta
+variable:
+  extraction-schema:
+    title: Extraction Schema
+    description: Schema for the extraction process.
+    format: string
+  ## Needs to be added once supported in Artifact BE
+  #file-name:
+  #  title: File Name
+  #  description: File name for retrieval metadata filter 
+  #  format: string
+  catalog-name:
+    title: Catalog Name
+    description: Name of the catalog/KB representing the file (assuming 1 file per KB)
+    format: string
+  namespace:
+    title: Namespace
+    description: Namespace where catalog/KB exists
+    format: string
+component:
+  get-file-metadata:
+    type: instill-artifact
+    task: TASK_GET_FILES_METADATA
+    input:
+      namespace: ${variable.namespace}
+      catalog-id: ${variable.catalog-name}
+  get-file-in-markdown:
+    type: instill-artifact
+    task: TASK_GET_FILE_IN_MARKDOWN
+    input:
+      namespace: ${variable.namespace}
+      catalog-id: ${variable.catalog-name}
+      file-uid: ${get-file-metadata.output.files[0].file-uid}
+  chunk-text:
+    type: text
+    task: TASK_CHUNK_TEXT
+    input:
+      text: ${get-file-in-markdown.output.content}
+      strategy:
+        setting:
+          chunk-size: 70000
+          chunk-overlap: 500
+          model-name: gpt-4
+          chunk-method: Markdown
+          code-blocks: true
+  map-chunks:
+    type: iterator
+    input: ${chunk-text.output.text-chunks}
+    component:
+      structured-extraction:
+        type: openai
+        task: TASK_TEXT_GENERATION
+        input:
+          model: gpt-4o-mini
+          n: 1
+          prompt: |-
+            Extract all relevant information based on the provided context according to the specified schema.
+            Focus on maximizing recall by capturing all potentially relevant details without omitting any information.
+
+            **Context**:
+            ```
+            ${map-chunks.element}
+            ```
+          response-format:
+            json-schema:
+              ${schema-generation.output.texts[0]}
+            type: json_schema
+          system-message: |-
+            You are a meticulous and highly capable assistant specialized in extracting information with a focus on high recall.
+            Your task is to identify and extract all potentially relevant details from the given context while adhering to the provided JSON schema.
+          temperature: 0
+          top-p: 0.95
+    output-elements:
+      result: ${structured-extraction.output.texts[0]}
+  reduce:
+    type: openai
+    task: TASK_TEXT_GENERATION
+    input:
+      model: gpt-4o-mini
+      n: 1
+      prompt: |-
+        Aggregate all extracted information from each chunk into a single JSON object.
+        
+        **Extracted Information**:
+        ```
+        ${map-chunks.output.result}
+        ```
+        **Output Requirements**:
+        1. Do not add any content that is not provided in the extracted information.
+        2. Do not omit any content that is provided in the extracted information.
+        3. If the same information is duplicated, simply extract and output the information once and discard the duplication.
+      response-format:
+        json-schema:
+          ${schema-generation.output.texts[0]}
+        type: json_schema
+      system-message: You are a helpful assistant.
+      temperature: 0
+      top-p: 0.95
+    condition: ${chunk-text.output.chunk-num} > 1
+  single-to-json:
+    type: json
+    task: TASK_UNMARSHAL
+    input:
+      string: ${map-chunks.output.result[0]}
+    condition: ${chunk-text.output.chunk-num} == 1
+  reduced-to-json:
+    type: json
+    task: TASK_UNMARSHAL
+    input:
+      string: ${reduce.output.texts[0]}
+    condition: ${chunk-text.output.chunk-num} > 1
+output:
+  single:
+    title: Single Chunk Output
+    value: ${single-to-json.output.json}
+    instill-ui-order: 1
+  multiple:
+    title: Multiple Chunk Output
+    value: ${reduced-to-json.output.json}
+    instill-ui-order: 2

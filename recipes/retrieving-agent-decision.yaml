@@ -12,7 +12,7 @@ variable:
     title: User Query
     description: User's follow-up query
     format: string
-  ## I find state-context is a bit redundant with instruction
+  ## I find state-context to be a bit redundant when instruction is provided
   #state-context:
   #  title: State Context
   #  description: State passed from executing agent
@@ -283,76 +283,67 @@ component:
       temperature: 0
       top-p: 0.95
     condition: ${update-decision.output.results[0].decision} == "deepAnalysis"
-  schema-to-json:
-    type: json
-    task: TASK_UNMARSHAL
-    input:
-      string: ${schema-generation.output.texts[0]}
-    condition: ${update-decision.output.results[0].decision} == "deepAnalysis"
-  generate-retrieval-queries:
+query-reviser:
     type: openai
     task: TASK_TEXT_GENERATION
     input:
       model: gpt-4o-mini
       n: 1
       prompt: |-
-        Generate 3 different queries to use for semantic search and retrieval of relevant information to address the instruction.
-        Use the instruction alongside the file summary, user follow-up query and user past conversation history to generate the queries.
-        The 3 generated queries should be sufficiently different to one another so that they each retrieve unique non-redundant chunks.
-        The queries must be relevant to the instruction, user follow-up query and user past conversation history.
+        \# Inputs:
+        \## **Conversation History** (if any):
 
-        **Instruction:**
-        ```
-        ${variable.instruction}
-        ```
+        *Please review the conversation history below. If this section is empty, it means below follow-up question is the user's first question (e.g., The user is just greeting a chatbot, so no need for any major changes).*
 
-        **File Summary:**
-        ```
-        ${variable.file-summary}
-        ```
-
-        **User Follow-up Query:**
-        ```
-        ${variable.user-query}
-        ```
-
-        **User Past Conversation History:**
-        ```
         ${variable.chat-history}
-        ```
+
+        \## User's Follow-up Question:
+
+        ${variable.user-query}
+
+
+        \# Guidelines:
+
+        1. **Review and Understand**: Carefully read the **Conversation History** and the **User's Follow-up Question** to fully comprehend the context and determine the specific information the user seeks.
+
+        2. **Correct Errors**:
+        - Fix any typos or grammatical errors in both the conversation history and the user's question.
+        - Resolve any incorrect or ambiguous pronouns to ensure clarity.
+
+        3. **Rephrase into Standalone Query**:
+        - Rewrite the user's follow-up question into a clear, self-contained query that does not rely on the conversation history.
+        - Ensure the rephrased query maintains the original meaning and emphasis of the user's question or intent.
+        - Incorporate essential context from the conversation history if it is crucial to understanding the user's intent.
+
+        4. **Ensure Precision**:
+        - Make the rephrased query precise and directly related to the user's information need.
+        - Optimize the query to effectively retrieve relevant documents or chunks from the Vector Database/RAG system.
+
+        5. **Output Format**:
+        - Present the rephrased standalone query plainly and clearly.
+        - Do not include any quotation marks, annotations, or additional commentary in your output.
+        - **Example Output**:
+            [Please just directly output your rephrased standalone query]
+
+        \## Important Notes:
+
+        - **Maintain Original Meaning**: Do not change the original intent or focus of the user's question. Your revisions should enhance clarity and effectiveness without altering the meaning.
+
+        - **Do Not Add Information**: Avoid introducing new information or assumptions that were not present in the user's original question or the conversation history.
+
+        - **Language Consistency**: Ensure that the language and terminology used are consistent and appropriate for the context of the query.
+
+        \### **Final Reminder**:
+
+        Your goal is to produce an accurate and effective standalone query that preserves the user's original intent and is optimized for retrieving relevant results from the Vector Database/RAG system. By enhancing clarity and precision, you will improve the system's ability to provide accurate and helpful information to the user.
       response-format:
-        json-schema: |
-          {
-              "name": "searchQueries",
-              "description": "Queries to use for vector semantic search and retrieval.",
-              "strict": true,
-              "schema": {
-                  "type": "object",
-                  "properties": {
-                      "queries": {
-                          "type": "array",
-                          "items": {
-                              "type": "string"
-                          },
-                          "description": "Three generated queries to use for semantic search and retrieval."
-                      }
-                  },
-                  "required": [
-                      "queries"
-                  ],
-                  "additionalProperties": false
-              }
-          }
-        type: json_schema
-      system-message: You are a smart and helpful prompt engineer and expert at generating relevant queries for vector database search.
+        type: text
+      system-message: |-
+        \# Your Task:
+
+        As an expert in language processing and query formulation, your task is to refine and rephrase the user's follow-up question into a standalone, self-contained query. This rephrased query will be used to search within a Vector Database or Retrieval-Augmented Generation (RAG) system to find relevant documents or chunks.
       temperature: 0
       top-p: 0.95
-    condition: ${update-decision.output.results[0].decision} == "rag"
-  queries-to-json:
-    type: json
-    task: TASK_UNMARSHAL
-    input:
-      string: ${generate-retrieval-queries.output.texts[0]}
     condition: ${update-decision.output.results[0].decision} == "rag"
 output:
   decision:
@@ -362,8 +353,8 @@ output:
   extraction-schema:
     title: Extraction Schema
     description: The schema for high-recall data extraction. Only returned if deep analysis method is selected.
-    value: ${schema-to-json.output.json}
-  rag-queries:
-    title: RAG Queries
-    description: The three generated queries to perform semantic vector search. Only returned if RAG retrieval method is selected.
-    value: ${queries-to-json.output.json.queries}
+    value: ${schema-generation.output.texts[0]}
+  rag-query:
+    title: RAG Query
+    description: The generated query to perform semantic vector search. Only returned if RAG retrieval method is selected.
+    value: ${query-reviser.output.texts[0]}

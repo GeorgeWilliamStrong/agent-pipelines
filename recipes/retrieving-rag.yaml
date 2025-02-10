@@ -1,0 +1,84 @@
+version: v1beta
+variable:
+  rag-query:
+    title: RAG Query
+    description: RAG query to perform semantic vector search.
+    format: string
+  ## Needs to be added once supported in Artifact BE
+  #file-name:
+  #  title: File Name
+  #  description: File name for retrieval metadata filter 
+  #  format: string
+  catalog-name:
+    title: Catalog Name
+    description: Name of the catalog/KB representing the file (assuming 1 file per KB)
+    format: string
+  namespace:
+    title: Namespace
+    description: Namespace where catalog/KB exists
+    format: string
+component:
+  retrieve:
+    type: instill-artifact
+    task: TASK_RETRIEVE
+    input:
+      namespace: ${variable.namespace}
+      catalog-id: ${variable.catalog-name}
+      text-prompt: ${variable.rag-query}
+      top-k: 30
+  add-source-file-name:
+    type: json
+    task: TASK_JQ
+    input:
+      json-value: ${retrieve.output.chunks}
+      jq-filter: |
+        .[] |= (.["text-content"] += "\nSource: " + .["source-file-name"] + ".")
+  add-chunk-uid:
+    type: json
+    task: TASK_JQ
+    input:
+      json-value: ${add-source-file-name.output.results[0]}
+      jq-filter: |
+        .[] |= (.["text-content"] += "\nChunk UID: " + .["chunk-uid"] + ".")
+  extract-text:
+    type: json
+    task: TASK_JQ
+    input:
+      json-value: ${add-chunk-uid.output.results[0]}
+      jq-filter: .[] | ."text-content"
+  cohere-rerank:
+    type: cohere
+    task: TASK_TEXT_RERANKING
+    input:
+      model-name: rerank-english-v3.0
+      query: ${variable.rag-query}
+      documents: ${extract-text.output.results}
+  json-filter:
+    type: json
+    task: TASK_JQ
+    input:
+      json-value: ${cohere-rerank.output}
+      jq-filter: |
+        [ range(0; (.ranking | length)) as $i
+          | {ranking: .ranking[$i], relevance: .relevance[$i]}
+          | select(.relevance > 0.1) # 0.1 relevance threshold
+          | .ranking
+        ][:15] # get top 15 only
+  json-filter2:
+    type: json
+    task: TASK_JQ
+    input:
+      json-value: ${cohere-rerank.output}
+      jq-filter: |
+        [ range(0; (.ranking | length)) as $i
+          | {ranking: .ranking[$i], relevance: .relevance[$i]}
+          | select(.relevance > 0.1) # 0.1 relevance threshold
+          | .relevance
+        ][:15] # get top 15 only
+output:
+  output_chunks:
+    title: Reranked Chunks
+    value: ${json-filter.output.results[0]}
+  output_scores:
+    title: Reranked Scores
+    value: ${json-filter2.output.results[0]}

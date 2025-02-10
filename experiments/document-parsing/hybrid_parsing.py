@@ -12,7 +12,7 @@ def test_pdf_parsing():
 
     # Get all files from samples directory
     samples_dir = Path("samples")
-    output_dir = Path("output/hybrid/markdown")
+    output_dir = Path("output/heuristic/markdown")
     output_dir.mkdir(parents=True, exist_ok=True)
 
     # Create timing stats directory
