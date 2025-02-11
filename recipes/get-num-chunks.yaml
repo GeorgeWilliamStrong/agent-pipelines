@@ -1,0 +1,40 @@
+version: v1beta
+variable:
+  ## Needs to be added once supported in Artifact BE
+  #file-name:
+  #  title: File Name
+  #  description: File name for retrieval metadata filter 
+  #  format: string
+  catalog-name:
+    title: Catalog Name
+    description: Name of the catalog/KB representing the file (assuming 1 file per KB)
+    format: string
+  namespace:
+    title: Namespace
+    description: Namespace where catalog/KB exists
+    format: string
+component:
+  get-file-metadata:
+    type: instill-artifact
+    task: TASK_GET_FILES_METADATA
+    input:
+      namespace: ${variable.namespace}
+      catalog-id: ${variable.catalog-name}
+  get-chunks-metadata:
+    type: instill-artifact
+    task: TASK_GET_CHUNKS_METADATA
+    input:
+      namespace: ${variable.namespace}
+      catalog-id: ${variable.catalog-name}
+      file-uid: ${get-file-metadata.output.files[0].file-uid}
+  num-chunks:
+    type: json
+    task: TASK_JQ
+    input:
+      json-value: ${get-chunks-metadata.output.chunks}
+      jq-filter: length
+output:
+  num-chunks:
+    title: Number of Chunks
+    description: Number of chunks for the file.
+    value: ${num-chunks.output.results[0]}

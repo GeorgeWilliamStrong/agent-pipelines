@@ -1,9 +1,5 @@
 version: v1beta
 variable:
-  rag-query:
-    title: RAG Query
-    description: RAG query to perform semantic vector search.
-    format: string
   ## Needs to be added once supported in Artifact BE
   #file-name:
   #  title: File Name
@@ -17,14 +13,100 @@ variable:
     title: Namespace
     description: Namespace where catalog/KB exists
     format: string
+  instruction:
+    title: Instruction
+    description: Specific instruction from executing agent
+    format: string
+  chat-history:
+    title: Chat History
+    description: User's chat history
+    format: string
+  user-query:
+    title: User Query
+    description: User's follow-up query
+    format: string
+  relevance-threshold:
+    title: Relevance Threshold
+    description: Relevance threshold for filtering RAG chunks
+    format: number
+  ## I find state-context is a bit redundant with instruction here
+  #state-context:
+  #  title: State Context
+  #  description: State passed from executing agent
+  #  format: string
 component:
+  query-reviser:
+    type: openai
+    task: TASK_TEXT_GENERATION
+    input:
+      model: gpt-4o-mini
+      n: 1
+      prompt: |-
+        \# Inputs:
+        \## **Conversation History** (if any):
+
+        *Please review the conversation history below. If this section is empty, it means below follow-up question is the user's first question (e.g., The user is just greeting a chatbot, so no need for any major changes).*
+
+        ${variable.chat-history}
+
+        \## User's Follow-up Question:
+
+        ${variable.user-query}
+
+        \## Instruction
+
+        ${variable.instruction}
+
+
+        \# Guidelines:
+
+        1. **Review and Understand**: Carefully read the **Conversation History**, **Instruction**, and **User's Follow-up Question** to fully comprehend the context and determine the specific information the user seeks.
+
+        2. **Correct Errors**:
+        - Fix any typos or grammatical errors in both the conversation history, and the user's question.
+        - Resolve any incorrect or ambiguous pronouns to ensure clarity.
+
+        3. **Rephrase into Standalone Query**:
+        - Rewrite the user's follow-up question into a clear, self-contained query that does not rely on the conversation history and is aligned with the instruction.
+        - Ensure the rephrased query maintains the original meaning and emphasis of the user's question or intent.
+        - Incorporate essential context from the conversation history if it is crucial to understanding the user's intent.
+
+        4. **Ensure Precision**:
+        - Make the rephrased query precise and directly related to the user's information need.
+        - Optimize the query to effectively retrieve relevant documents or chunks from the Vector Database/RAG system.
+
+        5. **Output Format**:
+        - Present the rephrased standalone query plainly and clearly.
+        - Do not include any quotation marks, annotations, or additional commentary in your output.
+        - **Example Output**:
+            [Please just directly output your rephrased standalone query]
+
+        \## Important Notes:
+
+        - **Maintain Original Meaning**: Do not change the original intent or focus of the user's question. Your revisions should enhance clarity and effectiveness without altering the meaning.
+
+        - **Do Not Add Information**: Avoid introducing new information or assumptions that were not present in the user's original question or the conversation history.
+
+        - **Language Consistency**: Ensure that the language and terminology used are consistent and appropriate for the context of the query.
+
+        \### **Final Reminder**:
+
+        Your goal is to produce an accurate and effective standalone query that preserves the user's original intent and is optimized for retrieving relevant results from the Vector Database/RAG system. By enhancing clarity and precision, you will improve the system's ability to provide accurate and helpful information to the user.
+      response-format:
+        type: text
+      system-message: |-
+        \# Your Task:
+
+        As an expert in language processing and query formulation, your task is to refine and rephrase the user's follow-up question into a standalone, self-contained query. This rephrased query will be used to search within a Vector Database or Retrieval-Augmented Generation (RAG) system to find relevant documents or chunks.
+      temperature: 0
+      top-p: 0.95
   retrieve:
     type: instill-artifact
     task: TASK_RETRIEVE
     input:
       namespace: ${variable.namespace}
       catalog-id: ${variable.catalog-name}
-      text-prompt: ${variable.rag-query}
+      text-prompt: ${query-reviser.output.texts[0]}
       top-k: 30
   add-source-file-name:
     type: json
@@ -50,8 +132,8 @@ component:
     type: cohere
     task: TASK_TEXT_RERANKING
     input:
-      model-name: rerank-english-v3.0
-      query: ${variable.rag-query}
+      model-name: rerank-english-v3.0 # rerank-multilingual-v3.0 is not supported with Instill Credit
+      query: ${query-reviser.output.texts[0]}
       documents: ${extract-text.output.results}
   json-filter:
     type: json
@@ -61,7 +143,7 @@ component:
       jq-filter: |
         [ range(0; (.ranking | length)) as $i
           | {ranking: .ranking[$i], relevance: .relevance[$i]}
-          | select(.relevance > 0.1) # 0.1 relevance threshold
+          | select(.relevance > ${variable.relevance-threshold})
           | .ranking
         ][:15] # get top 15 only
   json-filter2:
@@ -72,13 +154,30 @@ component:
       jq-filter: |
         [ range(0; (.ranking | length)) as $i
           | {ranking: .ranking[$i], relevance: .relevance[$i]}
-          | select(.relevance > 0.1) # 0.1 relevance threshold
+          | select(.relevance > ${variable.relevance-threshold})
           | .relevance
         ][:15] # get top 15 only
+  json-filter3:
+    type: json
+    task: TASK_JQ
+    input:
+      json-value: ${json-filter.output.results[0]}
+      jq-filter: |
+        .[] | capture("(?s).*Source: (?<source>.+?)\\.\\nChunk UID: (?<chunk_uid>[a-f0-9-]+)\\.") | "Source: \(.source). Chunk UID: \(.chunk_uid)."
+  json-filter4:
+    type: json
+    task: TASK_JQ
+    input:
+      json-value: ${json-filter.output.results[0]}
+      jq-filter: |
+        to_entries | .[] | "[\(.key + 1)] \(.value)"
 output:
-  output_chunks:
+  chunks:
     title: Reranked Chunks
-    value: ${json-filter.output.results[0]}
-  output_scores:
+    value: ${json-filter4.output.results}
+  scores:
     title: Reranked Scores
     value: ${json-filter2.output.results[0]}
+  citations:
+    title: Reranked Citations
+    value: ${json-filter3.output.results}
