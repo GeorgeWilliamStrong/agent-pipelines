@@ -25,17 +25,17 @@ Retrieval-Augmented Generation (RAG) is a technique that enhances Large Language
 | Component          | Traditional LLM                | Basic RAG                     | Advanced RAG                  | Enterprise RAG                          |
 |--------------------|--------------------------------|-------------------------------|-------------------------------|-----------------------------------------|
 | Knowledge Base      | Static training data           | Simple document store         | Vector database               | Distributed vector store with replication |
-| Update Frequency    | Requires retraining            | Real-time updates possible    | Continuous updates            | Real-time with versioning               |
-| Retrieval Method    | N/A                            | Keyword matching              | Dense vector embeddings       | Hybrid (dense + sparse) retrieval       |
-| Context Window      | Fixed                          | Limited by chunks            | Dynamic chunking              | Hierarchical chunking                   |
-| Query Processing    | Direct input                   | Basic preprocessing           | Query expansion               | Semantic understanding                  |
+| Update Frequency     | Requires retraining            | Real-time updates possible    | Continuous updates            | Real-time with versioning               |
+| Retrieval Method     | N/A                            | Keyword matching              | Dense vector embeddings       | Hybrid (dense + sparse) retrieval       |
+| Context Window       | Fixed                          | Limited by chunks            | Dynamic chunking              | Hierarchical chunking                   |
+| Query Processing     | Direct input                   | Basic preprocessing           | Query expansion               | Semantic understanding                  |
 | Response Generation  | Direct generation              | Single-hop retrieval          | Multi-hop reasoning           | Chain-of-thought with multiple retrievals |
-| Accuracy            | Varies                         | Improved                      | High                          | Very high                               |
-| Latency             | Low                            | Medium                        | Medium-High                   | Optimized                               |
-| Scalability         | Limited                        | Moderate                      | Good                          | Enterprise-grade                        |
-| Cost                | Base model cost               | Additional storage            | Higher compute needs          | Infrastructure + maintenance            |
-| Use Cases           | General tasks                 | Document QA                   | Complex research              | Mission-critical applications            |
-| Maintenance         | Model updates only             | Regular indexing              | Continuous optimization       | 24/7 monitoring                         |
+| Accuracy             | Varies                         | Improved                      | High                          | Very high                               |
+| Latency              | Low                            | Medium                        | Medium-High                   | Optimized                               |
+| Scalability          | Limited                        | Moderate                      | Good                          | Enterprise-grade                        |
+| Cost                 | Base model cost               | Additional storage            | Higher compute needs          | Infrastructure + maintenance            |
+| Use Cases           | General tasks                 | Document QA                   | Complex research              | Mission-critical applications           |
+| Maintenance          | Model updates only             | Regular indexing              | Continuous optimization       | 24/7 monitoring                         |
 
 | Security            | Base model security            | Basic access control          | Role-based access             | Enterprise security                      |
 | Compliance          | Limited                        | Basic logging                 | Audit trails                  | Full compliance suite                   |

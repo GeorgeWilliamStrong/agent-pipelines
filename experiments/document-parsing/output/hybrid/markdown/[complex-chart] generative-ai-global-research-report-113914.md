@@ -1,5 +1,5 @@
 ## Generative AI Global Research Report:  
-### Strategies for a Competitive Advantage
+### Strategies for a Competitive Advantage  
 
 ---
 
@@ -37,9 +37,9 @@ Since the widespread launch of ChatGPT in November 2022, GenAI has emerged as a 
 
 Our research shows that organizations that embrace GenAI are seeing significant benefits.  
 
-89% report improved employee experience and satisfaction  
-82% say that they are making savings on operational costs  
-82% state that customer retention is higher  
+- **89%** report improved employee experience and satisfaction  
+- **82%** say that they are making savings on operational costs  
+- **82%** state that customer retention is higher  
 
 However, with increased focus on and investment in GenAI, many organizations are encountering difficulties with implementation. These issues threaten to waste resources, dissuade customers and even render organizations legally noncompliant. In organizations that have fully implemented GenAI projects, 39% are finding it a challenge to integrate GenAI technology into existing systems, while 34% are struggling with prohibitive costs. These issues are best resolved at an early stage, ideally before GenAI is deployed and significant resources are invested.  
 
@@ -109,10 +109,10 @@ Most organizations across all industries are still developing governance framewo
 
 | Framework Type                     | AI Governance Framework | GenAI Governance Framework |
 |------------------------------------|------------------------|---------------------------|
-| Well-established and comprehensive  | 64%                    | 58%                       |
-| In development                      | 57%                    | 59%                       |
-| Ad hoc or informal                 | 5%                     | 11%                       |
-| Nonexistent                        | 0%                     | 10%                       |
+| Well-established and comprehensive  | 61%                    | 55%                       |
+| In development                      | 62%                    | 58%                       |
+| Ad hoc or informal                 | 5%                     | 7%                        |
+| Nonexistent                        | 5%                     | 8%                        |
 Fewer than one in 10 organizations provide a high level of training on GenAI governance and monitoring.
 
 ### What level of training does your organization currently have regarding GenAI/AI governance and monitoring?
@@ -120,39 +120,39 @@ Fewer than one in 10 organizations provide a high level of training on GenAI gov
 #### Artificial Intelligence (AI)
 **Governance and monitoring training**
 
-| Level     | Percentage |
-|-----------|------------|
-| High      | 15%        |
-| Adequate  | 40%        |
-| Minimal   | 45%        |
-| None      | 1%         |
+| Level    | Percentage |
+|----------|------------|
+| High     | 15%        |
+| Adequate | 40%        |
+| Minimal  | 45%        |
+| None     | 1%         |
 
 #### GenAI
 **Governance and monitoring training**
 
-| Level     | Percentage |
-|-----------|------------|
-| High      | 7%         |
-| Adequate  | 32%        |
-| Minimal   | 58%        |
-| None      | 3%         |
+| Level    | Percentage |
+|----------|------------|
+| High     | 7%         |
+| Adequate | 32%        |
+| Minimal  | 58%        |
+| None     | 3%         |
 
 Please note that percentages on charts may not add to 100% due to rounding.  
 Based on % ranking as a key concern.
 
 ### What are your concerns regarding the usage of GenAI in your organization?
 
-| Concern                        | Percentage |
-|--------------------------------|------------|
-| Data privacy                   | 76%        |
-| Data security                  | 75%        |
-| Governance                     | 56%        |
-| Ethical implications           | 52%        |
-| Overreliance/dependence       | 51%        |
-| In-house talent/skills         | 51%        |
+| Concern                          | Percentage |
+|----------------------------------|------------|
+| Data privacy                     | 76%        |
+| Data security                    | 75%        |
+| Governance                       | 56%        |
+| Ethical implications             | 52%        |
+| Overreliance/dependence         | 51%        |
+| In-house talent/skills          | 51%        |
 | Explainability and accuracy of the output | 49% |
-| Culture resistant to change     | 43%        |
-| Potential for bias             | 43%        |
+| Culture resistant to change      | 43%        |
+| Potential for bias              | 43%        |
 
 Data privacy and security are key concerns across all regions.
 
@@ -160,11 +160,12 @@ Data privacy and security are key concerns across all regions.
 
 | Region                          | Data Privacy | Data Security | Governance | Ethical Implications | Overreliance/Dependence |
 |---------------------------------|--------------|---------------|------------|----------------------|--------------------------|
-| All respondents                 | 76%          | 75%           | 56%        | 52%                  | 51%                      |
-| North America                   | 81%          | 79%           | 67%        | 56%                  | 54%                      |
-| LATAM                           | 79%          | 75%           | 55%        | 50%                  | 52%                      |
-| Northern Europe                 | 88%          | 74%           | 56%        | 48%                  | 37%                      |
-| South West & Eastern Europe     | 78%          | 75%           | 54%        | 45%                  | 54%                      |
+| All respondents                 | 88%          | 81%           | 76%        | 52%                  | 51%                      |
+| North America                   | 79%          | 75%           | 56%        | 48%                  | 54%                      |
+| Northern Europe                 | 75%          | 72%           | 56%        | 50%                  | 52%                      |
+| South West & Eastern Europe     | 74%          | 69%           | 55%        | 45%                  | 37%                      |
+| LATAM                           | 67%          | 56%           | 54%        | 52%                  | 52%                      |
+| APAC                            | 56%          | 56%           | 52%        | 54%                  | 54%                      |
 
 Only one in 20 organizations has a reliable system in place to measure bias and privacy risk in large language models (LLMs).
 
@@ -199,11 +200,15 @@ Data management and analytics tools can detect outliers and sources of bias in t
 | Regular manual audits                  | 25%        |
 | Limited or ad hoc monitoring           | 23%        |
 | External audits and assessments        | 11%        |
-| We do not have a monitoring system in place | 12%    |
+| We do not have a monitoring system in place | 12%   |
 
 *Monitoring of IT systems and networks to detect security threats, performance issues, or non-compliance problems in an automated manner to identify and address potential problems and threats in real time.
 
-Across all organizations, GenAI use can create anxieties about data privacy, security, lack of governance, dependence on the technology, and its potential for amplifying bias. Many of these organizations have not fully prepared themselves to comply with regulations and do not have GenAI governance in place or ways to monitor the technology. Our research shows that businesses are rushing into GenAI before establishing adequate systems of governance, which could result in serious issues with quality and compliance later.
+Across all organizations, GenAI use can create anxieties about data privacy, security, lack of governance, dependence on the technology, and its potential for amplifying bias.
+
+Many of these organizations have not fully prepared themselves to comply with regulations and do not have GenAI governance in place or ways to monitor the technology.
+
+Our research shows that businesses are rushing into GenAI before establishing adequate systems of governance, which could result in serious issues with quality and compliance later.
 # Insight 2:
 Asia Pacific countries (mainly China) are ahead in their preparation to comply with GenAI regulations.
 
@@ -212,8 +217,8 @@ Asia Pacific countries (mainly China) are ahead in their preparation to comply w
 | Preparedness Level       | Percentage |
 |--------------------------|------------|
 | Fully prepared           | 57%        |
-| Moderately prepared      | 49%        |
-| Slightly prepared        | 46%        |
+| Moderately prepared       | 49%        |
+| Slightly prepared        | 28%        |
 | Not prepared             | 2%         |
 
 - **All respondents using/planning to use GenAI**
@@ -223,9 +228,7 @@ Asia Pacific countries (mainly China) are ahead in their preparation to comply w
 - **South West & Eastern Europe**
 - **APAC**
 
-Data management tools are essential to ensure that LLMs are fed the highest quality data and prompts—data that is both auditable and traceable.
-
-These tools can provide user privacy and security, with robust data protection measures, including data minimization, anonymization, and encryption, ensuring that sensitive information remains safeguarded. Furthermore, workflows can be automated for the shortest, most direct route to building or tuning an LLM.
+Data management tools are essential to ensure that LLMs are fed the highest quality data and prompts—data that is both auditable and traceable. These tools can provide user privacy and security, with robust data protection measures, including data minimization, anonymization, and encryption, ensuring that sensitive information remains safeguarded. Furthermore, workflows can be automated for the shortest, most direct route to building or tuning an LLM.
 
 Organizations should refer to governance and compliance policies for an essential framework within which data management tools can be applied.
 
@@ -251,7 +254,7 @@ Organizations should refer to governance and compliance policies for an essentia
 
 ---
 
-# b. Strategic deployment: Translating implementation into measurable benefits
+## b. Strategic deployment: Translating implementation into measurable benefits
 
 The ideal GenAI investment offers clear opportunities for efficiency and a better customer experience, but many organizations report gaps in strategic thinking that are affecting successful rollout:
 
@@ -267,47 +270,60 @@ Respondents in manufacturing (where 61% have a good or complete understanding), 
 
 ---
 
-# Senior decision makers are not always completely familiar with GenAI adoption in their organizations.
+## Senior decision makers are not always completely familiar with GenAI adoption in their organizations.
 
-## Who are the primary decision makers for technology adoption in your organization?
+### Who are the primary decision makers for technology adoption in your organization?
 
-| Role                                   | Percentage |
-|----------------------------------------|------------|
-| Chief Technology Officer (CTO)        | 75%        |
-| Chief Information Officer (CIO)       | 55%        |
-| Head of IT or Information Systems      | 18%        |
-| IT Director/Manager                   | 13%        |
-| Chief Digital Officer (CDO)           | 11%        |
+| Role                          | Percentage |
+|-------------------------------|------------|
+| Chief Technology Officer (CTO) | 75%        |
+| Chief Information Officer (CIO) | 55%        |
+| Head of IT or Information Systems | 18%     |
+| IT Director/Manager           | 13%        |
+| Chief Digital Officer (CDO)   | 11%        |
 
-## How familiar are you with your organization’s adoption of GenAI?
+### How familiar are you with your organization’s adoption of GenAI?
 
-| Familiarity Level                     | Percentage |
-|---------------------------------------|------------|
-| Extremely familiar                    | 36%        |
-| Not familiar                          | 39%        |
+| Familiarity Level             | Percentage |
+|-------------------------------|------------|
+| Extremely familiar             | 61%        |
+| Not familiar                   | 39%        |
 
 Does your organization have a GenAI policy that dictates how your employees can and cannot use it for the business?
 
-| Response                              | Percentage |
-|---------------------------------------|------------|
-| Yes                                   | 61%        |
-| No                                    | 39%        |
+| Response                      | Percentage |
+|-------------------------------|------------|
+| Yes                           | 61%        |
+| No                            | 39%        |
 
 Please note that percentages on charts may not add to 100% due to rounding.
-APAC decision makers are most likely to have a GenAI usage policy, while LATAM respondents are least likely to have such a policy in place. Decision makers in the public sector are less confident in their understanding of GenAI than those in other industries.
+# APAC decision makers are most likely to have a GenAI usage policy, while LATAM respondents are least likely to have such a policy in place.
 
-### Does your organization have a GenAI policy that dictates how your employees can and cannot use it for the business?
+## Does your organization have a GenAI policy that dictates how your employees can and cannot use it for the business?
 
 | Yes | No |
 |-----|----|
 | 71% | 29% |
-| All respondents | 7% | 12% | 42% | 40% |
-| Banking | 7% | 11% | 41% | 41% |
-| Insurance | 6% | 11% | 42% | 41% |
-| Public sector | 4% | 17% | 33% | 45% |
-| Life sciences | 7% | 8% | 47% | 37% |
-| Health care | 6% | 16% | 38% | 39% |
-| Other | 7% | 10% | 46% | 36% |
+| 63% | 38% |
+| 61% | 39% |
+| 60% | 40% |
+| 58% | 42% |
+| 52% | 47% |
+| Banking | 7% | 41% | 41% |
+| Insurance | 6% | 42% | 41% |
+| Public sector | 4% | 33% | 45% |
+| Life sciences | 7% | 47% | 37% |
+| Health care | 6% | 38% | 39% |
+| Other | 7% | 46% | 36% |
+
+## How would you rate your personal understanding of GenAI and its potential impacts on business processes?
+
+| All respondents | Banking | Insurance | Public sector | Life sciences | Health care | Other |
+|----------------|---------|-----------|---------------|---------------|-------------|-------|
+| 7% (Understand completely) | 7% | 6% | 4% | 7% | 6% | 7% |
+| 12% (Understand well) | 11% | 11% | 17% | 8% | 16% | 10% |
+| 42% (Moderate understanding) | 41% | 42% | 33% | 47% | 38% | 46% |
+| 40% (Little understanding) | 41% | 41% | 45% | 37% | 39% | 36% |
 
 **Please note that percentages on charts may not add to 100% due to rounding.**
 
@@ -318,20 +334,23 @@ APAC decision makers are most likely to have a GenAI usage policy, while LATAM r
 
 **Bryan Harris, Executive Vice President and CTO at SAS**
 
+“With any new technology, organizations must navigate a discovery phase, separating hype from reality, to understand the complexity of real-world implementations in the enterprise. We have reached this moment with generative AI.”
+
 ---
 
 # Insight 4:
-Identify your best GenAI use case to deliver speedy return on investment.
+**Identify your best GenAI use case to deliver speedy return on investment.**
 
 The first step in successfully deploying GenAI is to identify high-impact use cases for the technology, which helps deliver a measurable return on investment as quickly as possible.
 
 ---
 
-### c. Technological integration: Ensuring that your systems and tools do not limit GenAI’s potential
+## c. Technological integration: Ensuring that your systems and tools do not limit GenAI’s potential
 
 At best, GenAI is seamlessly embedded within an organization’s processes and systems. But many companies struggle to integrate the technology with their existing tasks and tools.
 
 Our research finds that:
+
 - Almost half (47%) of decision makers report that they do not have appropriate tools to implement GenAI.
 - Four in 10 (41%) are experiencing compatibility issues when they try to combine GenAI with their current systems.
 - Half of decision makers (52%) are encountering obstacles in using public and proprietary data sets effectively.
@@ -342,9 +361,9 @@ When it comes to monitoring GenAI, some sectors believe they are limited by thei
 
 ---
 
-### Decision makers report that they do not have appropriate tools, are experiencing compatibility issues, and encounter obstacles in using public and proprietary data sets effectively.
+# Decision makers report that they do not have appropriate tools, are experiencing compatibility issues, and encounter obstacles in using public and proprietary data sets effectively.
 
-**What obstacles do you foresee, or have you encountered, in the implementation of GenAI?**
+## What obstacles do you foresee, or have you encountered, in the implementation of GenAI?
 
 | Obstacles | Percentage |
 |-----------|------------|
@@ -353,65 +372,65 @@ When it comes to monitoring GenAI, some sectors believe they are limited by thei
 | Challenges in transitioning generative AI from conceptual phase to practical use | 36% |
 | Insufficient internal expertise | 51% |
 | Compatibility issues with current systems | 39% |
-| Difficulty proving ROI | 38% |
+| Difficulty proving ROI | 36% |
 | Prohibitive costs associated with LLMs | 34% |
 | Insufficient data to fine-tune LLMs | 28% |
 
-| Status | Percentage |
-|--------|------------|
+| Implementation Status | Percentage |
+|----------------------|------------|
 | We are using GenAI and have fully implemented it | 48% |
 | We are using GenAI but haven’t yet fully implemented it | 49% |
-| We are not yet using GenAI but intend to within the next 2 years | 17% |
-
----
+| We are not yet using GenAI but intend to within the next 2 years | 14% |
 Over a third of businesses face technological challenges when they set out to implement and use GenAI.
 
-### What would you say is your biggest challenge in implementing effective governance and monitoring for GenAI?
+What would you say is your biggest challenge in implementing effective governance and monitoring for GenAI?
 
-| Challenge                                   | All respondents using/planning to use GenAI | North America | LATAM | Northern Europe | South West & Eastern Europe | APAC |
-|---------------------------------------------|---------------------------------------------|---------------|-------|----------------|-----------------------------|------|
-| Technological limitations                    | 34%                                         | 35%           | 35%   | 34%            | 34%                         | 32%  |
-| Lack of transparency and accountability      | 26%                                         | 25%           | 23%   | 21%            | 20%                         | 20%  |
-| Lack of clear guidelines or standards       | 17%                                         | 17%           | 17%   | 16%            | 15%                         | 15%  |
-| Insufficient funding                         | 14%                                         | 14%           | 13%   | 13%            | 12%                         | 12%  |
-| Lack of expertise or skilled personnel      | 8%                                          | 9%            | 9%    | 8%             | 5%                          | 5%   |
+| Challenge                                      | All respondents using/planning to use GenAI | North America | LATAM | Northern Europe | South West & Eastern Europe | APAC |
+|-----------------------------------------------|---------------------------------------------|---------------|-------|----------------|-----------------------------|------|
+| Technological limitations                      | 34%                                         | 35%           | 35%   | 34%            | 34%                         | 32%  |
+| Lack of transparency and accountability        | 26%                                         | 25%           | 23%   | 21%            | 20%                         | 20%  |
+| Lack of clear guidelines or standards         | 17%                                         | 17%           | 17%   | 16%            | 15%                         | 15%  |
+| Insufficient funding                           | 14%                                         | 14%           | 13%   | 13%            | 12%                         | 12%  |
+| Lack of expertise or skilled personnel        | 8%                                          | 9%            | 9%    | 8%             | 5%                          | 5%   |
 
 Professional services and telco organizations feel least challenged by technological limitations.
 
-### What would you say is your biggest challenge in implementing effective governance and monitoring for GenAI?
+What would you say is your biggest challenge in implementing effective governance and monitoring for GenAI?
 
-| Challenge                                   | All respondents using/planning to use GenAI | Banking | Insurance | Life sciences | Health care | Public sector |
-|---------------------------------------------|---------------------------------------------|---------|-----------|---------------|-------------|---------------|
-| Technological limitations                    | 34%                                         | 40%     | 38%       | 30%           | 30%         | 27%           |
-| Lack of transparency and accountability      | 30%                                         | 25%     | 24%       | 17%           | 16%         | 18%           |
-| Lack of clear guidelines or standards       | 20%                                         | 20%     | 15%       | 14%           | 12%         | 13%           |
-| Insufficient funding                         | 12%                                         | 12%     | 11%       | 9%            | 9%          | 9%            |
-| Lack of expertise or skilled personnel      | 6%                                          | 8%      | 8%        | 8%            | 8%          | 7%            |
+| Challenge                                      | All respondents using/planning to use GenAI | Banking | Insurance | Life sciences | Health care | Public sector |
+|-----------------------------------------------|---------------------------------------------|---------|-----------|---------------|-------------|---------------|
+| Technological limitations                      | 34%                                         | 38%     | 40%       | 30%           | 30%         | 27%           |
+| Lack of transparency and accountability        | 25%                                         | 24%     | 17%       | 20%           | 18%         | 15%           |
+| Lack of clear guidelines or standards         | 14%                                         | 12%     | 13%       | 12%           | 12%         | 11%           |
+| Insufficient funding                           | 9%                                          | 9%      | 9%        | 9%            | 8%          | 8%            |
+| Lack of expertise or skilled personnel        | 6%                                          | 8%      | 8%        | 8%            | 7%          | 6%            |
 
 The APAC region (particularly China) is confident that it has the appropriate tools and expertise to implement and use GenAI.
 
-### What obstacles do you foresee, or have you encountered, in the implementation of GenAI?
+What obstacles do you foresee, or have you encountered, in the implementation of GenAI?
 
-| Obstacle                                    | All respondents using/planning to use GenAI | North America | LATAM | Northern Europe | South West & Eastern Europe | APAC |
-|---------------------------------------------|---------------------------------------------|---------------|-------|----------------|-----------------------------|------|
-| Utilizing both public and proprietary data sets effectively | 52%                                         | 51%           | 46%   | 54%            | 47%                         | 48%  |
-| Absence of appropriate tools                 | 47%                                         | 41%           | 37%   | 40%            | 39%                         | 36%  |
+| Obstacle                                      | All respondents using/planning to use GenAI | North America | LATAM | Northern Europe | South West & Eastern Europe | APAC |
+|-----------------------------------------------|---------------------------------------------|---------------|-------|----------------|-----------------------------|------|
+| Utilizing both public and proprietary data sets effectively | 52%                                         | 51%           | 46%   | 54%            | 47%                         | 47%  |
+| Absence of appropriate tools                  | 47%                                         | 48%           | 49%   | 50%            | 41%                         | 41%  |
 | Challenges in transitioning generative AI from a conceptual phase to practical use | 41%                                         | 37%           | 40%   | 39%            | 38%                         | 36%  |
-| Compatibility issues with current systems (e.g., SAP) | 41%                                         | 37%           | 40%   | 28%            | 32%                         | 26%  |
+| Compatibility issues with current systems (e.g., SAP) | 41%                                         | 37%           | 40%   | 46%            | 47%                         | 47%  |
+| Insufficient internal expertise                | 39%                                         | 40%           | 37%   | 31%            | 31%                         | 31%  |
+| Difficulty proving ROI                         | 37%                                         | 39%           | 38%   | 36%            | 32%                         | 32%  |
+| Prohibitive costs associated with LLMs        | 26%                                         | 17%           | 15%   | 16%            | 13%                         | 13%  |
+| Insufficient data to fine-tune LLMs          | 15%                                         | 13%           | 13%   | 13%            | 13%                         | 13%  |
+
+“LLMs alone do not solve business problems. GenAI is nothing more than a feature that can augment your existing processes, but you need tools that enable their integration, governance, and orchestration. And most importantly, you need people that can use tools to ensure the appropriate level of orchestration.”  
+Marinela Profi,  
+Strategic AI Advisor at SAS
 
 ### Insight 5:
-Make sure that your GenAI software vendors can integrate with existing workflow and decisioning platforms.
-
+Make sure that your GenAI software vendors can integrate with existing workflow and decisioning platforms.  
 GenAI is an ideal contributor to hyper-automation, which facilitates the automation of all feasible tasks within an organization. It excels in summarizing vast amounts of data to support decisioning workflows, enabling real-time interactions aligned with your preferred business processes.
 
 ### Insight 6:
-Using a decisioning workflow system to infuse GenAI into existing business processes facilitates measurable outcomes.
-
+Using a decisioning workflow system to infuse GenAI into existing business processes facilitates measurable outcomes.  
 LLMs can only execute a few tasks of a use case. Organizations still need an end-to-end process that orchestrates the AI life cycle while enhancing the transparency and governance of LLMs.
-
-“LLMs alone do not solve business problems. GenAI is nothing more than a feature that can augment your existing processes, but you need tools that enable their integration, governance, and orchestration. And most importantly, you need people that can use tools to ensure the appropriate level of orchestration.”  
-**Marinela Profi,**  
-Strategic AI Advisor at SAS
 d. Expert guidance: Resourcing challenges with scarcity of GenAI skill sets
 
 For many organizations, it really comes down to this: In-house GenAI expertise is lacking. As HR departments encounter a scarcity of suitable hires, organizations worry that they do not have access to the necessary skills to make the most of their GenAI investment.
@@ -427,13 +446,14 @@ Lack of internal expertise is a particular issue for those in health care and th
 
 What obstacles do you foresee, or have you encountered, in the implementation of GenAI?
 
-| Obstacles | Percentage |
-|-----------|------------|
-| Utilizing both public and proprietary data sets effectively | 52% |
-| Absence of appropriate tools | 54% |
-| Challenges in transitioning generative AI from a conceptual phase to practical use | 53% |
-| Compatibility issues with current systems (e.g., SAP) | 55% |
-| Insufficient internal expertise | 54% |
+| Obstacles                                                                 | Percentage |
+|---------------------------------------------------------------------------|------------|
+| Utilizing both public and proprietary data sets effectively               | 52%        |
+| Absence of appropriate tools                                               | 54%        |
+| Challenges in transitioning generative AI from a conceptual phase to practical use | 53%        |
+| Compatibility issues with current systems (e.g., SAP)                    | 55%        |
+| Insufficient internal expertise                                            | 54%        |
+| Other                                                                     | 50%        |
 
 ## 04
 GenAI adoption rates will continue to grow
@@ -444,108 +464,95 @@ As you will see in the charts below, there are regional differences in GenAI imp
 
 To what extent is your organization using GenAI? (% currently using)
 
-| Region | Percentage |
-|--------|------------|
-| APAC | 63% |
-| North America | 60% |
-| Northern Europe | 55% |
-| South West & Eastern Europe | 47% |
-| LATAM | 45% |
+| Region                | Percentage |
+|-----------------------|------------|
+| APAC                  | 63%        |
+| North America         | 60%        |
+| Northern Europe       | 55%        |
+| South West & Eastern Europe | 47%   |
+| LATAM                 | 45%        |
 
 GenAI usage is above the global average in China, the UK, the US, Australia and Germany.
 
 To what extent is your organization using GenAI? (% currently using)
 
-| Country | Percentage |
-|---------|------------|
-| Italy | 33% |
-| Benelux | 34% |
-| Ireland | 39% |
-| Nordics | 40% |
-| Mexico | 44% |
-| Canada | 45% |
-| Brazil | 46% |
-| Poland | 48% |
-| UAE/Saudi Arabia | 50% |
-| Spain | 51% |
-| France | 52% |
-| Japan | 53% |
-| Germany | 57% |
-| Australia | 63% |
-| US | 70% |
-| UK | 83% |
-| China | 83% |
-| All respondents | 54% |
+| Country               | Percentage |
+|-----------------------|------------|
+| Italy                 | 33%        |
+| Benelux               | 34%        |
+| Ireland               | 39%        |
+| Nordics               | 40%        |
+| Mexico                | 44%        |
+| Canada                | 45%        |
+| Brazil                | 46%        |
+| Poland                | 48%        |
+| UAE/Saudi Arabia      | 50%        |
+| Spain                 | 51%        |
+| France                | 52%        |
+| Japan                 | 53%        |
+| Germany               | 57%        |
+| Australia             | 63%        |
+| US                    | 70%        |
+| UK                    | 83%        |
+| China                 | 83%        |
+| All respondents       | 54%        |
 Organizations in North America are further ahead with full implementation.
 
 To what extent is your organization using GenAI?
 
-| Using and fully implemented | 20% | 10% | 8% | 7% | 7% |
-|-----------------------------|-----|-----|----|----|----|
-| North America               | APAC| LATAM| Northern Europe | South West & Eastern Europe |
+| Region                        | Using and fully implemented | Using but not fully implemented |
+|-------------------------------|-----------------------------|---------------------------------|
+| North America                 | 20%                         | 40%                             |
+| APAC                          | 10%                         | 53%                             |
+| LATAM                         | 8%                          | 37%                             |
+| Northern Europe               | 7%                          | 47%                             |
+| South West & Eastern Europe   | 7%                          | 39%                             |
 
-| Using but not fully implemented | 53% | 47% | 40% | 39% | 37% |
-|---------------------------------|-----|-----|----|----|----|
-| APAC                            | Northern Europe | North America | South West & Eastern Europe | LATAM |
-
-29 / 38
-
-Those in China are most likely to be using GenAI to some extent but full implementation is most common in the US.
+Those in China are most likely to be using GenAI to some extent, but full implementation is most common in the US.
 
 To what extent is your organization using GenAI?
 
 - We are using generative AI but haven’t yet fully implemented it (i.e., running initial tests/experiments)
 - We are using generative AI and have fully implemented it (i.e., integrated GenAI into our regular processes)
-- All respondents
 
-| Country         | Using Generative AI (but not fully implemented) | Fully Implemented |
-|-----------------|------------------------------------------------|-------------------|
-| Ireland         | 39%                                            | 0%                |
-| UAE/Saudi Arabia| 48%                                            | 2%                |
-| Italy           | 30%                                            | 3%                |
-| Nordics         | 35%                                            | 5%                |
-| Benelux         | 28%                                            | 6%                |
-| Poland          | 42%                                            | 6%                |
-| Mexico          | 36%                                            | 8%                |
-| Brazil          | 38%                                            | 8%                |
-| Spain           | 43%                                            | 8%                |
-| Australia       | 55%                                            | 8%                |
-| Canada          | 36%                                            | 9%                |
-| Japan           | 44%                                            | 9%                |
-| Germany         | 48%                                            | 9%                |
-| France          | 41%                                            | 11%               |
-| UK              | 58%                                            | 11%               |
-| China           | 64%                                            | 19%               |
-| US              | 41%                                            | 24%               |
-| All respondents  | 43%                                           | 11%               |
+| Country                      | Using Generative AI (not fully) | Using Generative AI (fully) |
+|------------------------------|----------------------------------|-----------------------------|
+| Ireland                       | 39%                              | 0%                          |
+| UAE/Saudi Arabia             | 48%                              | 2%                          |
+| Italy                         | 30%                              | 3%                          |
+| Nordics                      | 35%                              | 5%                          |
+| Benelux                      | 28%                              | 6%                          |
+| Poland                       | 42%                              | 6%                          |
+| Mexico                       | 36%                              | 8%                          |
+| Brazil                       | 38%                              | 8%                          |
+| Spain                        | 43%                              | 8%                          |
+| Australia                    | 55%                              | 9%                          |
+| Canada                       | 36%                              | 9%                          |
+| Japan                        | 44%                              | 9%                          |
+| Germany                      | 48%                              | 9%                          |
+| France                       | 41%                              | 11%                         |
+| UK                           | 58%                              | 11%                         |
+| China                        | 64%                              | 19%                         |
+| US                           | 41%                              | 24%                         |
+| All respondents              | 43%                              | 11%                         |
 
-30 / 38
-
-Organizations are using – or planning to use – GenAI across multiple departments. A massive 86% of respondents have either begun to deploy GenAI across sales departments or are planning to do so.
-
-For marketing, that figure is 85%; for IT 81%; and for finance it’s 75%. Even in those departments where GenAI adoption is least likely, the majority are still either using or planning to bring it on board; 59% in HR and 49% in legal departments. A fifth of the workforce (20%) currently use GenAI tools to generate text, images or video every day.
-
-As organizations adopt GenAI, they seek to understand how to use it safely and ethically. Nearly two-thirds (61%) have a GenAI usage policy in place, indicating that even where governance is patchy, leaders are making efforts to standardize GenAI usage. Almost half (46%) are planning to enlist third-party support to ensure that they make the most of GenAI’s potential.
-
-Telco, retail, insurance, banking and life sciences organizations lead in GenAI usage.
+Telco, retail, insurance, banking, and life sciences organizations lead in GenAI usage.
 
 To what extent is your organization using GenAI? (% currently using)
 
-| Sector                | Percentage |
-|----------------------|------------|
-| Telco (TMT)          | 70%        |
-| Retail                | 66%        |
-| Insurance             | 60%        |
-| Banking               | 60%        |
-| Life sciences         | 58%        |
-| All respondents       | 54%        |
-| Energy & utilities    | 54%        |
-| Professional services  | 46%        |
-| Health care           | 46%        |
-| Public sector         | 44%        |
-| Manufacturing         | 40%        |
-
-31 / 38
+| Sector                       | Percentage Using |
+|------------------------------|------------------|
+| Telco (TMT)                  | 70%              |
+| Retail                        | 66%              |
+| Insurance                     | 60%              |
+| Banking                       | 60%              |
+| Life sciences                 | 58%              |
+| All respondents               | 54%              |
+| Energy & utilities            | 54%              |
+| Professional services         | 46%              |
+| Health care                   | 46%              |
+| Public sector                 | 44%              |
+| Manufacturing                 | 40%              |
 
 Many are enlisting third parties to support GenAI integration, including through orchestration platforms.
 
@@ -555,12 +562,10 @@ How do you envision scaling GenAI within your business processes?
 |-----------------------------------------------|------------|
 | Enlisting a third party for GenAI integration | 27%        |
 | As a built-in feature of enterprise applications | 21%        |
-| Through an enterprise-grade orchestration platform across third-party and open source | 19% |
+| Through an enterprise-grade orchestration platform across third-party and open source | 19%        |
 | Exploration of use cases                      | 13%        |
 | In-house development on open source           | 13%        |
 | Rethink our enterprise data strategy          | 6%         |
-
-32 / 38
 05
 # Blueprint for gaining a competitive advantage
 
@@ -603,6 +608,12 @@ Watch a short demo and learn more about our portfolio [here](#).
 
 ---
 
+![GenAI for increased business productivity with SAS Viya.](image-url)
+
+GenAI orchestration: SAS Viya integrates existing GenAI models to orchestrate LLMs for enterprise use cases.
+
+---
+
 07
 # About this research
 
@@ -614,21 +625,19 @@ Coleman Parkes is a full-service B2B market research agency specializing in IT/t
 
 For more information, contact [Stephen@coleman-parkes.co.uk](mailto:Stephen@coleman-parkes.co.uk).
 
----
-
-# About SAS
+## About SAS
 
 SAS is a global leader in data and AI. With SAS software and industry-specific solutions, organizations transform data into trusted decisions.
 # Geographical Coverage
 
-| Region   | Count | Countries                                                                                                           |
-|----------|-------|---------------------------------------------------------------------------------------------------------------------|
-| Americas | 550   | USA, Canada, Brazil, Mexico                                                                                       |
-| Europe   | 775   | UK/Ireland, Sweden, Norway, Finland, Denmark, France, Germany, Italy, Belgium/Netherlands/Luxembourg, Spain, Poland |
-| APAC     | 275   | Japan, Australia, China, UAE/Saudi Arabia                                                                          |
+| Region   | Count | Countries                                                                                          |
+|----------|-------|----------------------------------------------------------------------------------------------------|
+| Americas | 550   | USA, Canada, Brazil, Mexico                                                                        |
+| Europe   | 775   | UK/Ireland, Sweden, Norway, Finland, Denmark, France, Germany, Italy, Belgium/Netherlands/Luxemburg, Spain, Poland |
+| APAC     | 275   | Japan, Australia, China, UAE/Saudi Arabia                                                         |
 
 ![Geographical coverage map](https://example.com/geographical-coverage-map)  
-*This map illustrates the geographical coverage of the regions mentioned above, highlighting the Americas in blue, Europe in dark blue, and APAC in light blue.*
+*This map illustrates the geographical coverage of the regions mentioned above, highlighting the Americas, Europe, and APAC in different colors.*
 
 ---
 

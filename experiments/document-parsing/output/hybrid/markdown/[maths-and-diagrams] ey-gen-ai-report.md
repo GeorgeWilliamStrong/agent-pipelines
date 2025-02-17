@@ -20,9 +20,8 @@ Generative AI’s potential to accelerate India’s digital transformation
 
 ## Foreword
 
---- 
-
-*Image Description*: The image features a close-up of a cross-section of a tree trunk, showcasing intricate patterns and textures in golden hues against a dark background. The title "Foreword" is prominently displayed in yellow, emphasizing the section's importance.
+![Foreword Image](image-url)  
+*Description: An artistic representation of a tree ring, showcasing intricate patterns in golden hues against a dark background, symbolizing growth and the passage of time.*
 India, today, is in a powerful position to set the agenda and realize significant benefits as the world starts to leverage an explosion of AI capabilities. While 2023 was a year of rapid innovation, in the next decade, Generative AI (Gen AI) will break out from labs and Proofs of Concept (POCs) and into the open terrain of consumer and enterprise applications. Millions of Indian citizens stand to benefit from next-generation scaled AI applications across industries with the biggest impact on healthcare, drug discovery, financial services, education, and entertainment.
 
 A confluence of several factors can make India a big player in this transformation. Over the last decade, we have crafted a uniquely Indian approach to digital transformation. India has one of the most modern ‘open’ digital infrastructures in the world. With inclusion as a primary goal, today, nationwide scaled utilities aimed at digital identity, KYC, payments, and e-commerce have become an integral part of the digital architecture of India. Breakthrough innovation in Gen AI can be accelerated by public–private collaboration, and we have established models for success in this area.
@@ -56,7 +55,7 @@ While Gen AI’s positive impact is anticipated across all sectors, its level of
 Recognizing the ability of Gen AI to serve as an engine of economic growth, governments all over the world are looking to actively promote and regulate AI. Strategies differ across countries, and there is a need for coherent policies to harness the potential of Gen AI effectively.
 no consensus yet on the approach to promoting or regulating Gen AI. The Indian government recognizes the economic potential of AI and some public figures have called for a sharper India strategy for AI development.
 
-### Feasibility, adoption rate, organized sector’s share and the industry segment’s share in India’s economic activity will determine the level of Gen AI’s impact on specific sectors
+**Feasibility, adoption rate, organized sector’s share and the industry segment’s share in India’s economic activity will determine the level of Gen AI’s impact on specific sectors**
 
 In line with the development of Digital Public Infrastructure such as the India Stack, Aadhaar, UPI, etc., the government can consider developing Gen AI systems as Public Goods. This approach is in line with the National Strategy for Artificial Intelligence (2018), which emphasizes an inclusive ‘AI for ALL’ lens. The development of Gen AI as Public Goods can be a game changer as it can also be deployed across various sectors of impact such as education, healthcare, agriculture, smart cities, etc., where the government is a key player.
 
@@ -70,13 +69,19 @@ Besides data, the government could ensure access to critical digital infrastruct
 |-------------------------------|---------------------------|----------------------------|-------------------------------|
 | Enable new business models, customer journeys, products and services | Rebuild the tech stack–apps, data, infrastructure | Empower employees with the skills for the coming change | Put in place new governance–AI policies, data privacy, responsible approaches |
 
-The agenda for enterprises is clearly cut out. In the face of imminent digital transformation, the shift to an AI-first approach goes beyond implementing chatbots or experimenting with trendy tools. It demands a complete reimagination of the Digital Transformation strategy, leveraging AI alongside digital, cloud, and automation capabilities. This enables the emergence of new business models, widespread personalization, and accelerated product and service innovation, in addition to the integration of Gen AI co-pilots and auto-pilots for intelligent automation and decision-making across processes and personas. Unlike other emerging technologies, Gen AI is now easily accessible on demand, simplifying the establishment of the technological foundation. Development of a clear enterprise AI and Gen AI strategy is paramount.
+The agenda for enterprises is clearly cut out. In the face of imminent digital transformation, the shift to an AI-first approach goes beyond implementing chatbots or experimenting with trendy tools. It demands a complete reimagination of the Digital Transformation strategy, leveraging AI alongside digital, cloud, and automation capabilities. This enables the emergence of new business models, widespread personalization and accelerated product and service innovation, in addition to the integration of Gen AI co-pilots and auto-pilots for intelligent automation and decision-making across processes and personas. Unlike other emerging technologies, Gen AI is now easily accessible on demand, simplifying the establishment of the technological foundation. Development of a clear enterprise AI and Gen AI strategy is paramount.
+
+---
 
 ### Sector-wise impact of Gen AI on GVA (2029-30)
 
 Impact on sectoral GVA (X-axis) and additional GVA due to Gen AI (Y-axis) depicted here reflects the mid-point of the range-bound impact for each sector.
 
 To regulate Gen AI, a ‘light touch’ approach may help establish a responsive regulatory environment that effectively addresses the impact of this rapidly evolving technology.
+
+**The government can support innovation by facilitating interventions to improve access to data, chips, talent, computing resources, etc.**
+
+The approach will have to facilitate innovation while managing potential risks. This may be achieved through regulatory sandboxes, similar to what the government (RBI) had done to develop regulations for the FinTech industry. New algorithms can be tested in a ‘controlled environment’ to address risks and help develop new regulations that may be required to deploy the tested algorithms. Other measures could include the use of watermarking of Gen AI-created content and establishing technical standards. As the understanding of the technology and its implications improves, greater clarity may be developed on the regulatory framework required for safe adoption of Gen AI in India.
 
 ### An agenda for the government
 
@@ -89,7 +94,7 @@ To regulate Gen AI, a ‘light touch’ approach may help establish a responsive
 - Watermarking AI-generated products/media
 - Accuracy, accountability and liability
 
-The government can support innovation by facilitating interventions to improve access to data, chips, talent, computing resources, etc. The approach will have to facilitate innovation while managing potential risks. This may be achieved through regulatory sandboxes, similar to what the government (RBI) had done to develop regulations for the FinTech industry. New algorithms can be tested in a ‘controlled environment’ to address risks and help develop new regulations that may be required to deploy the tested algorithms. Other measures could include the use of watermarking of Gen AI-created content and establishing technical standards. As the understanding of the technology and its implications improves, greater clarity may be developed on the regulatory framework required for safe adoption of Gen AI in India.
+---
 
 ### EY India’s C-suite Gen AI survey
 
@@ -107,25 +112,48 @@ Customer experience is the single most important facet that Gen AI is expected t
 
 Skills gap and unclear use cases are two of the biggest challenges that organizations currently face.
 
+| Challenge                | Percentage |
+|--------------------------|------------|
+| Skills gap               | 52%        |
+| Unclear use cases        | 47%        |
+| Inadequate focus on skills | 33%      |
+| Risks seem to outweigh benefits at this point | 18% |
+| No challenge             | 3%         |
+| Others                   | 10%        |
+
 Organizations see data privacy as the single most important risk of Gen AI.
 
-Three-fourth of the respondents indicate a low to moderate level of readiness in benefiting from Gen AI. The preferred mode for Gen AI implementation is by partnering with external tech providers.
+| Risk                     | Percentage |
+|--------------------------|------------|
+| Data privacy             | 36%        |
+| Hallucination or fabricated answers | 24% |
+| Biased responses         | 21%        |
+| Cybersecurity            | 16%        |
+| Others                   | 10%        |
+
+Three-fourth of the respondents indicate a low to moderate level of readiness in benefiting from Gen AI.
+
+| Readiness Level | Percentage |
+|------------------|------------|
+| High             | 30%        |
+| Medium           | 26%        |
+| Low              | 44%        |
+
+The preferred mode for Gen AI implementation is by partnering with external tech providers.
+
+---
 
 ### Chapter 1
 
-### Three Steps to the Future
+**Three Steps to the Future**
 # Three Steps to the Future
 
-## Foundation models will 
-**fundamentally change the nature of digital interfaces**  
-enabling richer textual, voice image and video interactions
+## Foundation models will
+fundamentally change the nature of digital interfaces enabling richer textual, voice image and video interactions.
 
-## Knowledge bases will allow the 
-**development of intelligent autonomous agents**  
-that will release massive productivity gains
+## Knowledge bases will allow the development of intelligent autonomous agents that will release massive productivity gains.
 
-## Gen AI will be embedded into 
-**all applications enabling a move towards a new computing architecture**
+## Gen AI will be embedded into all applications enabling a move towards a new computing architecture.
 
 ---
 
@@ -148,20 +176,20 @@ However, there are still many open questions regarding the seeming omnipotence a
 | Feb 2023  | Microsoft launches Bing Chat                                           |
 | Mar 2023  | GPT 4 launched - Google launches Bard                                 |
 | Apr 2023  | Big Tech adds AI features to everything                               |
-| May 2023  | Will AutoGPT rule the world?                                         |
-| Jun 2023  | Databricks buys Mosaic for $US1.3 billion - Falcon 40B model made available |
-| Aug 2023  | Amazon invests US$4 billion in Anthropic                              |
-| Sep 2023  | GPT 4 Turbo launched with vision and lower cost, GPT store           |
-| Dec 2023  | Google launches Gemini AI - multi-modal Foundation Model              |
+| Jun 2023  | Databricks buys Mosaic for $US1.3 billion, Falcon 40B model made available |
+| Aug 2023  | Will AutoGPT rule the world?                                         |
+| Sep 2023  | GPT 4 Turbo launched with vision and lower cost, GPT store          |
+| Nov 2023  | Amazon invests US$4 billion in Anthropic                             |
+| Dec 2023  | Google launches Gemini AI - multi-modal Foundation Model             |
 
 Foundation models are a necessary but not sufficient step forward. There is no doubt that many more fundamental advances are needed till we can claim to achieve anything close to human-level intelligence. But the pace of innovation is rapid and the potential, even with the rudimentary tools in front of us, is immense. There is little doubt that we are at the precipice of fundamental change in how we use technology in our lives.
 
 > The future is already here – it’s just not evenly distributed.  
-> **William Gibson**
+> — William Gibson
 
 In the last decade, ubiquitous mobile phones, large datasets and cloud computing enabled companies to reinvent their business models using digital-first approaches. Every business saw onslaughts from competitors finding new ways to reach and engage consumers, build more agile supply chains and compete on lower operational cost.
 
-Today, we are poised for another wave of change, but the battle lines are different. A new class of apps powered by Gen AI with frictionless and ambient digital interfaces – imagine smart glasses that can see what you see by feeding a stream of vision data back to a foundation model. In November 2023, Open AI launched GPT 4 Turbo with 128K context window, which means you can pack 300 pages of a book in a single prompt. And that too at 2X to 3X lower cost of GPT 4. Open AI also launched GPTs that are no code tools to create Gen AI chat apps and also platforms to buy and sell these GPT apps on GPT store, with the aim of becoming the iOS or Android of the Gen AI ecosystem.
+Today, we are poised for another wave of change, but the battle lines are different. A new class of apps powered by Gen AI with frictionless and ambient digital interfaces will enable a whole new level of customer intimacy and challenge the hegemony of the ‘legacy’ mobile app ecosystem that we see around us today. Autonomous agents leveraging enterprise knowledge bases and powered by foundation models will work side by side with humans – not only to automate operations-intensive tasks like claims processing but also to enable cutting-edge creative tasks like drug discovery and movie production. And along the way, a new technology architecture will be born. Spatial computing, augmented reality, vector knowledge bases, agent frameworks and foundation models will be the new picks and shovels of this gold rush.
 
 ---
 
@@ -169,7 +197,7 @@ Today, we are poised for another wave of change, but the battle lines are differ
 
 The pace of innovation over the last few quarters has been stunning. Every day we see the release of shiny new toys and capabilities that can accomplish heretofore impossible feats.
 
-There has been a significant advancement in the capabilities of foundation models. Today we take the basic capabilities of foundation models for granted. These include conversations with long running context on abstract topics, summarizing web search results, condensing text and even querying structured datastores. We think it natural to point chat bots at PDF documents, websites and even structured data stores and we expect answers with simple conversational queries. We have grown accustomed to these models being able to perform tasks on which they were not specifically trained – i.e., they can generalize well beyond their training data which is arguably one of the key measures of intelligence.
+There has been a significant advancement in the capabilities of foundation models. Today we take the basic capabilities of foundation models for granted. These include conversations with long-running context on abstract topics, summarizing web search results, condensing text and even querying structured datastores. We think it natural to point chat bots at PDF documents, websites and even structured data stores and we expect answers with simple conversational queries. We have grown accustomed to these models being able to perform tasks on which they were not specifically trained – i.e., they can generalize well beyond their training data which is arguably one of the key measures of intelligence.
 
 All this happened in a few months. It is worth taking a few minutes to record the advances we have seen in 2023.
 
@@ -185,10 +213,10 @@ GPT4 with vision can now glean information from complex images, recognize locati
 
 ## The open source movement to build foundation models has accelerated
 
-Open source models are available for commercial use; they can be downloaded and used. This is distinct from the application programming interface (API) model initiated by Open AI. Companies can download and fine-tune open source models for specific purposes. In fact, this is a key trigger for specialized industry or even company specific foundation models. They have improved significantly in performance over the last few months.
+Open source models are available for commercial use; they can be downloaded and used. This is distinct from the application programming interface (API) model initiated by Open AI. Companies can download and fine-tune open source models for specific purposes. In fact, this is a key trigger for specialized industry or even company-specific foundation models. They have improved significantly in performance over the last few months.
 
 > Creativity is intelligence having fun.  
-> **Albert Einstein**
+> — Albert Einstein
 
 Meta started this trend by open sourcing its Llama series of models, which it uses in all its AI capabilities. The UAE launched Falcon. Today, on the Hugging Face leaderboard – a key source of foundation model information – the top models are open source and it is becoming a viable contender, giving enterprises options.
 
@@ -215,25 +243,29 @@ Large language models (LLMs) will increasingly become domain tuned with industry
 
 AI is no longer a preserve of large companies with terabytes of data and access to supercomputers. Big Tech is incorporating Gen AI into all their offerings and bringing AI-enabled capabilities to enterprises of all sizes via their cloud offerings. Google, Microsoft and Amazon have all significantly revamped their cloud services with offerings to enable building AI apps. Google is aiming to make Bard the personal assistant on your phone, handling tasks like planning a trip, sending texts, searching messages, etc. and is available through your workspace. Pixel phones with AI allow image editing to completely alter entire photos. Meta is adding Gen AI into its ad platform to help brands manage their creative campaigns – from editing images of products to writing copy. Microsoft is adding co-pilots into all its offerings – Bing, Edge, Windows and Azure. This allows image editing in all photo apps, chat with documents, assistants across all assets, and write emails like you. Google has Duet – an LLM-powered chatbot inside Google Cloud. Amazon Bedrock helps companies fine-tune their own models. It has invested in Anthropic and made its powerful LLMs, including Claude and Claude 2, available on AWS.
 
-### The trouble in paradise
+---
+
+## The trouble in paradise
 
 So, are we on the cusp of the launch of a new computing paradigm? Will this be as transformational as the internet? The new electricity? If this is a revolution, it seems in its very early stages. As with every hype cycle, there is today a whole industry devoted to producing ‘AI Snake Oil’ - purely demo versions of capabilities, amplified by social media and nowhere close to enterprise-ready and will not survive beyond well-curated demo conditions. To become enterprise-ready, native Gen AI capabilities need to be wrapped in layers of business context, integration, security compliance and control.
 
 But there are bigger challenges. If intelligence is defined as the ability to learn new skills, to generalize, reason, plan and understand the world then LLMs are arguably bad at many of these things. Start with the hallucination issue. Despite all the recent advances, foundation models still make stuff up. They do not give deterministic answers and cannot be relied upon to be predictable. For example, LLMs can fail at elementary math. Worse – they are ‘confidently wrong’ in many of their answers. Foundation models are not databases - they do not have memory. They are also very bad at planning and managing long-running tasks. This is inherently limiting in the context of enterprise use cases where an item, for example, a customer service request of a sales lead, needs to be taken to closure. Foundation models are also notoriously bad at reasoning, as they do not explicitly ‘know’ the world we live in, they can be fooled by simple misleading prompts. Last but not the least, at our current stage of technology maturity, they are very difficult and expensive to train.
 
-### Three steps to the future
+---
+
+## Three steps to the future
 
 Given the breakneck speed of evolution in so many dimensions, it is by no means certain what specific path the AI / Gen AI ecosystem will take going forward. But certain trajectories of evolution are starting to emerge. One can discern three key trends:
 
-#### 01 Cognitive interfaces transform the app landscape
+### 01 Cognitive interfaces transform the app landscape
 
 The way we engage with technology has evolved rapidly. Decades ago, we moved from punched cards to green screens on IBM mainframes. Then in the PC era we learned to use keyboards and mice on Windows. And now, since the birth of the mobile web, we have grown accustomed to compressing our digital world into small phone screens – six-inch rectangles that we fat finger every moment to navigate our lives. Gen AI has the potential to liberate us from the tyranny of the mobile phone and the app ecosystem as the primary interface to our digital lives. With ChatGPT, we are already searching the web in new ways. Gone are the Google search terms and six blue links - Bard or Bing can understand what we are looking for and search the web for us. We are starting to use chatbots to search for vacations and to book restaurant tables. We can now upload images and ask for a description of the image in 100 words. Many of us are comfortable enough speaking to computers. Welcome to a new low-friction world powered by cognitive agents who act on our behalf with few simple instructions. This will proliferate as cognitive agents lower friction in our digital interactions.
 
-#### 02 AI agents transform work
+### 02 AI agents transform work
 
 Deep learning can be used to create meaningful representations of data. Francois Chollet, the author of the Keras library, likens this to ‘a person trying to uncrumple a paper ball’. The uncrumpling process is a series of geometric transformations through which the network ‘learns’ to represent this data more meaningfully and in a simpler way. These tools ‘embeddings’ can then be stored, searched and analyzed in a knowledge base. Autonomous agents built on this foundation of knowledge can dramatically change how we work. Imagine you are an insurance company. You create ‘embeddings’ of your policy documents. These are mathematical representations of your enterprises’ business rules and are stored in a knowledge base which is no longer ‘unstructured’. Today, these rules and flows are scattered across your enterprise – sitting as Word documents on employee laptops, dispersed across many applications or coded into your apps. Going forward, the knowledge base increasingly takes center stage in your business architecture, and potentially becomes the single version of ‘truth’ of your enterprise know how. On this foundation, one can envision an autonomous underwriting agent which enables the processing of a customer’s medical and financial documents, simplifying search and understanding of multiple policies and helping improve real-time communication and processing. The agent used leverages Gen AI to summarize customers’ financial documents, medical reports and tests, then analyze applicant’s medical history, and develop well-structured dashboards to present all the case findings, document summaries, recommendation on adjusted premium for the underwriter to read and make informed decisions.
 
-#### 03 A new general computing paradigm is established
+### 03 A new general computing paradigm is established
 
 Foundation models are not apps by themselves. They are foundational components of the next generation of application architecture. Gen AI will fundamentally transform our approach to building apps. The front end moves from mobile apps to conversational interfaces. A significant part of the functionality of business rule engines will move to knowledge bases and vector stores. Process logic will be orchestrated via agent frameworks that integrate intelligent front ends with knowledge bases and enterprise applications. Integrations are accomplished via plug in architecture linked to foundation models. As we rethink our data architecture and move to more elegant data fabric-oriented architectures, we will need to integrate this with foundation models. This entire architecture will make use of fit-for-purpose cloud platforms which will increasingly be specialized to industries and functions. And then Gen AI also speeds up software coding by converting natural language instructions to complex code. This helps significant reduction in cost of digital apps and increase in velocity of new build & innovation.
 
@@ -250,7 +282,7 @@ The cost-benefit equation is also very dynamic. All along the journey, it is imp
 
 ## The break of the AI dawn
 
-Decades ago, enterprises embraced mainframes for centralized computing. This was followed by the rise of personal computers empowering individuals with greater work productivity. The end of the last century saw networking and connected computers taking collaboration to a new level all together with the web becoming a global nexus, transcending geographical boundaries. The 21st century has seen cloud computing reduce infrastructure costs, promoting collaboration with mobile-friendly work environments. Data analytics has empowered businesses to gain insights from big data, driving innovation. Automation, a cornerstone of the digital age, has revolutionized workflows, enhancing efficiency. In the current technology landscape, web, cloud computing, data analytics, and automation have taken center stage. Their seamless integration and the relentless march of digital innovation continue to redefine the way we live and work.
+Decades ago, enterprises embraced mainframes for centralized computing. This was followed by the rise of personal computers empowering individuals with greater work productivity. The end of the last century saw networking and connected computers taking collaboration to a new level all together with the web becoming a global nexus, transcending geographical boundaries. The 21st century has seen cloud computing reduce infrastructure costs, promoting collaboration with mobile-friendly work environments. Data analytics has empowered businesses to gain insights from big data, driving innovation. Automation, a cornerstone of the digital age, has revolutionized workflows, enhancing efficiency. In the current technology landscape, web, cloud computing, data analytics, and automation have taken center stage. Their seamless integration and the relentless march of digital innovation continues to redefine the way we live and work.
 
 Now, as the AI era dawns, specifically Gen AI, businesses are leveraging the technology to unlock unprecedented insights, optimize decision-making processes, and usher in a new age of efficiency and innovation.
 
@@ -269,7 +301,7 @@ CEOs globally recognize the potential of AI, but most are encountering significa
 - The survey clearly reflects that when it comes to AI, CEOs find themselves acting with urgency. 7 in 10 (70%) recognize that their organization must act now on Gen AI to avoid giving their competitors a strategic advantage.
 - 84% of Indian CEOs recognize the urgency to move quickly with Gen AI.
 - At the same time, nearly the same percentage (68%) agree that the uncertainty around Gen AI makes it challenging to move quickly in developing and implementing an AI strategy.
-- Majority of the Indian CEOs (80%) acknowledge the uncertainty surrounding Gen AI posing a challenge for a swift roll-out of their AI strategy.
+- The majority of the Indian CEOs (80%) acknowledge the uncertainty surrounding Gen AI posing a challenge for a swift roll-out of their AI strategy.
 
 ‘Digital Darwinism’ compels enterprises to adeptly navigate rapid technological shifts by investing in digital transformation. Survival hinges on the agility of those able to undertake this transformative journey swiftly and effectively.
 
@@ -279,29 +311,23 @@ Indian enterprises have embarked on AI transformation journeys, harboring great 
 
 ## The agenda for enterprises
 
-### Reimagining digital AI-first
-
+### Reimagining digital-AI first
 Enable new business models, customer journeys, products, and services.
+
+### Rebuilding the Tech Stack
+Rebuild the tech stack—apps, data, infrastructure.
+
+### Equipping the AI workforce
+Empower employees with the skills for the coming change.
+
+### Shielding with Responsible AI
+Put in place new governance—AI policies, data privacy, responsible approaches.
+
+Unlike several other emerging technologies, Gen AI is now readily accessible on demand (through Application Programming Interfaces (APIs)) making the setting up of the technological foundation a relatively straightforward task. Of paramount importance is the development of a clear AI strategy.
 
 The imminent digital transformation is not merely a matter of implementing new chatbots or allowing the marketing team to experiment with the latest trendy tools. To adopt an AI-first approach, a complete reimagination of the digital transformation strategy is needed to harness the potential of AI in conjunction with digital, cloud, and automation capabilities.
 
 This will facilitate the emergence of novel business models, enable widespread personalization, accelerate product and service innovation. It will also facilitate incorporation of Gen AI agents (co-pilots and auto-pilots) to facilitate intelligent automation and decision-making across processes and personas.
-
-### Rebuilding the Tech Stack
-
-Rebuild the tech stack–apps, data, infrastructure.
-
-### Equipping the AI workforce
-
-Empower employees with the skills for the coming change.
-
-### Shielding with Responsible AI
-
-Put in place new governance–AI policies, data privacy, responsible approaches.
-
-Unlike several other emerging technologies, Gen AI is now readily accessible on demand (through Application Programming Interfaces (APIs)) making the setting up of the technological foundation a relatively straightforward task. Of paramount importance is the development of a clear AI strategy.
-
-Given the intense scrutiny from the market and board, in-depth planning and successful initiation of the AI-first journey is crucial. This involves evangelizing AI with business leaders to create a shared understanding and adopting design thinking to finalize a use case roadmap. It is critical to prioritize these use cases based on potential value, complexity, and associated risks. Gen AI champions among business leaders play a key role. Organizations can take a dual approach during initial Gen AI pilots. One is a Bottom-Up approach that empowers Gen AI champions for grassroots innovation.
 
 ## Elements of Enterprise AI Strategy
 
@@ -314,6 +340,8 @@ Given the intense scrutiny from the market and board, in-depth planning and succ
 | 05   | Work with business leads to create AI use case roadmap |
 | 06   | Identify owners and policy for Responsible AI, AI Governance, and ethics |
 | 07   | Build-Buy-Partner approach |
+
+Given the intense scrutiny from the market and board, in-depth planning and successful initiation of the AI-first journey is crucial. This involves evangelizing AI with business leaders to create a shared understanding and adopting design thinking to finalize a use case roadmap. It is critical to prioritize these use cases based on potential value, complexity, and associated risks. Gen AI champions among business leaders play a key role. Organizations can take a dual approach during initial Gen AI pilots. One is a Bottom-Up approach that empowers Gen AI champions for grassroots innovation.
 using nimble federated Gen AI Pods. The other approach, Top Down, entails utilizing a Gen AI Center of Excellence (CoE) to design, build and deploy priority, high-value and complex use cases and also centrally define the technology stack, governance, talent and risk processes.
 
 Following the pilot launch, a clear ROI assessment using A/B testing is essential. Additionally, effective communication of the value created must be disseminated across the enterprise to gain buy-in, build support and drive organizational engagement for broader adoption of AI initiatives. This imparts the impetus for subsequent Gen AI use case iterations while constructing a compelling, self-funding business case for further investments in technology platforms, human resources and processes, thus ensuring the momentum is sustained.
@@ -337,19 +365,16 @@ Skills gap and unclear use cases are two of the biggest challenges organizations
 **What are the challenges to Gen AI adoption in your organization?**  
 (Mark all that apply)
 
-| Challenge                | Percentage |
-|--------------------------|------------|
-| Skills gap               | 52%        |
-| Unclear use cases        | 47%        |
+| Challenge                     | Percentage |
+|-------------------------------|------------|
+| Skills gap                    | 52%        |
+| Unclear use cases             | 47%        |
 | Inadequate focus on Gen AI initiatives | 33% |
-| Risks seem to outweigh benefits at this point | 18% |
-| No challenge             | 13%        |
-| Others                   | 10%        |
+| Risks seem to outweigh the benefits at this point | 18% |
+| No challenge                  | 13%        |
+| Others                        | 10%        |
 
 ---
-
-### EY India's C-suite Gen AI survey
-EY India conducted an in-depth Gen AI survey covering ~200 C-suite executives across India. They represent diverse sectors, including Technology; Media and Entertainment; Financial Services; Government; Health, Pharma and Life sciences; Retail; and Manufacturing. Key findings from the survey:
 
 ### Impact area
 Customer experience is the single most important facet that Gen AI is expected to impact.
@@ -394,9 +419,10 @@ Enterprises need to make strategic decisions on the utilization of data, priorit
 
 Based on business priorities, enterprises need to design the right architecture across different technology components.
 
-### Tools to create Gen AI agents
-- Data Platform, Data Pipeline, Data Governance
-- Responsible AI, ML + LLM Ops
+| Tools to create Gen AI agents | Type of Foundation Model | Infrastructure | Making LLM contextual on enterprise’s proprietary data |
+|--------------------------------|--------------------------|----------------|-------------------------------------------------------|
+| Data Platform, Data Pipeline, Data Governance | Closed Source | Public Cloud | Advanced Prompt Engineering |
+| Responsible AI, ML + LLM Ops | Open Source | Private Cloud | RAG (Retrieval, Augmentation & Generation) |
 
 Enterprises need to evaluate and design the right architecture across different technology components:
 
@@ -408,17 +434,11 @@ Open Source models need to be managed by enterprises, are more controllable and 
 
 3. To improve accuracy of Gen AI agents, enterprises need to make models contextual to their proprietary data. Various tools and techniques are available for enterprises to explore (Prompt engineering, prompt optimization, Retrieval Augmented Generation (RAG), and Model fine tuning).
 
-See Annexure A for more details on RAG and fine tuning and also our suggested approach for making LLMs more contextual with enterprise’s proprietary data.
-
 4. The fourth critical step revolves around the seamless integration of models with various enterprise applications to drive effective decision-making. This entails the build and deployment of Gen AI agents tailored for high-priority use cases and their workflows.
 
-These require adoption of specialized tools (for example, LangChain and LlamaIndex, Vector Databases like Pinecone, and model farms like Hugging Face). These agents can help automate end-to-end processes with minimal human intervention. Key differentiator is the intelligence and context of Gen AI to take a decision versus the existing business rules.
+5. These require adoption of specialized tools (for example, LangChain and LlamaIndex, Vector Databases like Pinecone, and model farms like Hugging Face). These agents can help automate end-to-end processes with minimal human intervention. Key differentiator is the intelligence and context of Gen AI to take a decision versus the existing business rules.
 
 Gen AI agents must also be seamlessly integrated with existing enterprise applications, including SFDC, SAP, Adobe, ServiceNow. Enterprises can also assess existing enterprise software providers who are augmenting their platforms with Gen AI capabilities, such as Salesforce’s Einstein and Adobe’s Firefly for creative content generation. Furthermore, a plethora of specialist SaaS tools for Gen AI applications are now available, offering enterprises options for speed and cost-efficiency, but need to be evaluated for security.
-
-5. The effectiveness of AI is inherently tied to the quality of the data it receives. Therefore, companies must prioritize augmentation of their data platform to cater to Gen AI use cases. This entails developing capabilities and implementing right tools for handling large volumes of unstructured data along with structured data. The modern data platform needs added capabilities around data governance, data security and some new functionalities for Gen AI models.
-
-Similarly, AI governance process and tools need to be augmented. LLMOps (LLM Operations) is the primary tool to enable this via model monitoring, traceability etc. See Annexure B for key data considerations for Gen AI.
 
 6. While there are multiple configurations of the Gen AI Tech Stack for enterprises, we see the emergence of two primary archetypes for Gen AI deployment:
    - Domain specific Open Source LLMs, fine-tuned and self-hosted on enterprise’s infrastructure.
@@ -426,7 +446,7 @@ Similarly, AI governance process and tools need to be augmented. LLMOps (LLM Ope
 
 See Annexure C for a detailed comparative analysis.
 
-Open Source LLMs are best leveraged for use cases at scale where the ‘token’ volumes are high. A ‘token’ is the basic unit of text that a model processes.
+Open Source LLMs are best leveraged for use cases at scale where the ‘token’ volumes are high. A ‘token’ is the basic unit of text that a data. The modern data platform needs added capabilities around data governance, data security and some new functionalities for Gen AI models.
 ["                    model uses to process and generate a response. A typical use case of high token volume is customer service quality analysis which require reviewing all customer call transcripts for call quality and identifying reasons for escalation. Open Source Models are also suited for use cases that need domain specific data like clinical medical research data to answer user queries or ones which need access to sensitive data. Working with these models requires enterprises to plan and build a strong foundation for effective deployment.
 
                     Closed Source LLMs are ideal for getting started, pilot and rapid experimentation. These are better suited for deployment of use cases that require versatility and ability to handle complex conversations like financial planning and fraud investigation, with low to medium token volume.
@@ -476,25 +496,25 @@ Open Source LLMs are best leveraged for use cases at scale where the ‘token’
                     **Demand for AI Skills**  
                     Developers and architects should possess a comprehensive skillset encompassing full stack knowledge. Data scientists with a strong proficiency in Python for NLP pre-processing, chunking, and fine-tuning of generative AI models, as well as model fine-tuning. Sector and domain experts should prioritize enhancing their skills in prompt engineering.
 
-                    Existing resources across departments will continue to be an integral part of building and scaling enterprise AI but their roles will transform.  
+                    **Existing resources across departments will continue to be an integral part of building and scaling enterprise AI but their roles will transform**  
                     - **Data Scientist**  
                       Keywords: LLM, Deep Learning, FM, Model Fine Tuning, RAG  
                     - **Data Engineer**  
                       Keywords: ETL, Security, Database Systems, Data Processing, Cloud  
-                    - **Data Analyst**  
-                      Keywords: Statistics, Visualization, Modeling, Reporting  
+                    - **DataOps & Cloud Engineer**  
+                      Keywords: Containerization, Orchestration, CI/CD, Cloud, Networking  
                     - **Software Developer**  
                       Keywords: SDLC Methodology, Web Development, Software Testing  
+                    - **Data Analyst**  
+                      Keywords: Statistics, Visualization, Modeling, Reporting  
                     - **Business Analyst**  
                       Keywords: Business Consulting, Industry Expertise, Process Expertise  
-                    - **Solutions Architect**  
-                      Keywords: AI, Data, Cloud, Distributed Systems, Software Architecture  
                     - **Legal, Risk & Compliance**  
                       Keywords: Regulations: AI, Algorithms, Auto Decision Making, Data Protection  
                     - **Data Security & Protection**  
                       Keywords: Security, Consumer Privacy, Vulnerability, Malware  
 
-                    Attracting new specialized AI talent is foundational for success.  
+                    **Attracting new specialized AI talent is foundational for success**  
                     - **Gen AI Engineer**  
                       Keywords: LLM, Fine Tuning, AI agents, AI apps, AI orchestration, LLMOps  
                     - **LLM Ops**  
@@ -541,15 +561,17 @@ At present, organizations see data privacy as the single most important risk of 
 
 ## Comparing classical ML and Gen AI products
 
-| Area                | “Classical” ML Products                          | Knowledge of Risk | Gen AI Products                               | Knowledge of Risk |
-|---------------------|--------------------------------------------------|-------------------|-----------------------------------------------|-------------------|
-| Logic                | Explicitly coded                                 | ![Risk Level]     | Driven by supplied data, prompts and queries | ![Risk Level]     |
+| Area                | "Classical" ML Products                          | Knowledge of Risk | Gen AI Products                                   | Knowledge of Risk |
+|---------------------|--------------------------------------------------|-------------------|--------------------------------------------------|-------------------|
+| Logic                | Explicitly coded                                 | ![Risk Level]     | Driven by supplied data, prompts and queries     | ![Risk Level]     |
 | Input                | Requires large amount of data which is usually generated/made available in-house for training | ![Risk Level]     | Models are pre-trained using various sources. This data remains unavailable to public. Although domain-specific data used for fine-tuning. | ![Risk Level]     |
 | Output               | Input: Dataset + Hyperparameters<br>Output: Stochastic, structured | ![Risk Level]     | Input: Prompts + Hyperparameters<br>Output: Stochastic, unstructured | ![Risk Level]     |
 | Model management     | Models are developed in-house from scratch      | ![Risk Level]     | Models are pre-trained by third-party organizations. These pre-trained models are known as Foundational Models. Only fine-tuning of the same is done on a need basis. | ![Risk Level]     |
 | Evaluation           | Clear set metrics based upon the type of model. Evaluation on held-out from the input training data set | ![Risk Level]     | Evaluation is a challenge due to non-availability of original training data. Curated dataset and human feedback is required. | ![Risk Level]     |
-| Testing              | Continuous testing/improving, real-time monitoring is desired | ![Risk Level]     | Real-time monitoring is essential            | ![Risk Level]     |
+| Testing              | Continuous testing/improving, real-time monitoring is desired | ![Risk Level]     | Real-time monitoring is essential                 | ![Risk Level]     |
 | Access to data       | Access to pre-defined set of variables          | ![Risk Level]     | Access to unstructured data that is difficult to control | ![Risk Level]     |
+
+**Known - Familiar - Unknown**
 
 To implement responsible AI effectively, it is imperative to establish a robust AI governance framework featuring explicit cross-functional ownership and accountability. This entails the formation of an AI Ethics Board dedicated to overseeing AI model risk management. Additionally, comprehensive training programs must be instituted for all employees, emphasizing responsible AI practices. The success of this deployment hinges on adept change management strategies to ensure a seamless and ethical integration of AI technologies within the organizational landscape. See Annexure F for EY’s approach to Responsible AI.
 
@@ -570,8 +592,9 @@ Developing a strategic blueprint for Gen AI involves navigating a challenging la
 | **Characteristics** | Digital First - mobile, web, social<br>Cloud native<br>Data and AI embedded in all business processes and decisions | Significant investments in automation, digital apps for customer, employees and ecosystem<br>Data and analytics Platform<br>AI heavy, AI deployment in select BUs and functions | Processes are not fully automated<br>Digital apps not adopted across industry; few leading the way<br>Data in silos; prioritization of data platforms in early stages<br>Very limited application of analytics and AI |
 | **Typical Industry** | Ecommerce<br>Fintech<br>Media                  | FS<br>Telecom<br>Retail<br>Consumer Goods<br>Auto<br>Pharma | Healthcare<br>Industrial products<br>Resources, energy, oil and gas<br>Utilities |
 | **Posture for Gen AI** | Aggressive: Embed across the value chain including end customer | Moderate: Prioritize use cases on value, complexity and risk. Initiate multiple pilots, mostly Internal Facing Chat (chat on policies, SOPs, contracts), Customer service, knowledge management, intelligent automation | Wait and watch / Experimentation |
-| **Roadmap**        | Enterprise-wide mobilization                     | Functional transformation of core processes       | POC and scale                                      |
-| **Tech Stack**     | Open Source LLM Fine Tuned + Closed Source LLM via API | Closed Source LLM now. To consider Open Source LLM in mid to long term as token volume grows | Closed Source LLM                                   |
+| **Roadmap**         | Enterprise-wide mobilization                     | Functional transformation of core processes        | POC and scale                                      |
+| **Organization model** | Federated with BUs and functions building their own Gen AI Pods. Gen AI CoE to define overall AI governance, technology choices and central talent pool | AI CoE extended to cater to Gen AI to build and deploy Gen AI pilots working with business champions. CoE also mandated to drive strategy, tech and talent | Part of data and data science team |
+| **Tech Stack**      | Open Source LLM Fine Tuned + Closed Source LLM via API | Closed Source LLM now. To consider Open Source LLM in mid to long term as token volume grows | Closed Source LLM |
 
 # Chapter 3
 ## The Economic Opportunity of Gen AI in India
@@ -601,26 +624,26 @@ Our methodology for assessing Gen AI's economic impact on India combines a macro
 
 The study indicates that India could experience a substantial boost in its GDP, with a potential addition of **US$359 billion to US$438 billion** in the fiscal year 2029-30, reflecting a **5.9% to 7.2%** increase. Over seven years (2023-24 to 2029-30), the cumulative impact on GDP may range from **US$1.2 trillion to US$1.5 trillion**, contributing an additional **0.9% to 1.1%** in annual CAGR.
 
-While Gen AI's positive impact is anticipated across all sectors, its level of influence in each segment will depend on factors like feasibility, adoption rates, the organized sector's share, and its contribution to India’s economic activity. Approximately **69%** of the overall impact is expected to derive from business services (including IT, legal, consulting, outsourcing, rental, etc.), financial services, transportation and logistics, education, retail trade, and healthcare. The expected impact encompasses improvements in employee productivity, enhanced operational efficiency, and personalized customer experiences. These sectors, having rapidly embraced digitalization, are well-positioned to capitalize on the benefits of Gen AI. The IT sector also stands to gain significantly from the development of Gen AI platforms and tools both through productivity gains and through more revenues from its clients.
+While Gen AI's positive impact is anticipated across all sectors, its level of influence in each segment will depend on factors like feasibility, adoption rates, the organized sector’s share, and its contribution to India’s economic activity. Approximately **69%** of the overall impact is expected to derive from business services (including IT, legal, consulting, outsourcing, rental, etc.), financial services, transportation and logistics, education, retail trade, and healthcare. The expected impact encompasses improvements in employee productivity, enhanced operational efficiency, and personalized customer experiences. These sectors, having rapidly embraced digitalization, are well-positioned to capitalize on the benefits of Gen AI. The IT sector also stands to gain significantly from the development of Gen AI platforms and tools both through productivity gains and through more revenues from its clients.
 
-To realize the full potential of Gen AI, we need a proactive regulatory stance. However, much will depend on the policy actions taken to ensure safety of citizens (See Chapter 5: A Gen AI Policy Agenda for India).
+To realize the full potential of Gen AI, we need a proactive regulatory stance. However, much will depend on the policy actions taken to ensure the safety of citizens (See Chapter 5: A Gen AI Policy Agenda for India).
 
 ---
 
 ## Gen AI’s boost to sectors
 
 | Sector                     | Impact on sectoral GVA | Addition to GVA due to Gen AI in 2029-30 (US$ BN) |
-|----------------------------|------------------------|---------------------------------------------------|
-| Business Services*         | 19%–23%                | 85–104                                            |
-| Financial Services          | 22%–26%                | 66–80                                            |
-| Transport and Storage       | 8%–10%                 | 22–27                                            |
-| Education                   | 8%–9%                  | 18–22                                            |
-| Retail Trade                | 5%–6%                  | 18–22                                            |
-| Health and Social Work      | 16%–20%                | 15–18                                            |
-| Construction                | 3%–4%                  | 14–17                                            |
-| Media                       | 20%–24%                | 6–8                                              |
-| Post and Telecommunication   | 7%–8%                  | 6–7                                              |
-| Pharma                      | 7%–8%                  | 4–5                                              |
+|----------------------------|------------------------|--------------------------------------------------|
+| Business Services*         | 19%–23%                | 85–104                                           |
+| Financial Services          | 22%–26%                | 66–80                                           |
+| Transport and Storage       | 8%–10%                 | 22–27                                           |
+| Education                   | 8%–9%                  | 18–22                                           |
+| Retail Trade                | 5%–6%                  | 18–22                                           |
+| Health and Social Work      | 16%–20%                | 15–18                                           |
+| Construction                | 3%–4%                  | 14–17                                           |
+| Media                       | 20%–24%                | 6–8                                             |
+| Post and Telecommunication   | 7%–8%                  | 6–7                                             |
+| Pharma                      | 7%–8%                  | 4–5                                             |
 
 *including IT, legal, consulting, outsourcing, rental, etc.
 
@@ -635,7 +658,8 @@ To realize the full potential of Gen AI, we need a proactive regulatory stance. 
 - While estimating the impact of Gen AI, relative shares of organized and unorganized sectors for each industry segment have also been taken into consideration.
 
 See Annexure G for technical analysis.
-# Levers for realizing the potential of Gen AI
+Levers for realizing the potential of Gen AI
+---
 
 - Give productivity boost as large documents can be summarized within seconds, saving many working hours.
 - Can generate new documents from scratch (product manuals, proposals, etc.); write policies when instructed appropriately.
@@ -648,8 +672,8 @@ See Annexure G for technical analysis.
 - Can also be used in customer-facing interfaces to optimize lead conversions.
 - Can aid in optimizing transport routes to save fuel and time and help utilize vehicular resources optimally by orchestrating intelligent fleet management.
 - Can be used as an intelligent scheduling and planning assistant that recommends the best use of transport vehicles matching them with appropriate tasks ordered by priority.
-- For example, e-commerce delivery fleets or middle mile logistics truck management using intelligent Gen AI bot.
-- Can be a patient and hyper-personalized tutor who understands the needs of every student.
+- For example, e-commerce delivery fleets or middle-mile logistics truck management using intelligent Gen AI bot.
+- Can be a patient and hyper-personalized tutor who understands needs of every student.
 - Can explain concepts and design a tailored learning path based on student’s ability, interest, and efforts.
 - Help generate best-in-class curriculum content and aid educators in building teaching plans.
 - Leverage Gen AI to create hyper-personalized advertisements, achieve targeted marketing through relevant content.
@@ -670,18 +694,25 @@ See Annexure G for technical analysis.
 
 ---
 
-## Chapter 4
-# A Gen AI Policy Agenda for India
+![Chapter 4: A Gen AI Policy Agenda for India](image_url)
 
-In developing AI regulations, many countries are attempting to balance innovation and risks.
+---
 
-Indian policy emphasis at present is on collaborative effort by stakeholders, with the government playing a central role.
+A Gen AI Policy Agenda for India
+---
 
-As subsequent measures bring clarity to the regulatory framework, the government can support innovation by facilitating interventions to improve access to data, chips, talent, computing resources, etc.
+- In developing AI regulations, many countries are attempting to balance innovation and risks.
+- Indian policy emphasis at present is on collaborative effort by stakeholders, with the government playing a central role.
+- As subsequent measures bring clarity to the regulatory framework, the government can support innovation by facilitating interventions to improve access to data, chips, talent, computing resources, etc.
+- Gen AI algorithms can be used to develop solutions that can be deployed as Public Goods.
 
-Gen AI algorithms can be used to develop solutions that can be deployed as Public Goods.
+---
 
-AI, especially Gen AI, has been attracting the attention of policymakers globally at the highest levels. It is seen as a technology that will drive the next level of scientific discovery and economic growth but carries risks that are yet to be fully understood. While all countries emphasize that AI regulation must strike a balance between fostering innovation while managing the risks, their approach and emphasis differ widely and have been evolving with time. Some countries are putting greater focus on promotion and development, while others on mitigating the risks from the implementation of the technology. The role of the government in developing AI algorithms also differs. Annexure H provides an overview of the approach taken by some countries.
+1 Building Blocks for Artificial Intelligence and Autonomy (publishing.service.gov.uk)
+
+---
+
+AI, especially Gen AI, has been attracting the attention of policymakers globally at the highest levels. It is seen as a technology that will drive the next level of scientific discovery and economic growth but carries risks that are yet to be fully understood. While all countries emphasize that AI regulation must strike a balance between fostering innovation while managing the risks, their approach and emphasis differ widely and has been evolving with time. Some countries are putting greater focus on promotion and development, while others on mitigating the risks from the implementation of the technology. The role of the government in developing AI algorithms also differs. Annexure H provides an overview of the approach taken by some countries.
 
 For the purposes of this chapter, 'Artificial Intelligence systems' is defined to broadly comprise of a Data Component, the Software/Algorithm Component, the Hardware/Compute Platform Component and Integration/Real World Applications. Gen AI has been considered as a sub-set of AI systems specifically intended to generate, with varying levels of autonomy, content such as complex text, images, audio, or video, computer code, 3D models, etc.
 
@@ -702,7 +733,7 @@ This chapter draws upon the global experience in promoting and regulating AI and
 - Current focus to maintain global leadership.
 - Leading AI companies have pledged to observe voluntary safeguards.
 - Issued an “Executive Order on Safe, Secure and Trustworthy Artificial Intelligence”.
-- Various US government agencies to formulate wide range of time-bound interventions relating to: safety, transparency, citizen/consumer protections, effective government usage, innovation, competition, global leadership, etc.
+- Various US government agencies to formulate wide range of time-bound interventions relating to: safety, security, transparency, citizen/consumer protections, effective government usage, innovation, competition, global leadership, etc.
 
 ## United Arab Emirates (UAE)
 - Launched a Gen AI guide to address the opportunities and challenges.
@@ -727,26 +758,24 @@ This chapter draws upon the global experience in promoting and regulating AI and
 
 While each country is looking at safeguards to address risks, many of the risks are global in nature. It is expected that as foundational models can perform a variety of tasks, the cost of access to these models will reduce as they become more widely accessible globally. Risks may arise from either intentional or unintentional misuse and could potentially arise anywhere. The recent Bletchley declaration, which 28 countries (including India, the US, the UK, Israel, and China) and the EU have signed, highlights the intention of countries to cooperate to both harness the benefits and to address the risks. This is therefore significant as it is possible that countries may look at common standards and regulatory principles in the future.
 
----
-
-# AI and the Indian context: Government initiatives laying foundation of growth of AI
+## AI and the Indian context: Government initiatives laying foundation of growth of AI
 
 There have been several Government initiatives that have laid out the foundation for approach to promote and develop AI in India. Some of the key initiatives are as follows:
 
-## The National Strategy for AI (2018)
-NITI Aayog released the National Strategy for Artificial Intelligence (NSAI 2018) which highlighted the use of AI in Healthcare (for diagnostics and personalized treatment); Agriculture (for demand prediction), Education (for improving access and quality), Smart cities and infrastructure (for enhancing quality of life) and Smart Mobility, which includes the use of AI in Transport and logistics.
+### The National Strategy for AI (2018)
+NITI Aayog released the National Strategy for Artificial Intelligence (NSAI 2018) which highlighted an approach to support “AI4ALL”. It emphasized a concerted collaborative effort by relevant stakeholders, with the government playing a leading role. A key element of the NSAI 2018 was the laying down of the sectoral priorities for AI in India, which include the use of AI in Healthcare (for diagnostics and personalized treatment), Agriculture (for demand prediction), Education (for improving access and quality), Smart cities and infrastructure (for enhancing quality of life) and Smart Mobility, which includes the use of AI in Transport and logistics.
 
 Suggested in this strategy paper, AIRAWAT (AI Research, Analytics and Knowledge Assimilation platform) was also launched. This platform guides the research and development of AI and other emerging technologies in India.
 
-## The Principles of Responsible AI
+### The Principles of Responsible AI
 NITI Aayog released the Principles of Responsible AI, which were finalized in 2021. These principles were designed to provide a framework that would serve as an enabling environment for promoting a responsible AI ecosystem in India. These include the Principles of Safety and Reliability, Equality, Inclusivity and Non-discrimination, Privacy and Security, Transparency, Accountability, and Protection and Reinforcement of Positive Human Values.
 
-## National AI Mission under PM-STIAC
+### National AI Mission under PM-STIAC
 The Prime Minister’s Science, Technology and Innovation Advisory Council (PM-STIAC) launched the National AI Mission in 2022 with a strong R&D focus. It aims to bring together academia and industry on developing core AI research capability at the national level and also encourage international collaborations.
 - India’s National Artificial Intelligence Portal ‘INDIAI’ was also launched as a one-stop digital platform for AI-related developments in India. This is a common infrastructure for developers to share tools, data and resources.
 
-## India AI 2023 Report by MEITY
-The Vision of India AI Report: India AI Mission ensures a precise and cohesive strategy to bridge the gaps in the existing AI ecosystem with regards to compute infrastructure, AI financing, research and innovation, skilling, and building institutional capacity for datasets. MEITY has identified the following seven AI Pillars in this report, which pertain to the focus areas of the government's AI strategy:
+### India AI 2023 Report by MEITY
+The Vision of India AI Report: India AI Mission ensures a precise and cohesive strategy to bridge the gaps in the existing AI ecosystem with regards to compute infrastructure, AI financing, research and innovation, skilling, and building institutional capacity for datasets. MEITY has identified the following seven AI Pillars in this report, which pertain to the focus areas of the government’s AI strategy:
 - IndiaAI Centres of Excellence
 - India Dataset Platform (IDP)
 - Institutional capacity and design of National Data Management Office (NDMO)
@@ -760,7 +789,6 @@ MEITY recommends a “Design Linked Incentive (DLI) Scheme” to provide financi
 Some of the challenges to realize the full potential of AI as identified in the NSAI (2018) were:
 - Low intensity of AI research
 - Core research in fundamental technologies
-- Transforming core research into market applications
 - Inadequate availability of AI expertise, workforce and skilling opportunities
 - High resource cost and low awareness of adopting AI in business processes
 - Unclear privacy, security, and ethical regulations
@@ -813,7 +841,7 @@ India has a history of developing successful Digital Public Goods (DPGs) such as
 
 ### Securing Critical Digital Infrastructure
 
-- **Access to chips**: Availability of computation infrastructure and securing the technology supply chain is imperative for the development and deployment of AI. Gen AI requires chips with high processing power such as graphics processing units (GPUs), field-programmable gate arrays (FPGAs), and application-specific integrated circuits (ASICs) that are specialized for AI. Presently, these chips are imported into India. Therefore, technology partnerships with countries like the US, Taiwan, etc. would be crucial in sourcing technology that enables the growth of AI systems in India and securing future supply chains. In addition, incentivizing the domestic manufacturing of the same may be expedited as recommended by MEITY’s IndiaAI Expert Group Report 2023.
+- **Access to chips**: Availability of computation infrastructure and securing the technology supply chain is imperative for the development and deployment of AI. Gen AI requires chips with high processing power such as graphics processing units (GPUs), field-programmable gate arrays (FPGAs), and application-specific integrated circuits (ASICs) that are specialized for AI. Presently, these chips are imported into India. Therefore, technology partnerships with countries like the US, Taiwan, etc. would be crucial in sourcing technology that enables the growth of AI systems in India and securing future supply chains. In addition, incentivizing the domestic manufacturing of the same may be expedited as recommended by MEITY’s IndiaAI Expert Group 2023.
 
 - **Access to enhanced computational capability**: Development of AI requires access to specialized computational capability. Cost of access to such computing power may be extremely challenging for smaller players, especially start-ups. Building on the suggestions of NITI Aayog in May 2023, the AIRAWAT supercomputer, focused on AI computing, was established at C-DAC. Such efforts can democratize access to AI compute infrastructure. The technical requirements from a compute infrastructure/Gen AI point of view will still need regular review and additional infrastructure can be established. Like in Japan, domestic start-ups may be provided subsidized access to publicly funded compute resources.
 
@@ -839,38 +867,49 @@ Regulatory sandboxes could identify policy and regulatory gaps that are needed f
 
 - **Cybersecurity and testing infrastructure**: Cybersecurity frameworks are constantly evolving in response to emergent security threats. The sandboxes can also be used to determine the standards and approach to security testing. Gen AI systems will also have to address unforeseen vulnerabilities in the future. Robust security testing and auditing infrastructure will be needed for the protection.
 # Watermarking AI Generated Products/ Media
+
 - Gen AI systems have the capability to produce images, texts, and videos that are at par with content created by humans. Watermarking of AI products can safeguard human creativity and also address some of the concerns related to “derived” or “generated” content including fake news, deep fakes, etc. Since these are global tools used across different geographies and jurisdictions, a global framework/standard for watermarking technology could be considered. Different watermarking technologies can be piloted and tested.
 
 # Accuracy, Accountability and Liability
+
 - To ensure that there is trust in the AI systems in the longer term, a clear liability framework for Gen AI may be required. Such a framework would require extensive stakeholder consultations as the technology is evolving and the full impact of the risks are not fully known/understood.
 
-![Image of a medical setting with a person in a lab coat operating a device](https://example.com/image1)
+![Image of a medical setting with advanced technology](https://example.com/image1)
+
+---
 
 # Annexures
+
 ## Making LLMs More Contextual with Enterprise’s Proprietary Data
+
 Retrieval Augmented Generation (RAG): This is an approach where enterprise knowledge i.e., documents, policies, manuals, SOPs etc. is stored in a vector database. User query is converted into a semantic or contextual search to the Vector Database which extracts the most relevant content from the knowledge base. This proprietary data is then used to generate the response ensuring a relevant response with no hallucinations. RAG helps overcome the context window token limit and adds more intelligence by providing the most relevant enterprise data across the knowledge base. It can also return the source data for AI transparency and can be made more accurate by knowledge graph, dynamic indexes and intelligent chunk retrieval.
 
 Fine tuning: LLMs are built using data sourced from different sources such as websites, research papers, journals, forums etc. LLM model parameters that help generate LLM responses are trained on this massive repository. Fine tuning an LLM by adding...
 
 | Ways of Making LLM Contextual on Enterprise’s Proprietary Data | Techniques Involved |
 |---------------------------------------------------------------|---------------------|
+| **Low**                                                      | **Low**             |
 | Prompt engineering and Optimization                           | Zero-Shot           |
-| Retrieval Augmented Generation                                 | Few-Shot            |
+| Retrieval Augmented Generation                                | Few-Shot            |
 | Model Fine Tuning                                            | Prompt versioning    |
-| Full Parametrization                                          | Prompt management     |
-
-- Document chunking
-- Tokenization
-- Embedding
-- Vectorization
-- Vector database
-- Similarity Search
-- Instruct tuned
-- Quantization
-- RLHF
-- Distillation
-- LoRA/Olora
-- Hyper-parameter tuning
+| **High**                                                     | **High**            |
+| Full Parametrization                                         | Chain of Thoughts    |
+|                                                             | Prompt tuning        |
+|                                                             | Prompt management     |
+|                                                             | Document Chunking    |
+|                                                             | Tokenization         |
+|                                                             | Embedding            |
+|                                                             | Vectorization        |
+|                                                             | Similarity Search    |
+|                                                             | Instruct tuned       |
+|                                                             | Quantization         |
+|                                                             | RLHF                 |
+|                                                             | Distillation         |
+|                                                             | LoRA/OLoRA          |
+|                                                             | Hyper-parameter tuning|
+|                                                             | Dataset Collection    |
+|                                                             | Dataset Preparation   |
+|                                                             | Model Architecture    |
 
 56 | The Alidea of India
 Key Data Considerations for Gen AI
@@ -947,17 +986,17 @@ Open Source LLMs with Fine Tuning
 
 ### Training
 Open Source LLM Model + 
-- Enterprise’s Policies and Procedures
-- Enterprise’s Customer Service Data & Instructions
-- Enterprise’s Proprietary Domain Data
+Enterprise’s Policies and Procedures + 
+Enterprise’s Customer Service Data & Instructions + 
+Enterprise’s Proprietary Domain Data
 
 ### Inference
-User Natural Language Query → LLM Response → Gen AI App or Agent → LLM fine tuning → Prompt Engineering → Enterprise’s Domain Specific Fine Tuned LLM
+User Natural Language Query → LLM Response → Gen AI App or Agent → LLM Response via API
 
 ---
 
-Pros and Cons of Approach 2: Closed Source LLM with RAG*
-==========================================================
+Closed Source LLM with Enterprise’s Data Embeddings
+====================================================
 
 ### Pros
 - Quick deployment for a wide variety of use cases; no infrastructure management and talent required
@@ -1010,14 +1049,10 @@ Reference Architecture for hybrid LLM deployment for an integrated Gen AI, AI, a
 
 ### Data Lakehouse Data Services
 - ETL/ ELT: Batch, Stream, API; Near Time, CDC
-- Data Storage: Data Governance; Data Quality, Lineage, Catalogue, Ops
+- Data Storage: Data Governance; Quality, Lineage, Catalogue, Ops
 
 ### Infrastructure
-- Azure
-- Google Cloud
-- AWS
-- Private Cloud
-- GPUs (Nvidia, others)
+- Azure, Google Cloud, AWS, Private Cloud, GPUs (Nvidia, others)
 
 ### Data Sources
 - Enterprise Data: Documents, Images, Audio, Video, Application DB, CRM, ERP, Digital Apps, Transaction Data, Channel, IoT, Emails, Call Transcripts, HR, Finance etc.
@@ -1058,18 +1093,18 @@ The Responsible AI framework developed by EY enables clients to mitigate AI risk
 
 ---
 
-# Technical Appendix
+## Technical Appendix
 
 Our methodology for estimating the economic impact of Gen AI on the Indian economy utilizes a macro framework in combination with survey-based inputs on the sectoral impact of Gen AI. The survey has been conducted across the 27 sectors of the economy as per the KLEMS database (RBI). The survey gathers inputs from EY's sector leaders whose assessments are based on their expertise and close interaction with clients. These clients include key players in their respective industry. The survey primarily captures the efficiency effects of Gen AI adoption in terms of expected cost reduction and output expansion over a seven-year period starting 2023-24 to 2029-30.
 
-## 01 Estimation of sectoral impact of Gen AI on the organized segment of each sector
+### 01 Estimation of sectoral impact of Gen AI on the organized segment of each sector
 
 The following variables have been used in the estimation framework:
 
 | #  | Variable | Description |
 |----|----------|-------------|
 | 1  | \( V_i \) | GVA of the ith sector |
-| 2  | \( O_i \) | Gross output of the ith sector |
+| 2  | \( Q_i \) | Gross output of the ith sector |
 | 3  | \( I_i \) | Intermediate consumption of the ith sector |
 | 4  | \( U_i \) | Share of the unorganized segment of ith sector |
 | 5  | \( g_i \) | Gen AI impact in terms of percentage change in sector i's GVA |
@@ -1080,26 +1115,26 @@ The following variables have been used in the estimation framework:
 Using (a) cost reduction and output expansion effects (in percentage terms) captured through the survey and (b) ratio of output and intermediate inputs relative to value added estimated from KLEMS database, we have assessed the impact of Gen AI on the organized segment of sector i's GVA (in % terms) through the following equation (1):
 
 \[
-\frac{\Delta V_i}{V_i} = \left[ \left(1+\text{output expansion}\right) \frac{Q_i}{V_i} - \left(1-\text{cost reduction}\right) \frac{I_i}{V_i} \right] - 1 \tag{1}
+\frac{\Delta V_i}{V_i} = \left[ \left( \alpha \% \text{ output expansion} \right) \frac{Q_i}{V_i} - \left( \beta \% \text{ cost reduction} \right) \frac{I_i}{V_i} \right] - 1 \tag{1}
 \]
 
 Where \( V_i \) is the GVA of the ith sector (avg. of 2017-18 to 2019-20 from KLEMS); \( Q_i \) is the gross output of the ith sector (avg. of 2017-18 to 2019-20 from KLEMS); \( I_i \) is the intermediate consumption of the ith sector (avg. of 2017-18 to 2019-20 from KLEMS).
 
-## 02 Estimation of sectoral impact of Gen AI on each sector's total GVA
+### 02 Estimation of sectoral impact of Gen AI on each sector's total GVA
 
 Impact of Gen AI on total GVA (organized + unorganized) of sector i (in % terms) is given by equation (2):
 
 \[
-(1 - U_i) \frac{\Delta V_i}{V_i} = (1 - U_i) \left[ \left(1+\text{output expansion}\right) \frac{Q_i}{V_i} - \left(1-\text{cost reduction}\right) \frac{I_i}{V_i} \right] \tag{2}
+(1 - U_i) \frac{\Delta V_i}{V_i} = (1 - U_i) \left[ \left( \alpha \% \text{ output expansion} \right) \frac{Q_i}{V_i} - \left( \beta \% \text{ cost reduction} \right) \frac{I_i}{V_i} \right] - 1 \tag{2}
 \]
 
-Where \( U_i \) is the share of the unorganized segment of each sector. The share of unorganized segment of each sector has been sourced from the IMF for the year 2017-18. The shares provided by the RBI for the unorganized segment have been used for the manufacturing sub sectors.
+Where \( U_i \) is the share of the unorganized segment of ith sector. The share of unorganized segment of each sector has been sourced from the IMF for the year 2017-18. The shares provided by the RBI for the unorganized segment have been used for the manufacturing sub sectors.
 
 \[
 (1 - U_i) \frac{\Delta V_i}{V_i} \text{ may be referred to as the Gen AI impact } (g_i)
 \]
 
-## Estimation of the magnitude of sectoral impact of Gen AI
+### Estimation of the magnitude of sectoral impact of Gen AI
 
 The magnitude of additional nominal sectoral GVA in the terminal year 2029-30 (\( \Delta GVA^{FY30}_i \)) on account of Gen AI is estimated by applying the Gen AI impact (\( g_i \)) on the base GVA (BGVA) magnitudes (which does not include the effect of Gen AI) for each sector:
 
@@ -1128,20 +1163,10 @@ GDP^{FY30} = GVA^{FY30} + NIT^{FY30}
 The output expansion and cost reduction effects of the adoption of Gen AI can then be incorporated in the above equation as:
 
 \[
-\frac{\Delta V_i}{V_i} = \left[ \left(1+\text{output expansion}\right) \frac{Q_i}{V_i} - \left(1-\text{cost reduction}\right) \frac{I_i}{V_i} \right] \tag{3}
+\frac{\Delta V_i}{V_i} = \left[ \left( \alpha \% \text{ output expansion} \right) \frac{Q_i}{V_i} - \left( \beta \% \text{ cost reduction} \right) \frac{I_i}{V_i} \right] \tag{3}
 \]
 
-The base GVA in 2029-30 has been estimated using the projected nominal GDP magnitudes in INR terms available up to 2028-29 sourced from the IMF (WEO April 2023). Base GVA during the period from 2023-24 to 2028-29 has been derived from first projecting GDP and then subtracting from it net indirect taxes (NIT). An average nominal growth of 11% (avg. over 2023-24 to 2028-29) has been applied to project the nominal (Base) GDP for 2029-30. From this, the GVA in nominal terms has been estimated by netting out the net indirect taxes for 2029-30. The overall nominal GVA estimated in 2029-30 has been split across the 27 KLEMS sectors to derive the base GVA for each sector \( \Delta GVA^{FY30}_i \) by utilizing the average share of these sectors in GVA during 2017-18 to 2019-20.
-
-Using the sectoral estimates of Gen AI induced incremental GVAs, we have calculated the aggregate GVA including the impact of Gen AI and from this GDP including the impact of Gen AI has been derived by adding net indirect taxes for the terminal year 2029-30. These magnitudes in INR terms have been converted into USD market exchange terms by applying the estimated exchange rate for the terminal year.
-
----
-
-# Global Developments with Respect to Regulations and Gen AI
-
-Countries are adopting differential approaches to promoting and regulating AI, and more specifically, Gen AI. While all countries emphasize that AI regulation must strike a balance between fostering innovation while managing the risks, however their approaches and emphasis differs widely. With some putting greater focus on promotion and development and others on mitigating the risks from the implementation of the technology. The role of the government in developing AI algorithms also differs.
-
-The US
+### The US
 
 Majority of the companies that are behind the development of the foundational Large Language Models (LLMs) which power Gen AI, are based out of the US. According to a recent report submitted to the US government, the breakthroughs have not happened by chance. The report acknowledges that they have emerged from an ecosystem characterized by:
 
@@ -1157,6 +1182,12 @@ Similar environment does not exist in most jurisdictions around the world and th
 Given the lead, the current focus in the US is on maintaining global leadership. Some of the measures/proposals under consideration include:
 
 - Setting up of a National AI Research Resource (NAIRR) that provides access to a federated mix of computational and data resources, testbeds, software and testing tools, and user support services via an integrated portal. These resources are proposed to be made broadly accessible to a range of users to increase the diversity of AI researchers.
+
+---
+
+## Global Developments with Respect to Regulations and Gen AI
+
+Countries are adopting differential approaches to promoting and regulating AI, and more specifically, Gen AI. While all countries emphasize that AI regulation must strike a balance between fostering innovation while managing the risks, however their approaches and emphasis differs widely. With some putting greater focus on promotion and development and others on mitigating the risks from the implementation of the technology. The role of the government in developing AI algorithms also differs.
 - The US government issued an Executive Order (9 August 2023) on the ground of national security, that limits the ability of competing countries to get hold of software programs pertaining to the development of AI as well as at the hardware required to develop it. Pursuant to that, the US would add or remove products/technologies under “covered national security technologies and products.” The order specifically mentions semiconductors and microelectronics, quantum information technologies, and artificial intelligence sectors.
 
 - The US government issued another Executive Order on 30 October 2023, which signals efforts to introduce safeguards to address the perceived risks of AI. The “Executive Order on Safe, Secure and Trustworthy Artificial Intelligence” introduces a sweeping range of measures to not only cater to safety, security, transparency, various citizen protections, effective government usage, etc., but also targets the promotion of innovation, competition, and global leadership of the US in the AI space.
@@ -1203,7 +1234,7 @@ It may be noted that EU was among the first to enact regulations relating to dat
 
 - **Support to open source**: The Act grants certain protections and some exemptions to open-source community from legal and compliance issues. While Open-source developers are encouraged to implement documentation of best practices, such as model and data cards, but the responsibility for compliance ultimately falls on the entities that incorporate open-source components into their AI applications.
 
-- **Measures for innovation in EU**: The EU is promoting Gen AI/AI innovation through regulatory sandboxes, and measures to reduce the regulatory burden for SMEs and start-ups. In addition, they have also promulgated rules/directives such as Data Governance Act which facilitates the open sharing of data, Open Data Directive which mandates the release of public sector data, and EU strategy for data which enables the creation of a mechanism to create a single market for data. Further, it has also notified rules to access data to develop high-risk AI systems.
+- **Measures for innovation in EU**: The EU is promoting Gen AI innovation through regulatory sandboxes, and measures to reduce the regulatory burden for SMEs and start-ups. In addition, they have also promulgated rules/directives such as Data Governance Act which facilitates the open sharing of data, Open Data Directive which mandates the release of public sector data, and EU strategy for data which enables the creation of a mechanism to create a single market for data. Further, it has also notified rules to access data to develop high-risk AI systems.
 
 ### UK proposes regulatory sandboxes to encourage innovation
 
@@ -1365,7 +1396,7 @@ Regulatory infrastructure required for AI systems to flourish in India and to be
 
 # Proud to be part of the face of the future
 **ey.ai** unifying platform  
-[www.ey.com/en_in/platform](http://www.ey.com/en_in/platform)
+[www.ey.com/en_in/ai/platform](http://www.ey.com/en_in/ai/platform)
 
 ---
 
@@ -1373,4 +1404,6 @@ Regulatory infrastructure required for AI systems to flourish in India and to be
 
 ## EY | Building a better working world
 
-EY exists to build a better working
+EY exists to build a better working world, helping to create long-term value for clients, people and society and build trust in the capital markets.
+
+Enabled by data and technology, diverse EY teams

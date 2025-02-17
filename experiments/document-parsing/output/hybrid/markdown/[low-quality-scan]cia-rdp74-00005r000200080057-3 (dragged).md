@@ -10,10 +10,10 @@ National Archives and Records Service, GSA
 
 ## CONTENTS  
 - Hard Copy Storage and Retrieval ........................................ 1  
-- Microfilm Storage and Retrieval ........................................... 8  
-- Computer Storage and Retrieval ........................................... 14  
-- Videotape Storage and Retrieval .......................................... 18  
-- Storage and Retrieval and Coordinate Indexing .......................... 18  
+- Microfilm Storage and Retrieval ........................................ 8  
+- Computer Storage and Retrieval ...................................... 14  
+- Videotape Storage and Retrieval ...................................... 18  
+- Storage and Retrieval and Coordinate Indexing .................. 18  
 
 ---
 

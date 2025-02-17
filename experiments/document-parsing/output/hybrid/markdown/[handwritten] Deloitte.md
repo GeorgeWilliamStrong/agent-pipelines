@@ -21,7 +21,7 @@
 |-----|----------------|-----------|----------------------|---------------------|
 | 1   | Anna Pojanis   | CTO       | anna@getamni.ai      | a                   |
 | 2   | Tyler Maran    | CEO       | tyler@getamni.ai     |                     |
-| 3   | Kathy Margaret  | Associate | kmargaret@qaconsultants.com | Kathy             |
+| 3   | Kathy Margaret  | Associate | kmargaret@qaconsultants.com | Kathy              |
 | 4   | Mark Ding      | Eng       | mark@getamni.ai      |                     |
 | 5   |                |           |                      |                     |
 
@@ -33,4 +33,4 @@
 
 **DELOITTE QUALITY ASSURANCE CONSULTANTS, LLC**  
 450 Oceanview Drive, Suite 200 - Santa Monica, CA 90405 - PHONE (800) 555-1234 (310) 555-7890 - FAX (310) 555-4567  
-**Website:** [www.qaconsultants.com](http://www.qaconsultants.com) - **Email:** contact@qaconsultants.com
+Website: [www.qaconsultants.com](http://www.qaconsultants.com) - Email: contact@qaconsultants.com

@@ -21,9 +21,11 @@ Avcry Davis
 | Website Design       | $50/hr | 5     | $250.00  |
 | Website Development   | $100/hr| 5     | $500.00  |
 | SEO                  | $50/hr | 4     | $200.00  |
-| **Sub-Total**        |        |       | $1,250.00|
-| **Package Discount (30%)** | |       | $375.00  |
-| **TOTAL**            |        |       | $875.00  |
+
+**Sub-Total**: $1,250.00  
+**Package Discount (30%)**: $375.00  
+
+## TOTAL: $875.00
 
 Payment is required within 14 business days of invoice date. Please send remittance to hello@reallygreatsite.com.
 

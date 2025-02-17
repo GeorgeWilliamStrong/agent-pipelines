@@ -24,7 +24,7 @@ For the case of an i.i.d. dataset and continuous latent variables per datapoint,
 
 The strategy in this section can be used to derive a lower bound estimator (a stochastic objective function) for a variety of directed graphical models with continuous latent variables. We will restrict ourselves here to the common case where we have an i.i.d. dataset with latent variables per datapoint, and where we like to perform maximum likelihood (ML) or maximum a posteriori (MAP) inference on the (global) parameters, and variational inference on the latent variables. It is, for example,
 
-![Figure 1: The type of directed graphical model under consideration. Solid lines denote the generative model p(z)p(x|z), dashed lines denote the variational approximation q(z|x) to the intractable posterior p(z|x). The variational parameters φ are learned jointly with the generative model parameters θ.](attachment)
+![Figure 1: The type of directed graphical model under consideration. Solid lines denote the generative model p(z)p(x|z), dashed lines denote the variational approximation q(z|x) to the intractable posterior p(z|x). The variational parameters φ are learned jointly with the generative model parameters θ.](image1.png)
 
 straightforward to extend this scenario to the case where we also perform variational inference on the global parameters; that algorithm is put in the appendix, but experiments with that case are left to future work. Note that our method can be applied to online, non-stationary settings, e.g. streaming data, but here we assume a fixed dataset for simplicity.
 
@@ -34,7 +34,7 @@ Let us consider some dataset \( X = \{x^{(i)}\}_{i=1}^N \) consisting of \( N \)
 
 Very importantly, we do not make the common simplifying assumptions about the marginal or posterior probabilities. Conversely, we are here interested in a general algorithm that even works efficiently in the case of:
 
-1. **Intractability**: the case where the integral of the marginal likelihood \( p(x) = \int p(z)p(x|z) dz \) is intractable (so we cannot evaluate or differentiate the marginal likelihood), where the true posterior density \( p(z|x) = p(x|z)p(z)/p(x) \) is intractable (so the EM algorithm cannot be used), and where the required integrals for any reasonable mean-field VB algorithm are also intractable. These intractabilities are quite common and appear in cases of moderately complicated likelihood functions \( p(x|z) \), e.g. a neural network with a nonlinear hidden layer.
+1. **Intractability**: the case where the integral of the marginal likelihood \( p_{\theta}(x) = \int p(z)p(x|z) dz \) is intractable (so we cannot evaluate or differentiate the marginal likelihood), where the true posterior density \( p_{\theta}(z|x) = p(x|z)p(z)/p(x) \) is intractable (so the EM algorithm cannot be used), and where the required integrals for any reasonable mean-field VB algorithm are also intractable. These intractabilities are quite common and appear in cases of moderately complicated likelihood functions \( p_{\theta}(x|z) \), e.g. a neural network with a nonlinear hidden layer.
 
 2. **A large dataset**: we have so much data that batch optimization is too costly; we would like to make parameter updates using small minibatches or even single datapoints. Sampling-based solutions, e.g. Monte Carlo EM, would in general be too slow, since it involves a typically expensive sampling loop per datapoint.
 
@@ -46,60 +46,58 @@ We are interested in, and propose a solution to, three related problems in the a
 
 3. Efficient approximate marginal inference of the variable \( x \). This allows us to perform all kinds of inference tasks where a prior over \( x \) is required. Common applications in computer vision include image denoising, inpainting and super-resolution.
 
-For the purpose of solving the above problems, let us introduce a recognition model \( q(z|x) \): an approximation to the intractable true posterior \( p(z|x) \). Note that in contrast with the approximate posterior in mean-field variational inference, it is not necessarily factorial and its parameters \( \phi \) are not computed from some closed-form expectation. Instead, we’ll introduce a method for learning the recognition model parameters \( \phi \) jointly with the generative model parameters \( \theta \).
+For the purpose of solving the above problems, let us introduce a recognition model \( q_{\phi}(z|x) \): an approximation to the intractable true posterior \( p(z|x) \). Note that in contrast with the approximate posterior in mean-field variational inference, it is not necessarily factorial and its parameters \( \phi \) are not computed from some closed-form expectation. Instead, we’ll introduce a method for learning the recognition model parameters \( \phi \) jointly with the generative model parameters \( \theta \).
 
-From a coding theory perspective, the unobserved variables \( z \) have an interpretation as a latent representation or code. In this paper we will therefore also refer to the recognition model \( q(z|x) \) as a probabilistic encoder, since given a datapoint \( x \) it produces a distribution (e.g. a Gaussian) over the possible values of the code \( z \) from which the datapoint \( x \) could have been generated. In a similar vein we will refer to \( p(x|z) \) as a probabilistic decoder, since given a code \( z \) it produces a distribution over the possible corresponding values of \( x \).
+From a coding theory perspective, the unobserved variables \( z \) have an interpretation as a latent representation or code. In this paper we will therefore also refer to the recognition model \( q_{\phi}(z|x) \) as a probabilistic encoder, since given a datapoint \( x \) it produces a distribution (e.g. a Gaussian) over the possible values of the code \( z \) from which the datapoint \( x \) could have been generated. In a similar vein we will refer to \( p_{\theta}(x|z) \) as a probabilistic decoder, since given a code \( z \) it produces a distribution over the possible corresponding values of \( x \).
 
 ### 2.2 The variational bound
 
-The marginal likelihood is composed of a sum over the marginal likelihoods of individual datapoints
+The marginal likelihood is composed of a sum over the marginal likelihoods of individual datapoints:
 
 \[
-\log p(x^{(1)}, \ldots, x^{(N)}) = \sum_{i=1}^N \log p(x^{(i)}),
+\log p_{\theta}(x^{(1)}, \ldots, x^{(N)}) = \sum_{i=1}^{N} \log p_{\theta}(x^{(i)}),
 \]
 
 which can each be rewritten as:
 
 \[
-\log p(x^{(i)}) \geq L(\theta, \phi; x^{(i)}) = E_{q(z|x^{(i)})}[-\log q(z|x^{(i)}) + \log p(x^{(i)}, z)].
+\log p_{\theta}(x^{(i)}) \geq L(\theta, \phi; x^{(i)}) = E_{q_{\phi}(z|x^{(i)})}[-\log q_{\phi}(z|x^{(i)}) + \log p_{\theta}(x^{(i)}, z)].
 \]
 
 The first RHS term is the KL divergence of the approximate from the true posterior. Since this KL-divergence is non-negative, the second RHS term \( L(\theta, \phi; x^{(i)}) \) is called the (variational) lower bound on the marginal likelihood of datapoint \( i \), and can be written as:
 
 \[
-\log p(x^{(i)}) \geq L(\theta, \phi; x^{(i)}) = E_{q(z|x^{(i)})}[-D_{KL}(q(z|x^{(i)}) || p(z)) + E_{q(z|x^{(i)})}[\log p(x^{(i)}|z)].
+\log p_{\theta}(x^{(i)}) \geq L(\theta, \phi; x^{(i)}) = E_{q_{\phi}(z|x^{(i)})}[-D_{KL}(q_{\phi}(z|x^{(i)}) || p_{\theta}(z)) + E_{q_{\phi}(z|x^{(i)})}[\log p_{\theta}(x^{(i)}|z)].
 \]
 
 We want to differentiate and optimize the lower bound \( L(\theta, \phi; x^{(i)}) \) w.r.t. both the variational parameters \( \phi \) and generative parameters \( \theta \). However, the gradient of the lower bound w.r.t. \( \phi \) is a bit problematic. The usual (naïve) Monte Carlo gradient estimator for this type of problem is:
 
 \[
-\nabla E_{q(z|x^{(i)})}[f(z)] = E_{q(z|x^{(i)})}[f(z) \nabla \log q(z)] \approx \frac{1}{L} \sum_{l=1}^L f(z^{(l)}) \nabla \log q(z^{(l)}),
+\nabla E_{q_{\phi}(z|x^{(i)})}[f(z)] = E_{q_{\phi}(z|x^{(i)})}[f(z) \nabla \log q_{\phi}(z|x^{(i)})] \approx \frac{1}{L} \sum_{l=1}^{L} f(z^{(l)}) \nabla \log q_{\phi}(z^{(l)}|x^{(i)}) \text{ where } z^{(l)} \sim q_{\phi}(z|x^{(i)}) .
 \]
 
-where \( z^{(l)} \sim q(z|x^{(i)}) \). This gradient estimator exhibits very high variance and is impractical for our purposes.
+This gradient estimator exhibits very high variance (see e.g. [BJP12]) and is impractical for our purposes.
 
 ### 2.3 The SGVB estimator and AEVB algorithm
 
-In this section we introduce a practical estimator of the lower bound and its derivatives w.r.t. the parameters. We assume an approximate posterior in the form \( q(z|x) \), but please note that the technique can be applied to the case \( q(z) \), i.e. where we do not condition on \( x \), as well. The fully variational Bayesian method for inferring a posterior over the parameters is given in the appendix.
+In this section we introduce a practical estimator of the lower bound and its derivatives w.r.t. the parameters. We assume an approximate posterior in the form \( q_{\phi}(z|x) \), but please note that the technique can be applied to the case \( q_{\phi}(z) \), i.e. where we do not condition on \( x \), as well. The fully variational Bayesian method for inferring a posterior over the parameters is given in the appendix.
 
-Under certain mild conditions outlined in section 2.4 for a chosen approximate posterior \( q(z|x) \), we can reparameterize the random variable \( z \sim q(z|x) \) using a differentiable transformation \( g(\epsilon, x) \) of an (auxiliary) noise variable \( \epsilon \):
-
-\[
-z = g(\epsilon, x) \quad \text{with } \epsilon \sim p(\epsilon).
-\]
-
-See section 2.4 for general strategies for choosing such an appropriate distribution \( p(\epsilon) \) and function \( g(\epsilon, x) \). We can now form Monte Carlo estimates of expectations of some function \( f(z) \) w.r.t. \( q(z|x) \) as follows:
+Under certain mild conditions outlined in section 2.4 for a chosen approximate posterior \( q_{\phi}(z|x) \) we can reparameterize the random variable \( z \sim q_{\phi}(z|x) \) using a differentiable transformation \( g(\epsilon, x) \) of an (auxiliary) noise variable \( \epsilon \):
 
 \[
-E_{q(z|x^{(i)})}[f(z)] = E[f(g(\epsilon, x^{(i)}))] \approx \frac{1}{L} \sum_{l=1}^L f(g(\epsilon^{(l)}, x^{(i)})),
+z = g(\epsilon, x) \text{ with } \epsilon \sim p(\epsilon).
 \]
 
-where \( \epsilon^{(l)} \sim p(\epsilon) \).
+See section 2.4 for general strategies for choosing such an appropriate distribution \( p(\epsilon) \) and function \( g(\epsilon, x) \). We can now form Monte Carlo estimates of expectations of some function \( f(z) \) w.r.t. \( q_{\phi}(z|x) \) as follows:
+
+\[
+E_{q_{\phi}(z|x^{(i)})}[f(z)] = E_{p(\epsilon)}[f(g(\epsilon, x^{(i)}))] \approx \frac{1}{L} \sum_{l=1}^{L} f(g(\epsilon^{(l)}, x^{(i)})) \text{ where } \epsilon^{(l)} \sim p(\epsilon).
+\]
 
 We apply this technique to the variational lower bound, yielding our generic Stochastic Gradient Variational Bayes (SGVB) estimator:
 
 \[
-\tilde{L}(\theta, \phi; x^{(i)}) \approx L(\theta, \phi; x^{(i)}) = \frac{1}{L} \sum_{l=1}^L \left[ \log p(x^{(i)}, z^{(i,l)}) - \log q_{\phi}(z^{(i,l)}|x^{(i)}) \right],
+\tilde{L}_{A}(\theta, \phi; x^{(i)}) \approx L(\theta, \phi; x^{(i)}) = \frac{1}{L} \sum_{l=1}^{L} \left[ \log p_{\theta}(x^{(i)}, z^{(i,l)}) - \log q_{\phi}(z^{(i,l)}|x^{(i)}) \right],
 \]
 
 where \( z^{(i,l)} = g(\epsilon^{(i,l)}, x^{(i)}) \) and \( \epsilon^{(l)} \sim p(\epsilon) \).
@@ -110,21 +108,21 @@ where \( z^{(i,l)} = g(\epsilon^{(i,l)}, x^{(i)}) \) and \( \epsilon^{(l)} \sim 
 2. repeat
    - \( X_M \leftarrow \) Random minibatch of \( M \) datapoints (drawn from full dataset)
    - \( \epsilon \leftarrow \) Random samples from noise distribution \( p(\epsilon) \)
-   - \( g \leftarrow \nabla_{\theta, \phi} \tilde{L}_M(\theta, \phi; X_M, \epsilon) \) (Gradients of minibatch estimator)
-   - \( \theta, \phi \leftarrow \) Update parameters using gradients \( g \) (e.g. SGD or Adagrad)
+   - \( g \leftarrow \nabla_{\theta, \phi} \tilde{L}_{M}(\theta, \phi; X_M, \epsilon) \) (Gradients of minibatch estimator)
+   - \( \theta, \phi \leftarrow \) Update parameters using gradients \( g \) (e.g. SGD or Adagrad [DHS10])
 3. until convergence of parameters \( (\theta, \phi) \)
 4. return \( \theta, \phi \)
 
-Often, the KL-divergence \( D_{KL}(q(z|x^{(i)}) || p(z)) \) can be integrated analytically, such that only the expected reconstruction error \( E_{q(z|x^{(i)})}[\log p(x^{(i)}|z)] \) requires estimation by sampling. The KL-divergence term can then be interpreted as regularizing \( \phi \), encouraging the approximate posterior to be close to the prior \( p(z) \). This yields a second version of the SGVB estimator:
+Often, the KL-divergence \( D_{KL}(q_{\phi}(z|x^{(i)}) || p_{\theta}(z)) \) of eq. (3) can be integrated analytically (see appendix B), such that only the expected reconstruction error \( E_{q_{\phi}(z|x^{(i)})}[\log p_{\theta}(x^{(i)}|z)] \) requires estimation by sampling. The KL-divergence term can then be interpreted as regularizing \( \phi \), encouraging the approximate posterior to be close to the prior \( p(z) \). This yields a second version of the SGVB estimator:
 
 \[
-\tilde{L}_B(\theta, \phi; x^{(i)}) \approx L(\theta, \phi; x^{(i)}),
+\tilde{L}_{B}(\theta, \phi; x^{(i)}) \approx L(\theta, \phi; x^{(i)}),
 \]
 
-which typically has less variance than the generic estimator:
+corresponding to eq. (3), which typically has less variance than the generic estimator:
 
 \[
-\tilde{L}_B(\theta, \phi; x^{(i)}) = -D_{KL}(q_{\phi}(z|x^{(i)}) || p(z)) + \frac{1}{L} \sum_{l=1}^L \log p_{\theta}(x^{(i)}|z^{(i,l)}),
+\tilde{L}_{B}(\theta, \phi; x^{(i)}) = -D_{KL}(q_{\phi}(z|x^{(i)}) || p_{\theta}(z)) + \frac{1}{L} \sum_{l=1}^{L} \log p_{\theta}(x^{(i)}|z^{(i,l)}),
 \]
 
 where \( z^{(i,l)} = g(\epsilon^{(i,l)}, x^{(i)}) \) and \( \epsilon^{(l)} \sim p(\epsilon) \).
@@ -132,25 +130,25 @@ where \( z^{(i,l)} = g(\epsilon^{(i,l)}, x^{(i)}) \) and \( \epsilon^{(l)} \sim 
 Given multiple datapoints from a dataset \( X \) with \( N \) datapoints, we can construct an estimator of the marginal likelihood lower bound of the full dataset, based on minibatches:
 
 \[
-L(\theta, \phi; X) \approx \tilde{L}_M(\theta, \phi; X_M) = \frac{1}{M} \sum_{i=1}^M \tilde{L}(\theta, \phi; x^{(i)}),
+L(\theta, \phi; X) \approx L_{M}(\theta, \phi; X_M) = \frac{1}{M} \sum_{i=1}^{M} \tilde{L}(\theta, \phi; x^{(i)}),
 \]
 
-where the minibatch \( X_M = \{x^{(i)}\}_{i=1}^M \) is a randomly drawn sample of \( M \) datapoints from the full dataset \( X \) with \( N \) datapoints. In our experiments we found that the number of samples \( L \) per datapoint can be set to 1 as long as the minibatch size \( M \) was large enough, e.g. \( M = 100 \). Derivatives \( \nabla_{\theta, \phi} \tilde{L}(\theta; X_M) \) can be taken, and the resulting gradients can be used in conjunction with stochastic optimization methods such as SGD or Adagrad. See algorithm 1 for a basic approach to compute the stochastic gradients.
+where the minibatch \( X_M = \{x^{(i)}\}_{i=1}^{M} \) is a randomly drawn sample of \( M \) datapoints from the full dataset \( X \) with \( N \) datapoints. In our experiments we found that the number of samples \( L \) per datapoint can be set to 1 as long as the minibatch size \( M \) was large enough, e.g. \( M = 100 \). Derivatives \( \nabla_{\theta, \phi} \tilde{L}(\theta; X_M) \) can be taken, and the resulting gradients can be used in conjunction with stochastic optimization methods such as SGD or Adagrad [DHS10]. See algorithm 1 for a basic approach to compute the stochastic gradients.
 
-A connection with auto-encoders becomes clear when looking at the objective function given at eq. (7). The first term is (the KL divergence of the approximate posterior from the prior) acts as a regularizer, while the second term is an expected negative reconstruction error. The function \( g(.) \) is chosen such that it maps a datapoint \( x^{(i)} \) and a random noise vector \( \epsilon^{(l)} \) to a sample from the approximate posterior for that datapoint: \( z^{(i,l)} = g(\epsilon^{(l)}, x^{(i)}) \). Subsequently, the sample \( z^{(i,l)} \) is then input to function \( \log p(x^{(i)}|z^{(i,l)}) \), which equals the probability density (or mass) of datapoint \( x^{(i)} \) under the generative model, given \( z^{(i,l)} \). This term is a negative reconstruction error in auto-encoder parlance.
+A connection with auto-encoders becomes clear when looking at the objective function given at eq. (7). The first term is (the KL divergence of the approximate posterior from the prior) acts as a regularizer, while the second term is an expected negative reconstruction error. The function \( g(.) \) is chosen such that it maps a datapoint \( x^{(i)} \) and a random noise vector \( \epsilon^{(l)} \) to a sample from the approximate posterior for that datapoint: \( z^{(i,l)} = g(\epsilon^{(l)}, x^{(i)}) \) where \( z^{(i,l)} \sim q(z|x^{(i)}) \). Subsequently, the sample \( z^{(i,l)} \) is then input to function \( \log p_{\theta}(x^{(i)}|z^{(i,l)}) \), which equals the probability density (or mass) of datapoint \( x^{(i)} \) under the generative model, given \( z^{(i,l)} \). This term is a negative reconstruction error in auto-encoder parlance.
 
 ### 2.4 The reparameterization trick
 
-In order to solve our problem we invoked an alternative method for generating samples from \( q(z|x) \). The essential parameterization trick is quite simple. Let \( z \) be a continuous random variable, and \( z \sim q(z|x) \) be some conditional distribution. It is then often possible to express the random variable \( z \) as a deterministic variable \( z = g(\epsilon, x) \), where \( \epsilon \) is an auxiliary variable with independent marginal \( p(\epsilon) \), and \( g(.) \) is some vector-valued function parameterized by \( \phi \).
+In order to solve our problem we invoked an alternative method for generating samples from \( q_{\phi}(z|x) \). The essential parameterization trick is quite simple. Let \( z \) be a continuous random variable, and \( z \sim q_{\phi}(z|x) \) be some conditional distribution. It is then often possible to express the random variable \( z \) as a deterministic variable \( z = g(\epsilon, x) \), where \( \epsilon \) is an auxiliary variable with independent marginal \( p(\epsilon) \), and \( g(.) \) is some vector-valued function parameterized by \( \phi \).
 
-This reparameterization is useful for our case since it can be used to rewrite an expectation w.r.t. \( q(z|x) \) such that the Monte Carlo estimate of the expectation is differentiable w.r.t. \( \phi \). A proof is as follows. Given the deterministic mapping \( z = g(\epsilon, x) \) we know that \( q(z|x) dz = p(\epsilon) \prod d\epsilon \). Therefore,
+This reparameterization is useful for our case since it can be used to rewrite an expectation w.r.t. \( q_{\phi}(z|x) \) such that the Monte Carlo estimate of the expectation is differentiable w.r.t. \( \phi \). A proof is as follows. Given the deterministic mapping \( z = g(\epsilon, x) \) we know that \( q_{\phi}(z|x) dz = p(\epsilon) \prod d\epsilon \). Therefore,
 
 \[
-E_{q(z|x)}[f(z)] = \int f(z) q(z|x) dz = \int f(g(\epsilon, x)) p(\epsilon) \prod d\epsilon.
+E_{q_{\phi}(z|x)}[f(z)] = \int f(z) q_{\phi}(z|x) dz = \int f(g(\epsilon, x)) p(\epsilon) \prod d\epsilon.
 \]
 
 It follows that the expectation can be differentiated w.r.t. \( \phi \) through the function \( g \).
-["         that a differentiable estimator can be constructed: \( f \int q(z|x)f(z) dz \approx \frac{1}{L} \sum_{l=1}^{L} f(g(x, \epsilon^{(l)})) \)
+["         that a differentiable estimator can be constructed: \( f_{q}(z|x)f(z) dz \approx \frac{1}{L} \sum_{l=1}^{L} f(g(x, \epsilon^{(l)})) \)
          where \( \epsilon^{(l)} \sim p(\epsilon) \). In section 2.3 we applied this trick to obtain a differentiable estimator of the variational lower bound.
 
          Take, for example, the univariate Gaussian case: let \( z \sim p(z|x) = N(\mu, \sigma^2) \). In this case, a valid reparameterization is \( z = \mu + \sigma \epsilon \), where \( \epsilon \) is an auxiliary noise variable \( \epsilon \sim N(0, 1) \). Therefore,
@@ -158,196 +156,76 @@ It follows that the expectation can be differentiated w.r.t. \( \phi \) through 
          E[f(z)] = E[f(\mu + \sigma \epsilon)] \approx \frac{1}{L} \sum_{l=1}^{L} f(\mu + \sigma \epsilon^{(l)}) \quad \text{where} \quad \epsilon^{(l)} \sim N(0, 1).
          \]
 
-         For which \( q(z|x) \) can we choose such a differentiable transformation \( g(.) \) and auxiliary variable \( \epsilon \sim p(\epsilon)? \) Three basic approaches are:
+         For which \( q(z|x) \) can we choose such a differentiable transformation \( g(.) \) and auxiliary variable \( \epsilon \sim p(\epsilon) \)? Three basic approaches are:
 
-           1. Tractable inverse CDF. In this case, let \( \epsilon \sim U(0, 1) \), and let \( g(\epsilon, x) \) be the inverse CDF of \( q(z|x) \). Examples: Exponential, Cauchy, Logistic, Rayleigh, Pareto, Weibull, Reciprocal, Gompertz, Gumbel, and Erlang distributions.
-           2. Analogous to the Gaussian example, for any "location-scale" family of distributions we can choose the standard distribution (with location = 0, scale = 1) as the auxiliary variable \( \epsilon \), and let \( g(.) = \text{location} + \text{scale} \cdot \epsilon \). Examples: Laplace, Elliptical, Student’s t, Logistic, Uniform, Triangular, and Gaussian distributions.
-           3. Composition: It is often possible to express random variables as different transformations of auxiliary variables. Examples: Log-Normal (exponentiation of normally distributed variable), Gamma (a sum over exponentially distributed variables), Dirichlet (weighted sum of Gamma variates), Beta, Chi-Squared, and F distributions.
+           1. **Tractable inverse CDF**. In this case, let \( \epsilon \sim U(0, 1) \), and let \( g(\epsilon, x) \) be the inverse CDF of \( q(z|x) \). Examples: Exponential, Cauchy, Logistic, Rayleigh, Pareto, Weibull, Reciprocal, Gompertz, Gumbel, and Erlang distributions.
+           2. **Analogous to the Gaussian example**, for any "location-scale" family of distributions we can choose the standard distribution (with location = 0, scale = 1) as the auxiliary variable \( \epsilon \), and let \( g(.) = \text{location} + \text{scale} \cdot \epsilon \). Examples: Laplace, Elliptical, Student’s t, Logistic, Uniform, Triangular, and Gaussian distributions.
+           3. **Composition**: It is often possible to express random variables as different transformations of auxiliary variables. Examples: Log-Normal (exponentiation of normally distributed variable), Gamma (a sum over exponentially distributed variables), Dirichlet (weighted sum of Gamma variates), Beta, Chi-Squared, and F distributions.
 
          When all three approaches fail, good approximations to the inverse CDF exist requiring computations with time complexity comparable to the PDF (see e.g. [Dev86] for some methods).
 
-         3 Example: Variational Auto-Encoder
+         ## 3 Example: Variational Auto-Encoder
 
          In this section we’ll give an example where we use a neural network for the probabilistic encoder \( q(z|x) \) (the approximation to the posterior of the generative model \( p(x, z) \)) and where the parameters \( \phi \) and \( \theta \) are optimized jointly with the AEVB algorithm.
 
          Let the prior over the latent variables be the centered isotropic multivariate Gaussian \( p(z) = N(z; 0, I) \). Note that in this case, the prior lacks parameters. We let \( p(x|z) \) be a multivariate Gaussian (in case of real-valued data) or Bernoulli (in case of binary data) whose distribution parameters are computed from \( z \) with a MLP (a fully-connected neural network with a single hidden layer, see appendix C). Note the true posterior \( p(z|x) \) is in this case intractable. While there is much freedom in the form \( q(z|x) \), we’ll assume the true (but intractable) posterior takes on an approximate Gaussian form with an approximately diagonal covariance. In this case, we can let the variational approximate posterior be a multivariate Gaussian with a diagonal covariance structure:
 
-                     \[
-                     \log q(z|x^{(i)}) = \log N(z; \mu^{(i)}, \sigma^2(I)) \tag{9}
-                     \]
+         \[
+         \log q(z|x^{(i)}) = \log N(z; \mu^{(i)}, \sigma^2(I)) \tag{9}
+         \]
 
          where the mean and s.d. of the approximate posterior, \( \mu^{(i)} \) and \( \sigma^{(i)} \), are outputs of the encoding MLP, i.e. nonlinear functions of datapoint \( x^{(i)} \) and the variational parameters \( \phi \) (see appendix C).
 
          As explained in section 2.4, we sample from the posterior \( z^{(i,l)} \sim q(z|x^{(i)}) \) using \( z^{(i,l)} = g(x^{(i)}, \epsilon^{(l)}) = \mu^{(i)} + \sigma^{(i)} \odot \epsilon^{(l)} \) where \( \epsilon^{(l)} \sim N(0, I) \). With \( \odot \) we signify an element-wise product. In this model both \( p(z) \) (the prior) and \( q(z|x) \) are Gaussian; in this case, we can use the estimator of eq. (7) where the KL divergence can be computed and differentiated without estimation (see appendix B). The resulting estimator for this model and datapoint \( x^{(i)} \) is:
 
-                   \[
-                   J(\theta, \phi; x^{(i)}) \approx \frac{1}{2} \sum_{j=1}^{L} \left( \log(\sigma^{(j)})^2 - (\mu^{(j)})^2 - (\sigma^{(j)})^2 \right) + \frac{1}{L} \sum_{l=1}^{L} \log p(x^{(i)}|z^{(i,l)}) \tag{10}
-                   \]
+         \[
+         J(\theta, \phi; x^{(i)}) \approx \frac{1}{L} \sum_{j=1}^{L} \left( \frac{1}{2} \left( \log(\sigma^{(j)})^2 - (\mu^{(j)})^2 - (\sigma^{(j)})^2 \right) + \frac{1}{L} \sum_{l=1}^{L} \log p(x^{(i)}|z^{(i,l)}) \right) \tag{10}
+         \]
 
          As explained above and in appendix C, the decoding term \( \log p(x^{(i)}|z^{(i,l)}) \) is a Bernoulli or Gaussian MLP, depending on the type of data we are modelling.
 
          2Note that this is just a (simplifying) choice, and not a limitation of our method.
 
-                            5
-
-
-         4 Related work
+         ## 4 Related work
 
          The wake-sleep algorithm [HDFN95] is, to the best of our knowledge, the only other on-line learning method in the literature that is applicable to the same general class of continuous latent variable models. Like our method, the wake-sleep algorithm employs a recognition model that approximates the true posterior. A drawback of the wake-sleep algorithm is that it requires a concurrent optimization of two objective functions, which together do not correspond to optimization of (a bound of) the marginal likelihood. An advantage of wake-sleep is that it also applies to models with discrete latent variables. Wake-Sleep has the same computational complexity as AEVB per datapoint.
 
-         Stochastic variational inference [HBWP13] has recently received increasing interest. Recently, [BJP12] introduced a control variate scheme to reduce the high variance of the naïve gradient estimator discussed in section 2.1, and applied to exponential family approximations of the posterior. In [RGB13] some general methods, i.e. a control variate scheme, were introduced for reducing the variance of the original gradient estimator. In [SK13], a similar reparameterization as in this paper was used in an efficient version of a stochastic variational inference algorithm for learning the natural parameters of exponential-family approximating distributions.
+         Stochastic variational inference [HBWP13] has recently received increasing interest. Recently, [BJP12] introduced a control variate schemes to reduce the high variance of the naïve gradient estimator discussed in section 2.1, and applied to exponential family approximations of the posterior. In [RGB13] some general methods, i.e. a control variate scheme, were introduced for reducing the variance of the original gradient estimator. In [SK13], a similar reparameterization as in this paper was used in an efficient version of a stochastic variational inference algorithm for learning the natural parameters of exponential-family approximating distributions.
 
          The AEVB algorithm exposes a connection between directed probabilistic models (trained with a variational objective) and auto-encoders. A connection between linear auto-encoders and a certain class of generative linear-Gaussian models has long been known. In [Row98] it was shown that PCA corresponds to the maximum-likelihood (ML) solution of a special case of the linear-Gaussian model with a prior \( p(z) = N(0, I) \) and a conditional distribution \( p(x|z) = N(x; Wz, \epsilon I) \), specifically the case with infinitesimally small \( \epsilon \).
 
-         In relevant recent work on autoencoders [VLL+10] it was shown that the training criterion of unregularized autoencoders corresponds to maximization of a lower bound (see the infomax principle [Lin89]) of the mutual information between input \( X \) and latent representation \( Z \). Maximizing (w.r.t. parameters) of the mutual information is equivalent to maximizing the conditional entropy, which is lower bounded by the expected loglikelihood of the data under the autoencoding model [VLL+10], i.e. the negative reconstruction error. However, it is well known that this reconstruction criterion is in itself not sufficient for learning useful representations [BCV13]. Regularization techniques have been proposed to make autoencoders learn useful representations, such as denoising, contractive, and sparse autoencoder variants [BCV13]. The SGVB objective contains a regularization term dictated by the variational bound (e.g. eq. (10)), lacking the usual nuisance regularization hyperparameter required to learn useful representations. Related are also encoder-decoder architectures such as the predictive sparse decomposition (PSD) [KRL08], from which we drew some inspiration. Also relevant are the recently introduced Generative Stochastic Networks [BTL13] where noisy auto-encoders learn the transition operator of a Markov chain that samples from the data distribution. In [SL10] a recognition model was employed for efficient learning with Deep Boltzmann Machines. These methods are targeted at either unnormalized models (i.e. undirected models like Boltzmann machines) or limited to sparse coding models, in contrast to our proposed algorithm for learning a general class of directed probabilistic models.
+         In relevant recent work on autoencoders [VLL+10] it was shown that the training criterion of unregularized autoencoders corresponds to maximization of a lower bound (see the infomax principle [Lin89]) of the mutual information between input \( X \) and latent representation \( Z \). Maximizing (w.r.t. parameters) of the mutual information is equivalent to maximizing the conditional entropy, which is lower bounded by the expected loglikelihood of the data under the autoencoding model [VLL+10], i.e. the negative reconstruction error. However, it is well known that this reconstruction criterion is in itself not sufficient for learning useful representations [BCV13]. Regularization techniques have been proposed to make autoencoders learn useful representations, such as denoising, contractive and sparse autoencoder variants [BCV13]. The SGVB objective contains a regularization term dictated by the variational bound (e.g. eq. (10)), lacking the usual nuisance regularization hyperparameter required to learn useful representations. Related are also encoder-decoder architectures such as the predictive sparse decomposition (PSD) [KRL08], from which we drew some inspiration. Also relevant are the recently introduced Generative Stochastic Networks [BTL13] where noisy auto-encoders learn the transition operator of a Markov chain that samples from the data distribution. In [SL10] a recognition model was employed for efficient learning with Deep Boltzmann Machines. These methods are targeted at either unnormalized models (i.e. undirected models like Boltzmann machines) or limited to sparse coding models, in contrast to our proposed algorithm for learning a general class of directed probabilistic models.
 
-         The recently proposed DARN method [GMW13], also learns a directed probabilistic model using an auto-encoding structure, however their method applies to binary latent variables. Even more recently, [RMW14] also make the connection between auto-encoders, directed probabilistic models, and stochastic variational inference using the reparameterization trick we describe in this paper. Their work was developed independently of ours and provides an additional perspective on AEVB.
+         The recently proposed DARN method [GMW13], also learns a directed probabilistic model using an auto-encoding structure, however their method applies to binary latent variables. Even more recently, [RMW14] also make the connection between auto-encoders, directed probabilistic models and stochastic variational inference using the reparameterization trick we describe in this paper. Their work was developed independently of ours and provides an additional perspective on AEVB.
 
-         5 Experiments
+         ## 5 Experiments
 
          We trained generative models of images from the MNIST and Frey Face datasets3 and compared learning algorithms in terms of the variational lower bound, and the estimated marginal likelihood.
 
-         The generative model (encoder) and variational approximation (decoder) from section 3 were used, where the described encoder and decoder have an equal number of hidden units. Since the Frey Face data are continuous, we used a decoder with Gaussian outputs, identical to the encoder, except that the means were constrained to the interval (0, 1) using a sigmoidal activation function at the
+         The generative model (encoder) and variational approximation (decoder) from section 3 were used, where the described encoder and decoder have an equal number of hidden units. Since the Frey Face data are continuous, we used a decoder with Gaussian outputs, identical to the encoder, except that the means were constrained to the interval (0, 1) using a sigmoidal activation function at the decoder output. Note that with hidden units we refer to the hidden layer of the neural networks of the encoder and decoder.
 
-          3Available at http://www.cs.nyu.edu/˜roweis/data.html
+         Parameters are updated using stochastic gradient ascent where gradients are computed by differentiating the lower bound estimator \( \nabla L(\theta, \phi; X) \) (see algorithm 1), plus a small weight decay term corresponding to a prior \( p(\theta) = N(0, I) \). Optimization of this objective is equivalent to approximate MAP estimation, where the likelihood gradient is approximated by the gradient of the lower bound.
 
-                            6
+         We compared performance of AEVB to the wake-sleep algorithm [HDFN95]. We employed the same encoder (also called recognition model) for the wake-sleep algorithm and the variational autoencoder. All parameters, both variational and generative, were initialized by random sampling from \( N(0, 0.01) \), and were jointly stochastically optimized using the MAP criterion. Stepsizes were adapted with Adagrad [DHS10]; the Adagrad global stepsize parameters were chosen from {0.01, 0.02, 0.1} based on performance on the training set in the first few iterations. Minibatches of size \( M = 100 \) were used, with \( L = 1 \) samples per datapoint.
 
+         ### Likelihood lower bound 
+         We trained generative models (decoders) and corresponding encoders (a.k.a. recognition models) having 500 hidden units in case of MNIST, and 200 hidden units in case of the Frey Face dataset (to prevent overfitting, since it is a considerably smaller dataset). The chosen number of hidden units is based on prior literature on auto-encoders, and the relative performance of different algorithms was not very sensitive to these choices. Figure 2 shows the results when comparing the lower bounds. Interestingly, superfluous latent variables did not result in overfitting, which is explained by the regularizing nature of the variational bound.
 
-          \[
-          100
-          \]
-          \[
-          110
-          \]
-          \[
-          120
-          \]
-          \[
-          130
-          \]
-          \[
-          140
-          \]
-          \[
-          150
-          \]
-           \[
-           105 106 107 108
-          \]
-          # Training samples evaluated
-         \( L \)
-            MNIST, \( N_z = 3 \) MNIST, \( N_z = 5 \) MNIST, \( N_z = 10 \) MNIST, \( N_z = 20 \) MNIST, \( N_z = 200 \)
-               \( z \)         \( z \)         \( z \)         \( z \)         \( z \)
-                 100       100       100       100
+         ### Marginal likelihood 
+         For very low-dimensional latent space it is possible to estimate the marginal likelihood of the learned generative models using an MCMC estimator. More information about the marginal likelihood estimator is available in the appendix. For the encoder and decoder we again used neural networks, this time with 100 hidden units, and 3 latent variables; for higher dimensional latent space the estimates became unreliable. Again, the MNIST dataset was used. The AEVB and Wake-Sleep methods were compared to Monte Carlo EM (MCEM) with a Hybrid Monte Carlo (HMC) [DKPR87] sampler; details are in the appendix. We compared the convergence speed for the three algorithms, for a small and large training set size. Results are in figure 3.
 
-                 110       110       110       110
+         ## Visualisation of high-dimensional data 
+         If we choose a low-dimensional latent space (e.g. 2D), we can use the learned encoders (recognition model) to project high-dimensional data to a low-dimensional manifold. See appendix A for visualisations of the 2D latent manifolds for the MNIST and Frey Face datasets.
 
-                 120       120       120       120
-
-                 130       130       130       130
-
-                 140       140       140       140
-
-                 150       150       150       150
-                  105 106 107 108 105 106 107 108 105 106 107 108 105 106 107 108
-
-                 1600
-                 1400
-                 1200
-                 1000
-                 800
-                 600
-                 400
-                 200
-                  0
-                  105 106 107 108
-                 L
-                   Frey Face, \( N_z = 2 \) Frey Face, \( N_z = 5 \) Frey Face, \( N_z = 10 \) Frey Face, \( N_z = 20 \)
-                       \( z \) 1600    \( z \) 1600    \( z \) 1600   \( z \)
-                        1400      1400      1400
-           Wake-Sleep (test) 1200      1200      1200
-           Wake-Sleep (train) 1000     1000      1000
-           AEVB (test)        800       800      800
-           AEVB (train)       600       600       600
-                        400       400      400
-                        200       200      200
-                         0         0         0
-                         105 106 107 108 105 106 107 108 105 106 107 108
-
-         Figure 2: Comparison of our AEVB method to the wake-sleep algorithm, in terms of optimizing the lower bound, for different dimensionality of latent space (\( N_z \)). Our method converged considerably faster and reached a better solution in all experiments. Interestingly enough, more latent variables does not result in more overfitting, which is explained by the regularizing effect of the lower bound. Vertical axis: the estimated average variational lower bound per datapoint. The estimator variance was small (< 1) and omitted. Horizontal axis: amount of training points evaluated. Computation took around 20-40 minutes per million training samples with an Intel Xeon CPU running at an effective 40 GFLOPS.
-
-         decoder output. Note that with hidden units we refer to the hidden layer of the neural networks of the encoder and decoder.
-
-         Parameters are updated using stochastic gradient ascent where gradients are computed by differentiating the lower bound estimator \( \nabla_{\theta, \phi} L(\theta, \phi; X) \) (see algorithm 1), plus a small weight decay term corresponding to a prior \( p(\theta) = N(0, I) \). Optimization of this objective is equivalent to approximate MAP estimation, where the likelihood gradient is approximated by the gradient of the lower bound.
-
-         We compared performance of AEVB to the wake-sleep algorithm [HDFN95]. We employed the same encoder (also called recognition model) for the wake-sleep algorithm and the variational auto-encoder. All parameters, both variational and generative, were initialized by random sampling from \( N(0, 0.01) \), and were jointly stochastically optimized using the MAP criterion. Stepsizes were adapted with Adagrad [DHS10]; the Adagrad global stepsize parameters were chosen from \{0.01, 0.02, 0.1\} based on performance on the training set in the first few iterations. Minibatches of size \( M = 100 \) were used, with \( L = 1 \) samples per datapoint.
-
-         Likelihood lower bound We trained generative models (decoders) and corresponding encoders (a.k.a. recognition models) having 500 hidden units in case of MNIST, and 200 hidden units in case of the Frey Face dataset (to prevent overfitting, since it is a considerably smaller dataset). The chosen number of hidden units is based on prior literature on auto-encoders, and the relative performance of different algorithms was not very sensitive to these choices. Figure 2 shows the results when comparing the lower bounds. Interestingly, superfluous latent variables did not result in overfitting, which is explained by the regularizing nature of the variational bound.
-
-         Marginal likelihood For very low-dimensional latent space it is possible to estimate the marginal likelihood of the learned generative models using an MCMC estimator. More information about the marginal likelihood estimator is available in the appendix. For the encoder and decoder we again used neural networks, this time with 100 hidden units, and 3 latent variables; for higher dimensional latent space the estimates became unreliable. Again, the MNIST dataset was used. The AEVB and Wake-Sleep methods were compared to Monte Carlo EM (MCEM) with a Hybrid Monte Carlo (HMC) [DKPR87] sampler; details are in the appendix. We compared the convergence speed for the three algorithms, for a small and large training set size. Results are in figure 3.
-
-                            7
-
-
-           \[
-           100
-           \]
-           \[
-           110
-           \]
-           \[
-           120
-           \]
-           \[
-           130
-           \]
-           \[
-           140
-           \]
-           \[
-           150
-           \]
-           \[
-           160
-           \]
-            \( 0 10 20 30 40 50 60 \)
-           # Training samples evaluated (millions)
-         doohilekil-gol
-         lanigraM
-               \( N_{train} = 1000 \)          \( N_{train} = 50000 \)
-               train       125    train
-
-                        130
-
-                                         Wake-Sleep (train)
-                        135
-                                         Wake-Sleep (test)
-                        140                     MCEM (train)
-                                         MCEM (test)
-                        145
-                                         AEVB (train)
-                        150                     AEVB (test)
-
-                        155
-
-                        160
-                         \( 0 10 20 30 40 50 60 \)
-
-         Figure 3: Comparison of AEVB to the wake-sleep algorithm and Monte Carlo EM, in terms of the estimated marginal likelihood, for a different number of training points. Monte Carlo EM is not an on-line algorithm, and (unlike AEVB and the wake-sleep method) can’t be applied efficiently for the full MNIST dataset.
-
-         Visualisation of high-dimensional data If we choose a low-dimensional latent space (e.g. 2D), we can use the learned encoders (recognition model) to project high-dimensional data to a low-dimensional manifold. See appendix A for visualisations of the 2D latent manifolds for the MNIST and Frey Face datasets.
-
-         6 Conclusion
+         ## 6 Conclusion
 
          We have introduced a novel estimator of the variational lower bound, Stochastic Gradient VB (SGVB), for efficient approximate inference with continuous latent variables. The proposed estimator can be straightforwardly differentiated and optimized using standard stochastic gradient methods. For the case of i.i.d. datasets and continuous latent variables per datapoint we introduce an efficient algorithm for efficient inference and learning, Auto-Encoding VB (AEVB), that learns an approximate inference model using the SGVB estimator. The theoretical advantages are reflected in experimental results.
 
-         7 Future work
+         ## 7 Future work
 
          Since the SGVB estimator and the AEVB algorithm can be applied to almost any inference and learning problem with continuous latent variables, there are plenty of future directions: (i) learning hierarchical generative architectures with deep neural networks (e.g. convolutional networks) used for the encoders and decoders, trained jointly with AEVB; (ii) time-series models (i.e. dynamic Bayesian networks); (iii) application of SGVB to the global parameters; (iv) supervised models with latent variables, useful for learning complicated noise distributions.
 
-                            8
-
+         3Available at http://www.cs.nyu.edu/˜roweis/data.html
 "]
 References
 
@@ -391,7 +269,7 @@ See figures 4 and 5 for visualisations of latent space and corresponding observe
 
 (a) Learned Frey Face manifold (b) Learned MNIST manifold
 
-Figure 4: Visualisations of learned data manifold for generative models with two-dimensional latent space, learned with AEVB. Since the prior of the latent space is Gaussian, linearly spaced coordinates on the unit square were transformed through the inverse CDF of the Gaussian to produce values of the latent variables z. For each of these values z, we plotted the corresponding generative p (x|z) with the learned parameters θ.
+Figure 4: Visualisations of learned data manifold for generative models with two-dimensional latent space, learned with AEVB. Since the prior of the latent space is Gaussian, linearly spaced coordinates on the unit square were transformed through the inverse CDF of the Gaussian to produce values of the latent variables z. For each of these values z, we plotted the corresponding generative p(x|z) with the learned parameters θ.
 
 (a) 2-D latent space (b) 5-D latent space (c) 10-D latent space (d) 20-D latent space
 
@@ -399,10 +277,10 @@ Figure 5: Random samples from learned generative models of MNIST for different d
 
 B  Solution of −D_KL(q_φ(z)||p_θ(z)), Gaussian case
 
-The variational lower bound (the objective to be maximized) contains a KL term that can often be integrated analytically. Here we give the solution when both the prior p (z) = N (0, I) and the posterior approximation q (z|x^(i)) are Gaussian. Let J be the dimensionality of z. Let µ and σ denote the variational mean and s.d. evaluated at datapoint i, and let µ_j and σ_j simply denote the j-th element of these vectors. Then:
+The variational lower bound (the objective to be maximized) contains a KL term that can often be integrated analytically. Here we give the solution when both the prior p(z) = N(0, I) and the posterior approximation q_φ(z|x^(i)) are Gaussian. Let J be the dimensionality of z. Let µ and σ denote the variational mean and s.d. evaluated at datapoint i, and let µ_j and σ_j simply denote the j-th element of these vectors. Then:
 
 \[
-\int q(z) \log p(z) dz = N(z; \mu, \sigma^2) \log N(z; 0, I) dz
+\int q_φ(z) \log p(z) dz = N(z; \mu, \sigma^2) \log N(z; 0, I) dz
 \]
 
 \[
@@ -412,7 +290,7 @@ The variational lower bound (the objective to be maximized) contains a KL term t
 And:
 
 \[
-\int q(z) \log q(z) dz = N(z; \mu, \sigma^2) \log N(z; \mu, \sigma^2) dz
+\int q_φ(z) \log q_φ(z) dz = N(z; \mu, \sigma^2) \log N(z; \mu, \sigma^2) dz
 \]
 
 \[
@@ -422,14 +300,14 @@ And:
 Therefore:
 
 \[
--D_{KL}(q_φ(z)||p_θ(z)) = \int q(z) \left( \log p(z) - \log q(z) \right) dz
+-D_{KL}(q_φ(z)||p_θ(z)) = \int q_φ(z) (\log p_θ(z) - \log q_φ(z)) dz
 \]
 
 \[
-= \frac{1}{2} \sum_{j=1}^{J} \left( 1 + \log(\sigma_j^2) - \mu_j^2 - \sigma_j^2 \right)
+= \frac{1}{2} \sum_{j=1}^{J} (1 + \log(\sigma_j^2) - \mu_j^2 - \sigma_j^2)
 \]
 
-When using a recognition model q (z|x) then µ and s.d. σ are simply functions of x and the variational parameters φ, as exemplified in the text.
+When using a recognition model q_φ(z|x) then µ and s.d. σ are simply functions of x and the variational parameters φ, as exemplified in the text.
 
 C  MLP’s as probabilistic encoders and decoders
 
@@ -437,7 +315,7 @@ In variational auto-encoders, neural networks are used as probabilistic encoders
 
 C.1 Bernoulli MLP as decoder
 
-In this case let p (x|z) be a multivariate Bernoulli whose probabilities are computed from z with a fully-connected neural network with a single hidden layer:
+In this case let p(x|z) be a multivariate Bernoulli whose probabilities are computed from z with a fully-connected neural network with a single hidden layer:
 
 \[
 \log p(x|z) = \sum_{i=1}^{D} x_i \log y_i + (1 - x_i) \log(1 - y_i)
@@ -461,20 +339,20 @@ where \(\mu = W_4 h + b_4\)
 
 \(h = \tanh(W_3 z + b_3)\)
 
-where {W_3, W_4, W_5, b_3, b_4, b_5} are the weights and biases of the MLP and part of θ when used as decoder. Note that when this network is used as an encoder q (z|x), then z and x are swapped, and the weights and biases are variational parameters φ.
+where {W_3, W_4, W_5, b_3, b_4, b_5} are the weights and biases of the MLP and part of θ when used as decoder. Note that when this network is used as an encoder q_φ(z|x), then z and x are swapped, and the weights and biases are variational parameters φ.
 
 D  Marginal likelihood estimator
 
-We derived the following marginal likelihood estimator that produces good estimates of the marginal likelihood as long as the dimensionality of the sampled space is low (less than 5 dimensions), and sufficient samples are taken. Let p (x, z) = p (z)p (x|z) be the generative model we are sampling from, and for a given datapoint x^(i) we would like to estimate the marginal likelihood p (x^(i)).
+We derived the following marginal likelihood estimator that produces good estimates of the marginal likelihood as long as the dimensionality of the sampled space is low (less than 5 dimensions), and sufficient samples are taken. Let p(x, z) = p(z)p(x|z) be the generative model we are sampling from, and for a given datapoint x^(i) we would like to estimate the marginal likelihood p(x^(i)).
 
 The estimation process consists of three stages:
 
-1. Sample L values {z^(l)} from the posterior using gradient-based MCMC, e.g. Hybrid Monte Carlo, using ∇ log p (z|x) = ∇ log p (z) + ∇ log p (x|z).
+1. Sample L values {z^(l)} from the posterior using gradient-based MCMC, e.g. Hybrid Monte Carlo, using ∇ log p(z|x) = ∇ log p(z) + ∇ log p(x|z).
 2. Fit a density estimator q(z) to these samples {z^(l)}.
 3. Again, sample L new values from the posterior. Plug these samples, as well as the fitted q(z), into the following estimator:
 
 \[
-p_\theta(x^{(i)}) \approx \left( \frac{1}{L} \sum_{l=1}^{L} \frac{q(z^{(l)})}{p(z)p(x^{(i)}|z^{(l)})} \right)^{-1}
+p_θ(x^{(i)}) \approx \left( \frac{1}{L} \sum_{l=1}^{L} q(z^{(l)}) \right)^{-1}
 \]
 
 where z^(l) ∼ p(z|x^(i)).
@@ -482,11 +360,11 @@ where z^(l) ∼ p(z|x^(i)).
 Derivation of the estimator:
 
 \[
-\frac{1}{p_\theta(x^{(i)})} = \int q(z) dz \int \frac{q(z)}{p_\theta(x^{(i)}|z)} dz
+\frac{1}{p_θ(x^{(i)})} \approx \int q(z) dz \int \frac{f(z) p_θ(x^{(i)}, z)}{p_θ(x^{(i)})} dz
 \]
 
 \[
-= \int p_\theta(x^{(i)}) q(z) dz
+= \int p_θ(x^{(i)}) q(z) dz
 \]
 
 \[
@@ -494,12 +372,12 @@ Derivation of the estimator:
 \]
 
 \[
-\approx \frac{1}{L} \sum_{l=1}^{L} \frac{q(z^{(l)})}{p(z)p(x^{(i)}|z^{(l)})}
+\approx \frac{1}{L} \sum_{l=1}^{L} q(z^{(l)}) \text{ where } z^{(l)} \sim p(z|x^{(i)})
 \]
 
 E  Monte Carlo EM
 
-The Monte Carlo EM algorithm does not employ an encoder, instead it samples from the posterior of the latent variables using gradients of the posterior computed with ∇ log p (z|x) = ∇ log p (z) + ∇ log p (x|z). The Monte Carlo EM procedure consists of 10 HMC leapfrog steps with an automatically tuned stepsize such that the acceptance rate was 90%, followed by 5 weight updates steps using the acquired sample. For all algorithms the parameters were updated using the Adagrad stepsizes (with accompanying annealing schedule).
+The Monte Carlo EM algorithm does not employ an encoder, instead it samples from the posterior of the latent variables using gradients of the posterior computed with ∇ log p(z|x) = ∇ log p(z) + ∇ log p(x|z). The Monte Carlo EM procedure consists of 10 HMC leapfrog steps with an automatically tuned stepsize such that the acceptance rate was 90%, followed by 5 weight updates steps using the acquired sample. For all algorithms the parameters were updated using the Adagrad stepsizes (with accompanying annealing schedule).
 
 The marginal likelihood was estimated with the first 1000 datapoints from the train and test sets, for each datapoint sampling 50 values from the posterior of the latent variables using Hybrid Monte Carlo with 4 leapfrog steps.
 
@@ -507,7 +385,7 @@ F  Full VB
 
 As written in the paper, it is possible to perform variational inference on both the parameters θ and the latent variables z, as opposed to just the latent variables as we did in the paper. Here, we’ll derive our estimator for that case.
 
-Let p (θ) be some hyperprior for the parameters introduced above, parameterized by α. The marginal likelihood can be written as:
+Let p(θ) be some hyperprior for the parameters introduced above, parameterized by α. The marginal likelihood can be written as:
 
 \[
 \log p(X) = D_{KL}(q_φ(θ)||p_α(θ|X)) + L(φ; X)
@@ -516,7 +394,7 @@ Let p (θ) be some hyperprior for the parameters introduced above, parameterized
 where the first RHS term denotes a KL divergence of the approximate from the true posterior, and where L(φ; X) denotes the variational lower bound to the marginal likelihood:
 
 \[
-L(φ; X) = \int q_φ(θ) \left( \log p(X) + \log p(θ) - \log q(θ) \right) dθ
+L(φ; X) = \int q_φ(θ) \left( \log p(X) + \log p(θ) - \log q_φ(θ) \right) dθ
 \]
 
 Note that this is a lower bound since the KL divergence is non-negative; the bound equals the true marginal when the approximate and true posteriors match exactly. The term log p(X) is composed of a sum over the marginal likelihoods of individual datapoints log p(X) = ∑_{i=1}^{N} log p(x^(i)), which can each be rewritten as:
@@ -532,7 +410,7 @@ Note that this is a lower bound since the KL divergence is non-negative; the bou
 
          The expectations on the RHS of eqs (14) and (16) can obviously be written as a sum of three separate
          expectations, of which the second and third component can sometimes be analytically solved, e.g.
-         when both p(x) and q(z|x) are Gaussian. For generality we will here assume that each of these
+         when both \( p(x) \) and \( q(z|x) \) are Gaussian. For generality we will here assume that each of these
          expectations is intractable.
 
          Under certain mild conditions outlined in section (see paper) for chosen approximate posteriors
@@ -560,18 +438,17 @@ Note that this is a lower bound since the KL divergence is non-negative; the bou
          L(φ; X) = \int q_{\phi}(\theta) \left( \log p(X) + \log p_{\alpha}(\theta) - \log q_{\phi}(\theta) \right) \, d\theta
          \]
 
-         \[
-         = \int p(\zeta) \left( \log p_{\theta}(X) + \log p_{\alpha}(\theta) - \log q_{\phi}(\theta) \right) \bigg|_{\theta=h_{\phi}(\zeta)} \, d\zeta \tag{20}
-         \]
+                   \[
+                   = \int p(\zeta) \left( \log p_{\theta}(X) + \log p_{\alpha}(\theta) - \log q_{\phi}(\theta) \right) \bigg|_{\theta=h_{\phi}(\zeta)} \, d\zeta \tag{20}
+                   \]
 
          For notational conciseness we introduce a shorthand notation \( f_{\phi}(x, z, θ) \):
-         \[
-         f_{\phi}(x, z, θ) = N \cdot \left( \log p(x|z) + \log p(z) - \log q(z|x) \right) + \log p(θ) - \log q(θ) \tag{21}
-         \]
+           \[
+           f_{\phi}(x, z, θ) = N \cdot \left( \log p(x|z) + \log p(z) - \log q(z|x) \right) + \log p(θ) - \log q(θ) \tag{21}
+           \]
 
          Using equations (20) and (18), the Monte Carlo estimate of the variational lower bound, given
          datapoint \( x^{(i)} \), is:
-
          \[
          L(φ; X) \approx \frac{1}{L} \sum_{l=1}^{L} f_{\phi}(x^{(l)}, g_{\phi}(\epsilon^{(l)}, x^{(l)}), h_{\phi}(\zeta^{(l)})) \tag{22}
          \]
@@ -587,7 +464,6 @@ Note that this is a lower bound since the KL divergence is non-negative; the bou
          Let the prior over the parameters and latent variables be the centered isotropic Gaussian \( p_{\alpha}(\theta) = N(\theta; 0, I) \) and \( p(z) = N(z; 0, I) \). Note that in this case, the prior lacks parameters. Let’s also
          assume that the true posteriors are approximately Gaussian with an approximately diagonal covariance. In this case, we can let the variational approximate posteriors be multivariate Gaussians with
          a diagonal covariance structure:
-
          \[
          \log q_{\phi}(\theta) = \log N(\theta; \mu_{\theta}, \sigma^2 I)
          \]
@@ -599,18 +475,27 @@ Note that this is a lower bound since the KL divergence is non-negative; the bou
          meaning of the functions \( f_{\phi}, g_{\phi} \) and \( h_{\phi} \).
 
          Require: \( φ \) (Current value of variational parameters)
-         \( g \gets 0 \)
-         for \( l \) is 1 to \( L \) do
-           \( x \gets \) Random draw from dataset \( X \)
-           \( \epsilon \gets \) Random draw from prior \( p(\epsilon) \)
-           \( \zeta \gets \) Random draw from prior \( p(\zeta) \)
-           \( g \gets g + \frac{1}{L} \nabla f_{\phi}(x, g_{\phi}(\epsilon, x), h_{\phi}(\zeta)) \)
+         \[
+         g \leftarrow 0
+         \]
+         for \( l = 1 \) to \( L \) do
+         \[
+         x \leftarrow \text{Random draw from dataset } X
+         \]
+         \[
+         \epsilon \leftarrow \text{Random draw from prior } p(\epsilon)
+         \]
+         \[
+         \zeta \leftarrow \text{Random draw from prior } p(\zeta)
+         \]
+         \[
+         g \leftarrow g + \frac{1}{L} \nabla f_{\phi}(x, g_{\phi}(\epsilon, x), h_{\phi}(\zeta))
+         \]
          end for
          return \( g \)
 
          where \( \mu_{z} \) and \( \sigma_{z} \) are yet unspecified functions of \( x \). Since they are Gaussian, we can parameterize
          the variational approximate posteriors:
-
          \[
          q_{\phi}(\theta) \text{ as } \tilde{\theta} = \mu_{\theta} + \sigma_{\theta} \odot \zeta \quad \text{where } \zeta \sim N(0, I)
          \]
@@ -621,7 +506,7 @@ Note that this is a lower bound since the KL divergence is non-negative; the bou
          above (eqs (21) and (22)).
 
          In this case it is possible to construct an alternative estimator with a lower variance, since in this
-         model \( p(\theta), p(z), q(\theta) \) and \( q(z|x) \) are Gaussian, and therefore four terms of \( f_{\phi} \) can be solved
+         model \( p(\theta), p(z), q_{\phi}(\theta) \) and \( q_{\phi}(z|x) \) are Gaussian, and therefore four terms of \( f_{\phi} \) can be solved
          analytically. The resulting estimator is:
          \[
          L(φ; X) \approx \frac{1}{L} \sum_{l=1}^{L} N \cdot \left( \frac{1}{2} \sum_{j=1}^{J} \left( 1 + \log((\sigma_{z}^{(l)})^2) - (\mu_{z}^{(l)})^2 - (\sigma_{z}^{(l)})^2 \right) + \log p_{\theta}(x^{(i)}|z^{(i)}) \right)
