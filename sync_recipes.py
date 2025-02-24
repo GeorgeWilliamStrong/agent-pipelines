@@ -13,8 +13,8 @@ def sync_recipes():
     token = os.environ.get("INSTILL_API_TOKEN")
     pipeline = init_pipeline_client(api_token=token)
 
-    # Get all YAML files in the current directory
-    recipes_dir = Path(__file__).parent
+    # Get all YAML files from the recipes directory
+    recipes_dir = Path(__file__).parent / "recipes"
     yaml_files = list(recipes_dir.glob("*.yaml"))
 
     print(f"Found {len(yaml_files)} YAML recipes to sync")
