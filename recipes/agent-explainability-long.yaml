@@ -1,0 +1,103 @@
+version: v1beta
+variable:
+  response:
+    title: Response
+    description: AI response
+    format: string
+  context:
+    title: Context
+    description: Provided context when generating response
+    format: string
+  context-type:
+    title: Context Type
+    description: The type of information context (web or file)
+    format: string
+  instruction:
+    title: Instruction
+    description: Instruction given to task agent
+    format: string
+component:
+  chunk-text:
+    type: text
+    task: TASK_CHUNK_TEXT
+    input:
+      text: ${variable.context}
+      strategy:
+        setting:
+          chunk-size: 80000
+          chunk-overlap: 1
+          model-name: gpt-4
+          chunk-method: Markdown
+          code-blocks: true
+  map-chunks:
+    type: iterator
+    input: ${chunk-text.output.text-chunks}
+    component:
+      explanation:
+        type: openai
+        task: TASK_TEXT_GENERATION
+        input:
+          model: gpt-4o-mini
+          n: 1
+          prompt: |-
+            Provide a clear explanation for an AI-generated response from Instill AI given the provided ${variable.context-type} search context and input instruction.
+
+            **Instill AI's Response:**
+            ```
+            ${variable.response}
+            ```
+
+            **${variable.context-type} Search Context:**
+            ```
+            ${map-chunks.element}
+            ```
+
+            **Instruction:**
+            ```
+            ${variable.instruction}
+            ```
+
+            If the provided ${variable.context-type} search context does not contain any relevant information that can explain Instill AI's response, respond with "No explanation."
+
+            Explanation:
+          response-format:
+            type: text
+          system-message: |-
+            You are an AI Explainability Assistant.
+            Your task is to provide a clear and concise explanation of why Instill AI produced its response based on the given ${variable.context-type} search context.
+            Internally, use a chain-of-thought approach to i) examine the ${variable.context-type} search context for relevant details and assumptions, and ii) connect these elements to Instill AI's response.
+            You may use the instruction provided for additional information, but do not refer to the instruction in the explanation.
+            If the provided ${variable.context-type} search context does not contain any relevant information that can explain Instill AI's response, respond with "No explanation."
+            However, your final output must be a single, well-structured explanatory paragraph without bullet points or separate sections.
+            Now, generate the explanation below.
+          temperature: 0
+          top-p: 0.95
+    output-elements:
+      result: ${explanation.output.texts[0]}
+  reduce-explanation:
+    type: openai
+    task: TASK_TEXT_GENERATION
+    input:
+      model: gpt-4o-mini
+      n: 1
+      prompt: |-
+        Aggregate the explanations
+
+        **Explanations:**
+        ```
+        ${map-chunks.output.result}
+        ```
+      response-format:
+        type: text
+      system-message: |-
+        You are an AI Explainability Assistant.
+        Your task is to provide a clear and concise explanation of why Instill AI produced its response based on the given ${variable.context-type} search context by aggregating the provided explanations.
+        Your final output must be a single, well-structured explanatory paragraph without bullet points or separate sections.
+        Make reference to the ${variable.context-type} search context where appropriate to link it to Instill AI's response.
+        Now, generate the explanation below.
+      temperature: 0
+      top-p: 0.95
+output:
+  explanation:
+    title: Explanation
+    value: ${reduce-explanation.output.texts[0]}

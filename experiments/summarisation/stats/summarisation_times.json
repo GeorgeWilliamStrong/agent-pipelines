@@ -1,53 +1,125 @@
 {
-  "vae-paper.md": [
+  "[handwritten] Deloitte.md": [
     {
-      "timestamp": "2025-02-07 10:25:09",
-      "processing_time": 12.078443050384521,
-      "file_size": 49418,
+      "timestamp": "2025-02-24 20:40:52",
+      "processing_time": 6.998175859451294,
+      "file_size": 1310,
       "success": true,
       "content_type": "document"
     }
   ],
-  "nvidia-10q.md": [
+  "[scanned] sv600_m_excellent.md": [
     {
-      "timestamp": "2025-02-07 10:25:22",
-      "processing_time": 12.81116271018982,
-      "file_size": 131728,
+      "timestamp": "2025-02-24 20:40:58",
+      "processing_time": 5.731950998306274,
+      "file_size": 2381,
       "success": true,
       "content_type": "document"
     }
   ],
-  "wework-s1.md": [
+  "[quarterly-release] aapl-20240629.md": [
     {
-      "timestamp": "2025-02-07 10:26:03",
-      "processing_time": 41.60278010368347,
-      "file_size": 1093985,
+      "timestamp": "2025-02-24 20:41:06",
+      "processing_time": 7.997792959213257,
+      "file_size": 99960,
       "success": true,
       "content_type": "document"
     }
   ],
-  "scanned-cia-document.md": [
+  "[red-line-doc] Dummy employee contract.md": [
     {
-      "timestamp": "2025-02-07 10:26:10",
-      "processing_time": 6.974171161651611,
-      "file_size": 57457,
+      "timestamp": "2025-02-24 20:41:11",
+      "processing_time": 5.325369119644165,
+      "file_size": 4469,
       "success": true,
       "content_type": "document"
     }
   ],
-  "apple-10q.md": [
+  "[form-data] uniform_residential_loan_application.md": [
     {
-      "timestamp": "2025-02-07 10:26:20",
-      "processing_time": 9.909148931503296,
-      "file_size": 56725,
+      "timestamp": "2025-02-24 20:41:17",
+      "processing_time": 6.020520210266113,
+      "file_size": 24238,
+      "success": true,
+      "content_type": "document"
+    }
+  ],
+  "[research-paper] 1312.6114v11.md": [
+    {
+      "timestamp": "2025-02-24 20:41:24",
+      "processing_time": 6.324729681015015,
+      "file_size": 48053,
+      "success": true,
+      "content_type": "document"
+    }
+  ],
+  "[2-page-table] Understanding RAG.md": [
+    {
+      "timestamp": "2025-02-24 20:41:30",
+      "processing_time": 6.53318977355957,
+      "file_size": 7864,
+      "success": true,
+      "content_type": "document"
+    }
+  ],
+  "[table] Black White Minimalist Simple Creative Freelancer Invoice (1).md": [
+    {
+      "timestamp": "2025-02-24 20:41:35",
+      "processing_time": 4.877331018447876,
+      "file_size": 920,
+      "success": true,
+      "content_type": "document"
+    }
+  ],
+  "[complex-chart] generative-ai-global-research-report-113914.md": [
+    {
+      "timestamp": "2025-02-24 20:41:40",
+      "processing_time": 5.437353134155273,
+      "file_size": 27332,
+      "success": true,
+      "content_type": "document"
+    }
+  ],
+  "[low-quality-scan]cia-rdp74-00005r000200080057-3 (dragged).md": [
+    {
+      "timestamp": "2025-02-24 20:41:48",
+      "processing_time": 7.782382249832153,
+      "file_size": 1108,
+      "success": true,
+      "content_type": "document"
+    }
+  ],
+  "[maths-and-diagrams] ey-gen-ai-report.md": [
+    {
+      "timestamp": "2025-02-24 20:41:56",
+      "processing_time": 7.389239072799683,
+      "file_size": 179513,
+      "success": true,
+      "content_type": "document"
+    }
+  ],
+  "[s1-form-large-file] wework-s1.md": [
+    {
+      "timestamp": "2025-02-24 20:42:15",
+      "processing_time": 19.020491123199463,
+      "file_size": 1627362,
+      "success": true,
+      "content_type": "document"
+    }
+  ],
+  "[scanned] PublicWaterMassMailing.md": [
+    {
+      "timestamp": "2025-02-24 20:42:21",
+      "processing_time": 5.976839065551758,
+      "file_size": 23500,
       "success": true,
       "content_type": "document"
     }
   ],
   "apple-10q-transcript.md": [
     {
-      "timestamp": "2025-02-07 10:26:26",
-      "processing_time": 6.1952879428863525,
+      "timestamp": "2025-02-24 20:42:27",
+      "processing_time": 6.523403167724609,
       "file_size": 49980,
       "success": true,
       "content_type": "audio"
