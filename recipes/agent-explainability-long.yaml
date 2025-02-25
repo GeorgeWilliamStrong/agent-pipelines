@@ -97,11 +97,7 @@ component:
         Now, generate the explanation below.
       temperature: 0
       top-p: 0.95
-    condition: ${chunk-text.output.chunk-num} > 1
 output:
-  explanation-from-long-text:
+  explanation:
     title: Explanation from long text
     value: ${reduce-explanation.output.texts[0]}
-  explanation-from-short-text:
-    title: Explanation from short text
-    value: ${map-chunks.output.result[0]}
