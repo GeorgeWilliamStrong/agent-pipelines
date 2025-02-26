@@ -3,15 +3,15 @@ variable:
   context:
     title: Context
     description: Converted markdown from file or document
-    format: string
+    type: string
   file-type:
     title: File Type
     description: One of document/audio/video/image
-    format: string
+    type: string
   llm-model:
     title: OpenAI LLM model
     description: OpenAI model e.g., gpt-4o-mini
-    format: string
+    type: string
 component:
   chunk-text:
     type: text

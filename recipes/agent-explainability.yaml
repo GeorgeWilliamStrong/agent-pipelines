@@ -3,19 +3,19 @@ variable:
   response:
     title: Response
     description: AI response
-    format: string
+    type: string
   context:
     title: Context
     description: Provided context when generating response
-    format: string
+    type: string
   context-type:
     title: Context Type
     description: The type of information context (web or file)
-    format: string
+    type: string
   instruction:
     title: Instruction
     description: Instruction given to task agent
-    format: string
+    type: string
 component:
   explanation:
     type: openai

@@ -2,7 +2,7 @@ version: v1beta
 variable:
   file:
     title: Document
-    format: file
+    type: file
 component:
   process-document:
     type: document

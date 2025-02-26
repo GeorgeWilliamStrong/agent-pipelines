@@ -1,39 +1,38 @@
 version: v1beta
 variable:
-  ## Needs to be added once supported in Artifact BE
-  #file-name:
-  #  title: File Name
-  #  description: File name for retrieval metadata filter 
-  #  format: string
+  file-name:
+    title: File Name
+    description: File name for retrieval metadata filter
+    type: string
   catalog-name:
     title: Catalog Name
     description: Name of the catalog/KB representing the file (assuming 1 file per KB)
-    format: string
+    type: string
   namespace:
     title: Namespace
     description: Namespace where catalog/KB exists
-    format: string
+    type: string
   instruction:
     title: Instruction
     description: Specific instruction from executing agent
-    format: string
+    type: string
   chat-history:
     title: Chat History
     description: User's chat history
-    format: string
+    type: string
   user-query:
     title: User Query
     description: User's follow-up query
-    format: string
+    type: string
   relevance-threshold:
     title: Relevance Threshold
     description: Relevance threshold for filtering RAG chunks
-    format: number
+    type: number
   ## I find state-context is a bit redundant with instruction here
   #state-context:
   #  title: State Context
   #  description: State passed from executing agent
-  #  format: string
+  #  type: string
 component:
   query-reviser:
     type: openai
@@ -108,6 +107,7 @@ component:
       catalog-id: ${variable.catalog-name}
       text-prompt: ${query-reviser.output.texts[0]}
       top-k: 30
+      filename: ${variable.file-name}
   add-source-file-name:
     type: json
     task: TASK_JQ

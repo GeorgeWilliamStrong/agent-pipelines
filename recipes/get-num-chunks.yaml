@@ -4,15 +4,15 @@ variable:
   #file-name:
   #  title: File Name
   #  description: File name for retrieval metadata filter 
-  #  format: string
+  #  type: string
   catalog-name:
     title: Catalog Name
     description: Name of the catalog/KB representing the file (assuming 1 file per KB)
-    format: string
+    type: string
   namespace:
     title: Namespace
     description: Namespace where catalog/KB exists
-    format: string
+    type: string
 component:
   get-file-metadata:
     type: instill-artifact
