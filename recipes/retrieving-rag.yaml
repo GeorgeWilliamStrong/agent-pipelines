@@ -28,6 +28,10 @@ variable:
     title: Relevance Threshold
     description: Relevance threshold for filtering RAG chunks
     type: number
+  content-type:
+    title: Content Type
+    description: Content type for retrieval metadata filter
+    type: string
   ## I find state-context is a bit redundant with instruction here
   #state-context:
   #  title: State Context
@@ -107,6 +111,7 @@ component:
       catalog-id: ${variable.catalog-name}
       text-prompt: ${query-reviser.output.texts[0]}
       top-k: 30
+      content-type: ${variable.content-type}
       filename: ${variable.file-name}
   add-source-file-name:
     type: json

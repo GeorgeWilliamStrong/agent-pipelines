@@ -4,10 +4,6 @@ variable:
     title: File Name
     description: Name of the file to extract source markdown
     type: string
-  file-uid:
-    title: File UID
-    description: UID of the file to extract source markdown
-    type: string
   catalog-name:
     title: Catalog Name
     description: Name of the catalog/KB representing the file (assuming 1 file per KB)
@@ -33,13 +29,26 @@ variable:
     description: Summary of the markdown file contents
     type: string
 component:
+  get-file-metadata:
+    type: instill-artifact
+    task: TASK_GET_FILES_METADATA
+    input:
+      namespace: ${variable.namespace}
+      catalog-id: ${variable.catalog-name}
+  get-uid:
+    type: json
+    task: TASK_JQ
+    input:
+      json-value: ${get-file-metadata.output.files}
+      jq-filter: .[] |
+        select(."file-name" == "${variable.file-name}") | ."file-uid"
   get-file-in-markdown:
     type: instill-artifact
     task: TASK_GET_FILE_IN_MARKDOWN
     input:
       namespace: ${variable.namespace}
       catalog-id: ${variable.catalog-name}
-      file-uid: ${variable.file-uid}
+      file-uid: ${get-uid.output.results[0]}
   chunk-text:
     type: text
     task: TASK_CHUNK_TEXT
@@ -47,8 +56,8 @@ component:
       text: ${get-file-in-markdown.output.content}
       strategy:
         setting:
-          chunk-size: 70000
-          chunk-overlap: 500
+          chunk-size: 90000
+          chunk-overlap: 200
           model-name: gpt-4
           chunk-method: Markdown
           code-blocks: true
